@@ -1,13 +1,42 @@
-$black: #212121
+$black: #222
+$darkblack: #111
 $white: #eee
+$darkwhite: #ddd
+$cyan: #75E8FF
 
 *
-    font-family: 'Source Code Pro', monospace
-    font-weight: 400
-    font-size: 1em
-    color: $white
+  font-family: 'Source Code Pro', monospace
+  font-weight: 400
 
 body
-    padding: 2em
-    background-color: $black
+  background-color: $black
+
+a
+  background-color: $darkblack
+  color: $white
+
+  &:hover
+    background-color: $white
+    color: $black
+
+h1
+  color: $white
+  font-size: 1.5em
+    
+
+content
+  width: 100%
+  max-width: 60em
+  text-align: left
+  font-size: 1em
+  color: $white
+
+button
+  padding: 3px
+  background-color: $darkblack
+  color: $white
+  border-bottom: 2px, solid, $white
+  
+  &:hover
+    background-color: $darkwhite
     

@@ -1,11 +1,34 @@
 * {
   font-family: "Source Code Pro", monospace;
-  font-weight: 400;
+  font-weight: 400; }
+
+body {
+  background-color: #222; }
+
+a {
+  background-color: #111;
+  color: #eee; }
+  a:hover {
+    background-color: #eee;
+    color: #222; }
+
+h1 {
+  color: #eee;
+  font-size: 1.5em; }
+
+content {
+  width: 100%;
+  max-width: 60em;
+  text-align: left;
   font-size: 1em;
   color: #eee; }
 
-body {
-  padding: 2em;
-  background-color: #212121; }
+button {
+  padding: 3px;
+  background-color: #111;
+  color: #eee;
+  border-bottom: 2px, solid, #eee; }
+  button:hover {
+    background-color: #ddd; }
 
 /*# sourceMappingURL=style.css.map */
