@@ -6,6 +6,8 @@ body {
   background-color: #222; }
 
 a {
+  padding: 1px;
+  text-decoration: none;
   background-color: #111;
   color: #eee; }
   a:hover {
