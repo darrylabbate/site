@@ -27,10 +27,15 @@ content {
 
 button {
   padding: 3px;
+  font-size: 0.8em;
   background-color: #111;
   color: #eee;
-  border-bottom: 2px, solid, #eee; }
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 2px solid #eee; }
   button:hover {
-    background-color: #ddd; }
+    background-color: #ddd;
+    color: #222; }
 
 /*# sourceMappingURL=style.css.map */
