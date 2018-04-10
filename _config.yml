@@ -9,6 +9,5 @@ permalink: /:title
 github_username:  rootbeersoup
 google_analytics: UA-117240781-1
 markdown: kramdown
-include: ["bin"]
 exclude: ["README.md", "LICENSE", "Gemfile", "Gemfile.lock"]
 

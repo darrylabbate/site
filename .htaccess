@@ -1,7 +1,5 @@
 Options +FollowSymlinks
 RewriteEngine On
 RewriteBase /
-RewriteCond %{HTTP_USER_AGENT} ^(curl|wget) [NC]
-RewriteRule https://darryl.sh/bin/dotfiles.sh/ [L]
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 RewriteRule ^(.*)$ https://%1/$1 [R,L]
