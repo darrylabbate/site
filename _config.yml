@@ -1,0 +1,13 @@
+title: darryl.sh
+email: rootbeersoup@gmail.com
+description: 
+url: https://darryl.sh
+timezone: America/Chicago
+
+permalink: /:title
+
+github_username:  rootbeersoup
+google_analytics: UA-117240781-1
+markdown: kramdown
+exclude: ["README.md", "LICENSE", "Gemfile", "Gemfile.lock"]
+
