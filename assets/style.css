@@ -3,25 +3,26 @@
 	--black: #444;
 	--darkblack: #111;
 	--white: #eee;
-	--midwhite: #bbb;
+	--midwhite: #ccc;
 	--darkwhite: #999;
 	--cyan: #75e8ff;
 }
 
 * {
-	font-family: "Source Code Pro", monospace;
+	font-family: "Source Sans Pro", sans-serif;
 	font-weight: 400;
 }
 
 body {
 	background: var(--white);
+	max-width: 1500px;
 }
 
 a {
 	padding: 0 0.2em;
 	text-decoration: none;
-	background: var(--midwhite);
 	color: var(--black);
+	background: var(--midwhite);
 }
 
 	a:hover {
@@ -29,8 +30,15 @@ a {
 		color: var(--white);
 	}
 
+a svg {
+	fill: var(--black);
+}
+
+a:hover svg {
+		fill: var(--white);
+	}
 p {
-	font-size: 0.9em;
+	font-size: 1em;
 	color: var(--black);
 }
 
@@ -39,6 +47,13 @@ h1 {
 	font-size: 1.5em;
 }
 
+.announcement {
+	background-color: var(--midwhite);
+	border-radius: 3px;
+	border: dashed 3px var(--black);
+	padding: 10px;
+	text-align: center;
+}
 button {
 	padding: 3px;
 	font-size: 0.8em;
@@ -57,7 +72,7 @@ button {
 
 .content {
 	margin: 0 auto;
-	padding-left: 120px;
-	width: 100%;
+	max-width: 100ex;
+	width: 60%;
 	text-align: left;
 }

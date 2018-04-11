@@ -66,8 +66,8 @@
 .cube p svg {
   fill: #444;
   margin-top: -2px;
-  margin-left: -35px;
-  transform: scaleY(1.20);
+  margin-left: -36px;
+  transform: scaleY(1.25);
 }
 .nav .face {
   left: 30px;
@@ -119,12 +119,17 @@
 .hamburger li, ul {
 	list-style-type: none;
 	margin-left: 0;
+	margin-bottom: 10px;
 	float: left;
 }
 
-.hamburger a  {
-	/* display:none; */
+.hamburger a {
+	display:none;
 	list-style-type: none;
 	background: none;
 	fill: #999;
+}
+
+.hamburger a:hover {
+	visibility: visible;
 }
