@@ -1,9 +1,10 @@
 /* Default colors */
 :root {
-	--black: #222;
+	--black: #444;
 	--darkblack: #111;
 	--white: #eee;
-	--darkwhite: #ccc;
+	--midwhite: #bbb;
+	--darkwhite: #999;
 	--cyan: #75e8ff;
 }
 
@@ -13,18 +14,18 @@
 }
 
 body {
-	background-color: var(--white);
+	background: var(--white);
 }
 
 a {
-	padding: 0 0.3em;
+	padding: 0 0.2em;
 	text-decoration: none;
-	background-color: var(--darkwhite);
+	background: var(--midwhite);
 	color: var(--black);
 }
 
 	a:hover {
-		background-color: var(--black);
+		background: var(--black);
 		color: var(--white);
 	}
 
@@ -38,16 +39,10 @@ h1 {
 	font-size: 1.5em;
 }
 
-wordmark1 {
-	color: var(--darkblack)
-	font-family: 'Orbitron', sans-serif;
-	font-size: 2em;
-}
-
 button {
 	padding: 3px;
 	font-size: 0.8em;
-	background-color: var(--darkwhite);
+	background: var(--darkwhite);
 	color: var(--black);
 	border-top: 0;
 	border-left: 0;
@@ -62,7 +57,7 @@ button {
 
 .content {
 	margin: 0 auto;
+	padding-left: 120px;
 	width: 100%;
-	max-width: 50em;
 	text-align: left;
 }
