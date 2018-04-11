@@ -4,7 +4,13 @@ description:
 url: https://darryl.sh
 timezone: America/Chicago
 
+includes_dir: includes
+layouts_dir: layouts
+
 permalink: /:title
+
+plugins:
+  - jekyll-octicons
 
 github_username:  rootbeersoup
 google_analytics: UA-117240781-1
