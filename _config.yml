@@ -15,6 +15,6 @@ plugins:
 github_username:  rootbeersoup
 google_analytics: UA-117240781-1
 markdown: kramdown
-include: ["img"]
+include: ["_posts", "assets", "img"]
 exclude: ["README.md", "LICENSE", "Gemfile", "Gemfile.lock"]
 
