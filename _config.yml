@@ -7,7 +7,7 @@ timezone: America/Chicago
 includes_dir: includes
 layouts_dir: layouts
 
-permalink: /:title
+permalink: /:title/
 
 plugins:
   - jekyll-octicons
