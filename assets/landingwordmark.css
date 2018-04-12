@@ -1,0 +1,97 @@
+.cube {
+  /* position: fixed; */
+  display: block;
+  margin: 100px;
+  /* width: 600px; */
+  /* height: 600px; */
+}
+
+
+.face {
+  /* overflow: hidden; */
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+.cube .face.top {
+  -webkit-transform: rotate(210deg) skewX(-30deg) scaleY(0.864);
+  -moz-transform: rotate(210deg) skewX(-30deg) scaleY(0.864);
+  -ms-transform: rotate(210deg) skewX(-30deg) scaleY(0.864);
+  -o-transform: rotate(210deg) skewX(-30deg) scaleY(0.864);
+  transform: rotate(210deg) skewX(-30deg) scaleY(0.864);
+}
+.cube .face.left {
+  -webkit-transform: rotate(90deg) skewX(-30deg) scaleY(0.864);
+  -moz-transform: rotate(90deg) skewX(-30deg) scaleY(0.864);
+  -ms-transform: rotate(90deg) skewX(-30deg) scaleY(0.864);
+  -o-transform: rotate(90deg) skewX(-30deg) scaleY(0.864);
+  transform: rotate(90deg) skewX(-30deg) scaleY(0.864);
+}
+.cube .face.right {
+  -webkit-transform: rotate(-30deg) skewX(-30deg) scaleY(0.864);
+  -moz-transform: rotate(-30deg) skewX(-30deg) scaleY(0.864);
+  -ms-transform: rotate(-30deg) skewX(-30deg) scaleY(0.864);
+  -o-transform: rotate(-30deg) skewX(-30deg) scaleY(0.864);
+  transform: rotate(-30deg) skewX(-30deg) scaleY(0.864);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.cube p {
+  height: 100%;
+  margin: 0 auto;
+  padding-top: 0px;
+  font-size: 62px;
+  font-weight: 700;
+  font-family: "Orbitron", sans-serif;
+  /* float: left; */
+}
+/* .cube .face { */
+/*   left: 50px; */
+/*   top: 50px; */
+/* } */
+.cube .top p {
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  color: #777;
+  margin-right: 12px;
+  margin-top: 2px;
+}
+.cube .left p {
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  color: #555;
+}
+
+.cubescale {
+	display: block;
+	margin: 10 10 auto;
+/* 	width: 100px; */
+/* 	transform: scale(0.8); */
+}
