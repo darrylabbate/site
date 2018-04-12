@@ -11,6 +11,7 @@
 * {
 	font-family: "Source Sans Pro", sans-serif;
 	font-weight: 400;
+	color: var(--black);
 }
 
 body {
@@ -25,26 +26,36 @@ a {
 	background: var(--midwhite);
 }
 
-	a:hover {
-		background: var(--black);
-		color: var(--white);
-	}
+a:hover {
+	background: var(--black);
+	color: var(--white);
+}
 
 a svg {
 	fill: var(--black);
+	vertical-align: middle;
+	padding-bottom: 2px;
 }
 
 a:hover svg {
 		fill: var(--white);
-	}
+}
 p {
-	font-size: 1em;
+	font-size: 1.2em;
 	color: var(--black);
+	max-width: 80em;
 }
 
 h1 {
 	color: var(--black);
-	font-size: 1.5em;
+	font-size: 2em;
+}
+
+h2 {
+	color: var(--black);
+	font-size: 1.75em;
+	margin-top: 1.75em;
+	line-height: 1.2;
 }
 
 .announcement {
@@ -54,25 +65,62 @@ h1 {
 	padding: 10px;
 	text-align: center;
 }
-button {
-	padding: 3px;
-	font-size: 0.8em;
-	background: var(--darkwhite);
-	color: var(--black);
-	border-top: 0;
-	border-left: 0;
-	border-right: 0;
-	border-bottom: 2px solid var(--black);
-}
-
-	button:hover {
-		background-color: var(--darkblack);
-		color: var(--white);
-	}
-
 .content {
 	margin: 0 auto;
-	max-width: 100ex;
+	min-width: 30em;
+	max-width: 40em;
 	width: 60%;
 	text-align: left;
+	line-height: 1.4;
+	/* padding-bottom: 3em; */
+}
+
+.EOF {
+	text-align: center;
+	padding: 3em 0;
+	font-family: "Source Code Pro", monospace;
+	font-size: 1.5em;
+	color: var(--black);
+}
+
+/* Post Styling */
+
+.postinfobox {
+	text-align: right;
+}
+.postinfo, .postinfo a {
+	/* background: var(--midwhite); */
+	font-size: 0.8em;
+	font-family: "Source Code Pro", monospace;
+	padding: 1px;
+	/* border-bottom: 2px dashed var(--black); */
+	line-height: 1.8;
+}
+
+
+/* .postinfo hover a:hover { */
+/* 	background: var(--black); */
+/* } */
+
+.postinfo svg {
+	fill: var(--black);
+	vertical-align: middle;
+	padding-bottom: 2px;
+}
+
+pre {
+  display: block;
+  white-space: pre;
+  /* white-space: pre-wrap; */
+  /* word-wrap: break-word; */
+	background-color: var(--black);
+}
+
+pre, code {
+	overflow: hidden;
+	overflow-x: scroll;
+	padding: 10px;
+	border-radius: 5px;
+	font-family: "Source Code Pro", monospace;
+	color: var(--white);
 }
