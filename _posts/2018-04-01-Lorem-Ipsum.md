@@ -6,6 +6,15 @@ date: 2018/04/29
 tags: ipsum, lorem
 ---
 
+## Table of Contents
+* [Item #1]
+* [Item #2]
+	* [Sub item #1]
+	* [Sub item #2]
+		* [Sub sub item]
+* [Item #3]
+
+---
 
 ## Forem vineta est non meruisse mentem
 
