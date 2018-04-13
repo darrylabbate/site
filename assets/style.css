@@ -21,6 +21,7 @@ body {
 
 a {
 	padding: 0 0.2em;
+	border-radius: 0.2em;
 	text-decoration: none;
 	color: var(--black);
 	background: var(--midwhite);
@@ -48,7 +49,7 @@ p {
 
 h1 {
 	color: var(--black);
-	font-size: 2em;
+	font-size: 2.5em;
 }
 
 h2 {
@@ -86,15 +87,15 @@ h2 {
 /* Post Styling */
 
 .postinfobox {
-	text-align: right;
+	/* text-align: right; */
 }
 .postinfo, .postinfo a {
 	/* background: var(--midwhite); */
 	font-size: 0.8em;
 	font-family: "Source Code Pro", monospace;
-	padding: 1px;
-	/* border-bottom: 2px dashed var(--black); */
-	line-height: 1.8;
+	padding: 0.1em 0.2em;
+	border-radius: 0.2em;
+	/* line-height: 1.6; */
 }
 
 
@@ -105,7 +106,7 @@ h2 {
 .postinfo svg {
 	fill: var(--black);
 	vertical-align: middle;
-	padding-bottom: 2px;
+	padding-bottom: 0.2em;
 }
 
 pre {
@@ -119,8 +120,8 @@ pre {
 pre, code {
 	overflow: hidden;
 	overflow-x: scroll;
-	padding: 10px;
-	border-radius: 5px;
+	padding: 0.5em;
+	border-radius: 0.3em;
 	font-family: "Source Code Pro", monospace;
 	color: var(--white);
 }
