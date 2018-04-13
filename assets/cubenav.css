@@ -4,33 +4,20 @@
   margin: 30px 20px;
   width: 60px;
   height: 60px;
-  cursor: pointer;
-  transition: max-height 500ms ease;
+  cursor: auto;
+  list-style-type: none;
 }
 
-.cube a, .cube a {
+.cube a {
 	background: none;
 }
 
-.burger, .menuitem svg {
-	/* transition: height 1s ease-in-out; */
-}
 
-.cube:hover .burger svg {
-	/* visibility: hidden; */
-}
-
-.cube:hover .face, li {
-  overflow: visible;
-} 
-
-.menuitem:hover p, .menuitem:hover svg {
-	fill: #444;
-	color: #444;
+.cube:hover a svg {
+	background: none;
 }
 
 .face {
-  overflow: hidden;
   position: absolute;
   height: 50px;
   width: 50px;
@@ -79,12 +66,6 @@
   text-align: center;
   float: left;
 }
-.cube p svg {
-  fill: #666;
-  margin-top: -2px;
-  margin-left: -36px;
-  transform: scaleY(1.25);
-}
 .cube .face {
   left: 30px;
   top: 30px;
@@ -117,33 +98,105 @@
   color: #555;
 }
 
-/* .cubescale { */
-/* 	/1* display: block; *1/ */
-/* 	width: 100px; */
-/* 	transform: scale(0.8); */
-/* } */
-
 .menu {
   display: block;
-  height: 50px;
 }
 
-.menu, .menu li, .menu ul {
+.menu, .menu li, .menu ul, .menu a {
 	list-style-type: none;
-	margin-bottom: 20px;
+	margin-bottom: 18px;
 	float: left;
-    width: 80px;
 }
 
-.menu, .menu a, .menu p {
+.menu, .menu a svg {
 	list-style-type: none;
 	background: none;
-	fill: #777;
-	color: #777;
-  max-height: 200px;
 }
 
 .menuitem {
-	margin-left: 5;
+	list-style-type: none;
+	position: relative;
+	margin-bottom: 15px;
+	margin-left: -35px;
+	display: inline-block;
 }
 
+.burger a svg {
+  fill: #666;
+  transform: scaleY(1.25);
+}
+
+.burger svg {
+  list-style-type: none;
+	position: relative;
+}
+
+li.burger, nav {
+	height: 50px;
+	overflow: visible;
+}
+
+.submenu:before {
+	position: absolute;
+	top: 0;
+	right: -15px;
+	bottom: -15px;
+	left: -15px;
+	z-index: -1;
+	display: block;
+	content: ''
+}
+
+.submenu {
+	font-size: 2em;
+	width: 200px;
+	list-style-type: none;
+	visibility: hidden;
+	opacity: 0;
+	position: relative;
+	top: -75px;
+	transform: translateY(-1em);
+	z-index: -1;
+	transition: all 0.1s linear 0s, visibility 0s linear 0.1s, z-index 0s linear 0.01s;
+}
+
+.burger:focus .submenu, .burger:focus-within .submenu, .burger:hover .submenu {
+	visibility: visible;
+	opacity: 1;
+	z-index: 1;
+	transform: translateY(50px);
+	transition-delay: 0s, 0s, 0.2s;
+}
+
+.menuitem a {
+	color: transparent;
+	padding: 0 0;
+	font-family: "Orbitron", sans-serif;
+}
+
+li.menuitem a:hover {
+	color: #444;
+}
+
+li.burger > a:hover svg {
+	fill: #444;
+}
+
+li.menuitem > a:hover svg {
+	fill: #444;
+}
+
+.cube:hover ~ .content {
+	opacity: 0.5;
+	filter: blur(5px);
+}
+
+.content {
+	transition: all 0.1s linear 0s;
+}
+.cube a:hover .top p {
+	color: #555;
+}
+.cube a:hover .left p {
+	color: #333;
+}
