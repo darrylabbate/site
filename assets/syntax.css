@@ -1,0 +1,43 @@
+pre span {
+	font-family: "Source Code Pro", monospace;
+}
+
+pre {
+  display: block;
+  white-space: pre;
+	padding: 0.5em;
+	background-color: var(--black);
+	font-family: "Source Code Pro", monospace;
+	border-radius: 0.3em;
+	overflow: hidden;
+	overflow-x: scroll;
+}
+
+code {
+	font-family: "Source Code Pro", monospace;
+	font-size: 0.9em;
+}
+
+pre > code {
+	overflow: hidden;
+	overflow-x: scroll;
+	font-family: "Source Code Pro", monospace;
+	color: var(--white);
+	font-size: 1em;
+}
+
+p > code, p a {
+	color: var(--black);
+	background-color: var(--midwhite);
+	padding: 0 0.3em;
+	border-radius: 0.2em;
+	font-size: 0.9em;
+}
+
+a:hover code {
+	color: var(--white);
+}
+
+.nb { color: red; }
+.nt { color: blue; }
+.nv { color: var(--darkwhite); }

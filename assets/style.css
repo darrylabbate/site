@@ -3,7 +3,7 @@
 	--black: #444;
 	--darkblack: #111;
 	--white: #eee;
-	--midwhite: #ccc;
+	--midwhite: #ddd;
 	--darkwhite: #999;
 	--cyan: #75e8ff;
 }
@@ -73,7 +73,6 @@ h2 {
 	width: 60%;
 	text-align: left;
 	line-height: 1.4;
-	/* padding-bottom: 3em; */
 }
 
 .EOF {
@@ -109,19 +108,3 @@ h2 {
 	padding-bottom: 0.2em;
 }
 
-pre {
-  display: block;
-  white-space: pre;
-  /* white-space: pre-wrap; */
-  /* word-wrap: break-word; */
-	background-color: var(--black);
-}
-
-pre, code {
-	overflow: hidden;
-	overflow-x: scroll;
-	padding: 0.5em;
-	border-radius: 0.3em;
-	font-family: "Source Code Pro", monospace;
-	color: var(--white);
-}
