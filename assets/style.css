@@ -2,7 +2,7 @@
 :root {
 	--black: #444;
 	--darkblack: #111;
-	--white: #eee;
+	--white: #fafafa;
 	--midwhite: #ddd;
 	--darkwhite: #999;
 	--cyan: #75e8ff;
@@ -16,7 +16,7 @@
 
 body {
 	background: var(--white);
-	max-width: 1500px;
+	/* max-width: 1500px; */
 }
 
 a {
