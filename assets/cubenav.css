@@ -171,15 +171,26 @@ li.burger, nav {
 .menuitem a {
 	color: transparent;
 	padding: 0 0;
+	font-weight: 700;
 	font-family: "Orbitron", sans-serif;
 }
 
 li.menuitem a:hover {
-	color: #444;
+background: linear-gradient(45deg, #7DE3F9 0%, #88F5BF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 li.burger > a:hover svg {
-	fill: #444;
+	fill: url(#gradient);
+}
+
+svg:hover stop:first-child {
+    stop-color: #1EBEE0;
+}
+
+svg:hover stop:last-child {
+    stop-color: #952491;
 }
 
 li.menuitem > a:hover svg {
@@ -195,8 +206,12 @@ li.menuitem > a:hover svg {
 	transition: all 0.1s linear 0s;
 }
 .cube a:hover .top p {
-	color: #555;
-}
+background: linear-gradient(45deg, #7DE3F9 0%, #88F5BF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
 .cube a:hover .left p {
-	color: #333;
-}
+background: linear-gradient(45deg, #6EB2F7 0%, #7DE3F9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }

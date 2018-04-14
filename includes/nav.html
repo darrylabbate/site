@@ -8,7 +8,20 @@
 	<span class="face right">
 		<nav>
 			<li class="burger" tab-index="0">
-				<a href="#">{% octicon three-bars height:58 %}</a>
+				<a href="#">
+					<svg height="58" class="octicon octicon-three-bars" viewBox="0 0 12 16" version="1.1" width="43" enable-background="new 0 0 12 16" aria--hidden="true" xml:space="preserve">
+						<defs>
+							        <linearGradient id="gradient" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0" stop-color="#666" />
+            <stop offset="1" stop-color="#666" />
+        </linearGradient>
+        <mask id="mask" maskUnits="userSpaceOnUse" x="0" y="0" width="43" height="58">
+        </mask>
+    </defs>
+    <g mask="url(#mask)">
+        <rect x="0" y="0" width="43" height="58" fill="url(#gradient)" />
+    </g>
+				<path id="burger" d="M11.41 9H.59C0 9 0 8.59 0 8c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zm0-4H.59C0 5 0 4.59 0 4c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zM.59 11H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1H.59C0 13 0 12.59 0 12c0-.59 0-1 .59-1z"/></svg></a>
 				<ul class="submenu">
 			<li class="menuitem"><a href="https://darryl.sh/about">{% octicon person height:50 %} about</a> </li>
 			<li class="menuitem"><a href="https://darryl.sh/posts">{% octicon file height:50 %} posts</a></li>
