@@ -81,7 +81,7 @@
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
-  color: #777;
+  color: #aaa;
   margin-left: -2px;
 }
 .cube .left p {
@@ -95,7 +95,7 @@
   -ms-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
   transform: rotate(-90deg);
-  color: #555;
+  color: #888;
 }
 
 .menu {
@@ -122,7 +122,7 @@
 }
 
 .burger a svg {
-  fill: #666;
+  fill: #999;
   transform: scaleY(1.25);
 }
 
@@ -176,7 +176,7 @@ li.burger, nav {
 }
 
 li.menuitem a:hover {
-background: linear-gradient(45deg, #7DE3F9 0%, #88F5BF 100%);
+background: linear-gradient(90deg, #7de3f9 0%,#88f5bf 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -185,18 +185,25 @@ li.burger > a:hover svg {
 	fill: url(#gradient);
 }
 
-svg:hover stop:first-child {
-    stop-color: #1EBEE0;
+a:hover svg stop:first-child {
+    stop-color: #6eb2f7;
 }
 
-svg:hover stop:last-child {
-    stop-color: #952491;
+a:hover svg stop:last-child {
+    stop-color: #7de3f9;
 }
 
-li.menuitem > a:hover svg {
-	fill: #444;
+li.about > a:hover svg {
+	fill: url(#gradient1);
 }
 
+li.posts > a:hover svg {
+	fill: url(#gradient2);
+}
+
+li.projects > a:hover svg {
+	fill: url(#gradient3);
+}
 .cube:hover ~ .content {
 	opacity: 0.5;
 	filter: blur(5px);
@@ -206,12 +213,12 @@ li.menuitem > a:hover svg {
 	transition: all 0.1s linear 0s;
 }
 .cube a:hover .top p {
-background: linear-gradient(45deg, #7DE3F9 0%, #88F5BF 100%);
+background: linear-gradient(45deg, #6eb2f7 0%, #7de3f9 30%, #88f5bf 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   }
 .cube a:hover .left p {
-background: linear-gradient(45deg, #6EB2F7 0%, #7DE3F9 100%);
+background: linear-gradient(70deg, #3c98f4 0%, #7de3f9 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   }
