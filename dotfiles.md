@@ -1,8 +1,11 @@
 ---
-layout: post
-title: "dotfiles"
+layout: page
+title: dotfiles
 permalink: /dotfiles/
 ---
+<p align="center"> 
+<img src="../img/dotfiles.png">
+</p>
 
 ## About
 
