@@ -6,6 +6,9 @@ timezone: America/Chicago
 
 includes_dir: includes
 layouts_dir: layouts
+sass:
+  sass_dir: assets
+  style: compressed
 
 permalink: /:title/
 

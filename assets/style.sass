@@ -1,0 +1,369 @@
+---
+---
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Orbitron:700|Source+Code+Pro|Source+Sans+Pro)
+$sourcecodepro: 'Source Code Pro', monspace
+$sourcesanspro: 'Source Sans Pro', sans-serif
+$orbitron: 'Orbitron', sans-serif
+
+// Colors
+$black: #444
+$darkblack: #111
+$white: #fdfdfd
+$midwhite: #fdfdfd
+$darkwhite: #999
+
+body
+  background: $white
+  font-family: $sourcesanspro
+  font-weight: 400
+  color: $black
+
+a
+  padding: 0 0.2em
+  border-radius: 0.2em
+  text-decoration: none
+  color: $black
+  background: $midwhite
+
+  &:hover
+    background: $black
+    color: $white
+
+  svg
+    fill: $black
+    vertical-align: middle
+    padding-bottom: 2px
+
+  &:hover svg
+    fill: $white
+
+p
+  font-size: 1.2em
+  color: $black
+  max-width: 80em
+
+h1
+  color: $black
+  font-size: 2.5em
+
+h2
+  color: $black
+  font-size: 1.75em
+  margin-top: 1.75em
+  line-height: 1.2
+
+hr
+  border: 0
+  border-top: 2px dashed $black
+
+  /* padding: 1px;
+  /* background: linear-gradient(90deg, #6eb2f7, #7de3f9, #88f5bf);
+
+.announcement
+  background-color: $midwhite
+  border-radius: 3px
+  border: dashed 3px $black
+  padding: 10px
+  text-align: center
+
+.content
+  margin: 0 auto
+  min-width: 30em
+  max-width: 40em
+  width: 60%
+  text-align: left
+  line-height: 1.4
+
+.EOF
+  text-align: center
+  padding: 3em 0
+  font-family: $sourcecodepro
+  font-size: 1.5em
+  color: $darkwhite
+
+/* Post Styling
+
+.postinfobox
+  /* text-align: right;
+
+.postinfo
+  /* background: $midwhite;
+  font-size: 0.8em
+  font-family: $sourcecodepro
+  padding: 0.1em 0.2em
+  border-radius: 0.2em
+
+  /* line-height: 1.6;
+
+  a
+    /* background: $midwhite;
+    font-size: 0.8em
+    font-family: $sourcecodepro
+    padding: 0.1em 0.2em
+    border-radius: 0.2em
+
+  svg
+    fill: $black
+    vertical-align: middle
+    padding-bottom: 0.2em
+
+pre
+  span
+    font-family: $sourcecodepro
+
+  display: block
+  white-space: pre
+  padding: 0.5em
+  background-color: $black
+  font-family: $sourcecodepro
+  border-radius: 0.3em
+  overflow: hidden
+  overflow-x: scroll
+
+code
+  font-family: $sourcecodepro
+  font-size: 0.9em
+
+pre > code
+  overflow: hidden
+  overflow-x: scroll
+  font-family: $sourcecodepro
+  color: $white
+  font-size: 1em
+
+p
+  > code, a
+    color: $black
+    background-color: $midwhite
+    padding: 0 0.3em
+    border-radius: 0.2em
+    font-size: 0.9em
+
+a:hover code
+  color: $white
+
+.nb
+  color: red
+
+.nt
+  color: blue
+
+.nv
+  color: $darkwhite
+
+// Desktop navigation
+
+.cube
+  position: fixed
+  display: block
+  margin: 30px 20px
+  width: 60px
+  height: 60px
+  cursor: auto
+  list-style-type: none
+
+  a, &:hover a svg
+    background: none
+
+.face
+  position: absolute
+  height: 50px
+  width: 50px
+  -webkit-transform-origin: 0 0
+  -moz-transform-origin: 0 0
+  -ms-transform-origin: 0 0
+  -o-transform-origin: 0 0
+  transform-origin: 0 0
+
+.cube .face
+  &.top
+    -webkit-transform: rotate(210deg) skewX(-30deg) scaleY(0.864)
+    -moz-transform: rotate(210deg) skewX(-30deg) scaleY(0.864)
+    -ms-transform: rotate(210deg) skewX(-30deg) scaleY(0.864)
+    -o-transform: rotate(210deg) skewX(-30deg) scaleY(0.864)
+    transform: rotate(210deg) skewX(-30deg) scaleY(0.864)
+
+  &.left
+    -webkit-transform: rotate(90deg) skewX(-30deg) scaleY(0.864)
+    -moz-transform: rotate(90deg) skewX(-30deg) scaleY(0.864)
+    -ms-transform: rotate(90deg) skewX(-30deg) scaleY(0.864)
+    -o-transform: rotate(90deg) skewX(-30deg) scaleY(0.864)
+    transform: rotate(90deg) skewX(-30deg) scaleY(0.864)
+
+  &.right
+    -webkit-transform: rotate(-30deg) skewX(-30deg) scaleY(0.864)
+    -moz-transform: rotate(-30deg) skewX(-30deg) scaleY(0.864)
+    -ms-transform: rotate(-30deg) skewX(-30deg) scaleY(0.864)
+    -o-transform: rotate(-30deg) skewX(-30deg) scaleY(0.864)
+    transform: rotate(-30deg) skewX(-30deg) scaleY(0.864)
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+.cube
+  p
+    height: 100%
+    margin: 0 auto
+    padding-top: 0px
+    font-size: 62px
+    font-weight: 700
+    font-family: 'Orbitron', sans-serif
+    text-align: center
+    float: left
+
+  .face
+    left: 30px
+    top: 30px
+
+  .top p
+    -webkit-transform-origin: 50% 50%
+    -moz-transform-origin: 50% 50%
+    -ms-transform-origin: 50% 50%
+    -o-transform-origin: 50% 50%
+    transform-origin: 50% 50%
+    -webkit-transform: rotate(180deg)
+    -moz-transform: rotate(180deg)
+    -ms-transform: rotate(180deg)
+    -o-transform: rotate(180deg)
+    transform: rotate(180deg)
+    color: #aaa
+    margin-left: -2px
+
+  .left p
+    -webkit-transform-origin: 50% 50%
+    -moz-transform-origin: 50% 50%
+    -ms-transform-origin: 50% 50%
+    -o-transform-origin: 50% 50%
+    transform-origin: 50% 50%
+    -webkit-transform: rotate(-90deg)
+    -moz-transform: rotate(-90deg)
+    -ms-transform: rotate(-90deg)
+    -o-transform: rotate(-90deg)
+    transform: rotate(-90deg)
+    color: #888
+
+.menu
+  display: block
+  list-style-type: none
+  margin-bottom: 18px
+  float: left
+
+  li, ul
+    list-style-type: none
+    margin-bottom: 18px
+    float: left
+
+  a
+    list-style-type: none
+    margin-bottom: 18px
+    float: left
+
+    svg
+      list-style-type: none
+      background: none
+
+  list-style-type: none
+  background: none
+
+.menuitem
+  list-style-type: none
+  position: relative
+  margin-bottom: 15px
+  margin-left: -35px
+  display: inline-block
+
+.burger
+  a svg
+    fill: #999
+    transform: scaleY(1.25)
+
+  svg
+    list-style-type: none
+    position: relative
+
+li.burger, nav
+  height: 50px
+  overflow: visible
+
+.submenu
+  &:before
+    position: absolute
+    top: 0
+    right: -15px
+    bottom: -15px
+    left: -15px
+    z-index: -1
+    display: block
+    content: ''
+
+  font-size: 2em
+  width: 200px
+  list-style-type: none
+  visibility: hidden
+  opacity: 0
+  position: relative
+  top: -75px
+  transform: translateY(-1em)
+  z-index: -1
+  transition: all 0.1s linear 0s, visibility 0s linear 0.1s, z-index 0s linear 0.01s
+
+.burger
+  &:focus .submenu, &:focus-within .submenu, &:hover .submenu
+    visibility: visible
+    opacity: 1
+    z-index: 1
+    transform: translateY(50px)
+    transition-delay: 0s, 0s, 0.2s
+
+.menuitem a
+  color: transparent
+  padding: 0 0
+  font-weight: 700
+  font-family: $orbitron
+
+li
+  &.menuitem a:hover
+    background: linear-gradient(90deg, #7de3f9 50%, #88f5bf 100%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+
+  &.burger > a:hover svg
+    fill: url(#gradient)
+
+a:hover svg stop
+  &:first-child
+    stop-color: #6eb2f7
+
+  &:last-child
+    stop-color: #7de3f9
+
+li
+  &.about > a:hover svg
+    fill: url(#gradient1)
+
+  &.posts > a:hover svg
+    fill: url(#gradient2)
+
+  &.projects > a:hover svg
+    fill: url(#gradient3)
+
+.cube:hover ~ .content
+  opacity: 0.5
+  filter: blur(5px)
+
+.content
+  transition: all 0.1s linear 0s
+
+.cube a:hover
+  .top p
+    background: linear-gradient(45deg, #6eb2f7 0%, #7de3f9 30%, #88f5bf 100%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+
+  .left p
+    background: linear-gradient(70deg, #3c98f4 0%, #7de3f9 100%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
