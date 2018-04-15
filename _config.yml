@@ -19,6 +19,6 @@ plugins:
 github_username:  rootbeersoup
 google_analytics: UA-117240781-1
 markdown: redcarpet
-include: ["_posts", "assets", "img"]
+include: ["_posts", "assets", "img", "pages"]
 exclude: ["README.md", "LICENSE", "Gemfile", "Gemfile.lock"]
 
