@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Ipsum Lorem: a How-To"
-permalink: /ipsum-lorem
+permalink: /ipsum-lorem/
 date: 2018/04/29
 tags: ipsum, lorem
 ---

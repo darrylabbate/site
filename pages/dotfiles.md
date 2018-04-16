@@ -1,7 +1,7 @@
 ---
 layout: page
 title: dotfiles
-permalink: /dotfiles
+permalink: /dotfiles/
 ---
 <p align="center"> 
 <img src="../img/dotfiles.png">
