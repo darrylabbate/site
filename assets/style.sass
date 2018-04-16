@@ -12,7 +12,7 @@ $black: #444
 $darkblack: #111
 $white: #fdfdfd
 $midwhite: #eee
-$darkwhite: #999
+$darkwhite: #dfdfdf
 $link: #66A5E6
 
 body
@@ -23,10 +23,14 @@ body
 
 a
   text-decoration: none
-  color: $link
+  color: $black
+  background: $darkwhite
+  padding: 0 0.3em
+  border-radius: 0.2em
 
   &:hover
-    text-decoration: underline
+    background: $black
+    color: $white
 
   svg
     fill: $black
@@ -36,26 +40,23 @@ a
   &:hover svg
     fill: $white
 
-  &>code
-    background-color: $midwhite
-    padding: 0 0.3em
-    border-radius: 0.2em
-
-
 p
   font-size: 1.2em
   color: $black
   max-width: 80em
   
-  &>a code
-    text-decoration: none
-    color: $link
-
   code
     color: $black
-    background-color: $midwhite
+    background: $midwhite
     padding: 0 0.3em
     border-radius: 0.2em
+
+  &>a>code
+    padding: 0
+    background: none
+
+  &>a:hover code
+    color: $white
 
 h1
   color: $black
@@ -82,7 +83,7 @@ hr
   // background: linear-gradient(90deg, #6eb2f7, #7de3f9, #88f5bf)
 
 .announcement
-  background-color: $midwhite
+  background: $midwhite
   border-radius: 3px
   border: dashed 3px $black
   padding: 10px
@@ -124,6 +125,8 @@ hr
 
 .highlight
   pre
+    border-radius: 0.3em
+
     code
       font-family: $sourcecodepro
       font-size: 1em
@@ -132,9 +135,8 @@ pre
   display: block
   white-space: pre
   padding: 0.5em
-  background-color: $black
+  background: $black
   font-family: $sourcecodepro
-  border-radius: 0.3em
   overflow: hidden
   overflow-x: scroll
 
@@ -144,22 +146,20 @@ pre
     color: $white
 
   a
-    text-decoration: none
-    color: $link
+    color: $black
+    background: $darkwhite
+    padding: 0 0.3em
+    border-radius: 0.2em
 
 code
   font-family: $sourcecodepro
   font-size: 0.9em
 
   a
-    text-decoration: none
-    color: $link
-
-.nb
-  color: red
-
-.nt
-  color: yellow
+    color: $black
+    background: $darkwhite
+    padding: 0 0.3em
+    border-radius: 0.2em
 
 .nv
   color: $darkwhite
@@ -177,6 +177,7 @@ code
 
   a, &:hover a svg
     background: none
+    padding: 0
 
 .face
   position: absolute
