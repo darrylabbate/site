@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Ipsum Lorem: a How-To"
-permalink: /ipsum-lorem/
+permalink: /ipsum-lorem
 date: 2018/04/29
 tags: ipsum, lorem
 ---
@@ -13,8 +13,6 @@ tags: ipsum, lorem
 	* [Sub item #2]
 		* [Sub sub item]
 * [Item #3]
-
----
 
 ## Forem vineta est non meruisse mentem
 
