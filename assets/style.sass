@@ -13,6 +13,7 @@ $darkblack: #111
 $white: #fdfdfd
 $midwhite: #eee
 $darkwhite: #999
+$link: #66A5E6
 
 body
   background: $white
@@ -21,15 +22,11 @@ body
   color: $black
 
 a
-  padding: 0 0.2em
-  border-radius: 0.2em
   text-decoration: none
-  color: $black
-  background: $midwhite
+  color: $link
 
   &:hover
-    background: $black
-    color: $white
+    text-decoration: underline
 
   svg
     fill: $black
@@ -43,6 +40,16 @@ p
   font-size: 1.2em
   color: $black
   max-width: 80em
+  
+  a
+    text-decoration: none
+    color: $link
+
+  code
+    color: $black
+    background-color: $midwhite
+    padding: 0 0.3em
+    border-radius: 0.2em
 
 h1
   color: $black
@@ -54,6 +61,12 @@ h2
   font-size: 1.75em
   margin-top: 1.75em
   line-height: 1.2
+  font-weight: 400
+  border-bottom: 2px dashed $black
+
+h3
+  color: $black
+  font-size: 1.5em
   font-weight: 400
 
 hr
@@ -103,11 +116,13 @@ hr
     vertical-align: middle
     padding-bottom: 0.2em
 
-pre
-  span
-    font-family: $sourcecodepro
-    font-size: 0.9em
+.highlight
+  pre
+    code
+      font-family: $sourcecodepro
+      font-size: 1em
 
+pre
   display: block
   white-space: pre
   padding: 0.5em
@@ -117,33 +132,28 @@ pre
   overflow: hidden
   overflow-x: scroll
 
+  code
+    overflow: hidden
+    overflow-x: scroll
+    color: $white
+
+  a
+    text-decoration: none
+    color: $link
+
 code
   font-family: $sourcecodepro
   font-size: 0.9em
 
-pre > code
-  overflow: hidden
-  overflow-x: scroll
-  font-family: $sourcecodepro
-  color: $white
-  font-size: 1em
-
-p
-  > code, a
-    color: $black
-    background-color: $midwhite
-    padding: 0 0.3em
-    border-radius: 0.2em
-    font-size: 0.9em
-
-a:hover code
-  color: $white
+  a
+    text-decoration: none
+    color: $link
 
 .nb
   color: red
 
 .nt
-  color: blue
+  color: yellow
 
 .nv
   color: $darkwhite
@@ -241,6 +251,7 @@ a:hover code
   a svg
     fill: #999
     transform: scaleY(1.25)
+    left: 4px
 
   svg
     list-style-type: none
