@@ -13,6 +13,7 @@ $darkblack: #212121
 $white: #fdfdfd
 $midwhite: #eee
 $darkwhite: #dfdfdf
+$cyan: #4CE7FE
 $link: #66A5E6
 
 body
@@ -80,8 +81,6 @@ h3
 hr
   border: 0
   border-top: 2px dashed $black
-  // padding: 1px
-  // background: linear-gradient(90deg, #6eb2f7, #7de3f9, #88f5bf)
 
 .announcement
   background: $midwhite
@@ -115,7 +114,6 @@ hr
   background: $darkblack
 
 .home
-  // position: fixed
   display: block
   margin: 0 auto
   height: 50px
@@ -130,31 +128,48 @@ hr
 
   .name
     top: 40%
-    left: 65%
+    left: 60%
 
   .top p
     transform-origin: 50% 50%
     transform: rotate(180deg)
     color: $white
-    font-size: 61px
+    font-size: 62px
     font-weight: 700
     font-family: $orbitron
-    text-align: center
     float: left
     height: 50px
-    margin: 0px 3px
+    width: 304px
+    // margin: 0px 3px
+    overflow-x: hidden
 
   .left p
     transform-origin: 50% 50%
     transform: rotate(-90deg)
-    color: #aaa
+    color: #ccc
     font-size: 62px
     font-weight: 700
     font-family: $orbitron
     text-align: center
     float: left
-    height: 50px
-    margin: 128px -122px
+    margin: 131px -122px
+
+  .homelinks
+    transform: rotate(180deg)
+    height: 315px
+    float: left
+    font-family: $sourcesanspro
+    font-size: 2em
+    text-align: right
+    line-height: 1.2
+
+    a
+      background: none
+      color: #777
+
+      &:hover
+        color: $cyan
+
 
 .name
   position: absolute
@@ -253,19 +268,19 @@ code
     float: left
 
   .face
-    left: 30px
-    top: 30px
+    left: 40px
+    top: 40px
 
   .top p
     transform-origin: 50% 50%
     transform: rotate(180deg)
-    color: #aaa
+    color: $darkwhite
     margin-left: -2px
 
   .left p
     transform-origin: 50% 50%
     transform: rotate(-90deg)
-    color: #888
+    color: #ccc
 
 .face
   position: absolute
@@ -318,7 +333,7 @@ code
 
 .burger
   a svg
-    fill: #999
+    fill: #ccc
     transform: scaleY(1.25)
     left: -1px
 
@@ -348,6 +363,7 @@ li.burger, nav
   opacity: 0
   position: relative
   top: -75px
+  left: 5px
   transform: translateY(-1em)
   z-index: -1
   transition: all 0.1s linear 0s, visibility 0s linear 0.1s, z-index 0s linear 0.01s
@@ -364,33 +380,24 @@ li.burger, nav
   color: transparent
   padding: 0 0
   font-weight: 700
-  font-family: $orbitron
+  font-family: $sourcesanspro
 
 li
   &.menuitem a:hover
-    background: linear-gradient(90deg, #7de3f9 50%, #88f5bf 100%)
-    -webkit-background-clip: text
-    -webkit-text-fill-color: transparent
+    color: $cyan
 
   &.burger > a:hover svg
-    fill: url(#gradient)
-
-a:hover svg stop
-  &:first-child
-    stop-color: #6eb2f7
-
-  &:last-child
-    stop-color: #7de3f9
+    fill: $cyan
 
 li
   &.about > a:hover svg
-    fill: url(#gradient1)
+    fill: $cyan
 
   &.posts > a:hover svg
-    fill: url(#gradient2)
+    fill: $cyan
 
   &.projects > a:hover svg
-    fill: url(#gradient3)
+    fill: $cyan
 
 .cube:hover ~ .content
   opacity: 0.5
@@ -401,11 +408,7 @@ li
 
 .cube a:hover
   .top p
-    background: linear-gradient(45deg, #6eb2f7 0%, #7de3f9 30%, #88f5bf 100%)
-    -webkit-background-clip: text
-    -webkit-text-fill-color: transparent
+    color: $cyan
 
   .left p
-    background: linear-gradient(45deg, #3c98f4 0%, #7de3f9 100%)
-    -webkit-background-clip: text
-    -webkit-text-fill-color: transparent
+    color: #41C7D8
