@@ -111,7 +111,7 @@ hr
   margin: 0 auto
   height: 100%
   width: 100%
-  background: $darkblack
+  background: #333
 
 .home
   display: block
@@ -127,26 +127,24 @@ hr
     float: left
 
   .name
-    top: 40%
+    top: 35%
     left: 60%
 
   .top p
     transform-origin: 50% 50%
     transform: rotate(180deg)
-    color: $white
+    color: #ccc
     font-size: 62px
     font-weight: 700
     font-family: $orbitron
     float: left
     height: 50px
     width: 304px
-    // margin: 0px 3px
-    overflow-x: hidden
 
   .left p
     transform-origin: 50% 50%
     transform: rotate(-90deg)
-    color: #ccc
+    color: #aaa
     font-size: 62px
     font-weight: 700
     font-family: $orbitron
@@ -165,7 +163,8 @@ hr
 
     a
       background: none
-      color: #777
+      color: #999
+      padding: 0
 
       &:hover
         color: $cyan
@@ -224,6 +223,9 @@ pre
     overflow-x: scroll
     color: $white
 
+pre > code.language-bash::before
+  content: '$ '
+
   a
     color: $black
     background: $darkwhite
@@ -274,13 +276,13 @@ code
   .top p
     transform-origin: 50% 50%
     transform: rotate(180deg)
-    color: $darkwhite
+    color: #888
     margin-left: -2px
 
   .left p
     transform-origin: 50% 50%
     transform: rotate(-90deg)
-    color: #ccc
+    color: #666
 
 .face
   position: absolute
@@ -333,7 +335,7 @@ code
 
 .burger
   a svg
-    fill: #ccc
+    fill: #777
     transform: scaleY(1.25)
     left: -1px
 
@@ -380,7 +382,7 @@ li.burger, nav
   color: transparent
   padding: 0 0
   font-weight: 700
-  font-family: $sourcesanspro
+  font-family: $orbitron
 
 li
   &.menuitem a:hover
