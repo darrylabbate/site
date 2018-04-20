@@ -386,20 +386,29 @@ li.burger, nav
 
 li
   &.menuitem a:hover
-    color: $cyan
+    background: linear-gradient(90deg, #7de3f9 50%, #88f5bf 100%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
 
   &.burger > a:hover svg
-    fill: $cyan
+    fill: url(#gradient)
+
+a:hover svg stop
+  &:first-child
+    stop-color: #6eb2f7
+
+  &:last-child
+    stop-color: #7de3f9
 
 li
   &.about > a:hover svg
-    fill: $cyan
+    fill: url(#gradient1)
 
   &.posts > a:hover svg
-    fill: $cyan
+    fill: url(#gradient2)
 
   &.projects > a:hover svg
-    fill: $cyan
+    fill: url(#gradient3)
 
 .cube:hover ~ .content
   opacity: 0.5
@@ -410,7 +419,11 @@ li
 
 .cube a:hover
   .top p
-    color: $cyan
+    background: linear-gradient(45deg, #6eb2f7 0%, #7de3f9 30%, #88f5bf 100%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
 
   .left p
-    color: #41C7D8
+    background: linear-gradient(45deg, #3c98f4 0%, #7de3f9 100%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
