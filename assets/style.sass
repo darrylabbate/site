@@ -2,15 +2,16 @@
 ---
 
 // Fonts
-@import url(https://fonts.googleapis.com/css?family=Orbitron:700|Source+Code+Pro|Source+Sans+Pro)
+@import url(https://fonts.googleapis.com/css?family=Orbitron:700|Oswald:300,400|Source+Code+Pro|Source+Sans+Pro)
+$orbitron: 'Orbitron', sans-serif
+$oswald: 'Oswald', sans-serif
 $sourcecodepro: 'Source Code Pro', monospace
 $sourcesanspro: 'Source Sans Pro', sans-serif
-$orbitron: 'Orbitron', sans-serif
 
 // Colors
-$black: #444
+$black: #414141
 $darkblack: #212121
-$white: #fdfdfd
+$white: #f7f9fb
 $midwhite: #eee
 $darkwhite: #dfdfdf
 $cyan: #4CE7FE
@@ -43,7 +44,7 @@ a
     fill: $white
 
 p
-  font-size: 1.2em
+  font-size: 1em
   color: $black
   max-width: 80em
   
@@ -91,6 +92,7 @@ hr
 
 .content
   margin: 0 auto
+  padding-top: 2em
   min-width: 30em
   max-width: 40em
   width: 60%
@@ -111,12 +113,11 @@ hr
   margin: 0 auto
   height: 100%
   width: 100%
-  background: #333
+  background: $white
 
 .home
   display: block
   margin: 0 auto
-  height: 50px
   width: 0%
   cursor: auto
 
@@ -128,38 +129,26 @@ hr
 
   .name
     top: 35%
-    left: 60%
+    left: 50%
 
   .top p
     transform-origin: 50% 50%
     transform: rotate(180deg)
-    color: #ccc
-    font-size: 62px
+    color: #666
+    font-size: 90px
     font-weight: 700
     font-family: $orbitron
     float: left
-    height: 50px
-    width: 304px
-
-  .left p
-    transform-origin: 50% 50%
-    transform: rotate(-90deg)
-    color: #aaa
-    font-size: 62px
-    font-weight: 700
-    font-family: $orbitron
-    text-align: center
-    float: left
-    margin: 131px -122px
+    text-shadow: 3px 3px 5px #ccc
 
   .homelinks
     transform: rotate(180deg)
-    height: 315px
     float: left
-    font-family: $sourcesanspro
-    font-size: 2em
-    text-align: right
+    font-family: $oswald
+    font-size: 3em
+    text-align: left
     line-height: 1.2
+    margin: -100px -340px
 
     a
       background: none
@@ -167,8 +156,9 @@ hr
       padding: 0
 
       &:hover
-        color: $cyan
-
+        background: linear-gradient(90deg, #7de3f9 50%, #88f5bf 100%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
 
 .name
   position: absolute
@@ -178,9 +168,6 @@ hr
 .home .name
   &.top
     transform: rotate(210deg) skewX(-30deg) scaleY(0.864)
-
-  &.left
-    transform: rotate(90deg) skewX(-30deg) scaleY(0.864)
 
 // Post Styling
 
@@ -381,8 +368,8 @@ li.burger, nav
 .menuitem a
   color: transparent
   padding: 0 0
-  font-weight: 700
-  font-family: $orbitron
+  font-weight: 400
+  font-family: $oswald
 
 li
   &.menuitem a:hover
