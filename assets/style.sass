@@ -263,6 +263,7 @@ code
     font-family: $orbitron
     text-align: center
     float: left
+    transition: all 0.1s linear
 
   .face
     left: 40px
@@ -298,35 +299,41 @@ code
 *
   box-sizing: border-box
 
-.menu
-  display: block
-  list-style-type: none
-  margin-bottom: 18px
-  float: left
-
-  li, ul
-    list-style-type: none
-    margin-bottom: 18px
-    float: left
-
-  a
-    list-style-type: none
-    margin-bottom: 18px
-    float: left
-
-    svg
-      list-style-type: none
-      background: none
-
-  list-style-type: none
-  background: none
-
 .menuitem
   list-style-type: none
   position: relative
-  margin-bottom: 15px
-  margin-left: -35px
+  margin-left: -40px
   display: inline-block
+  
+  a
+    color: #666
+    position: relative
+    padding: 0
+    font-weight: 400
+    font-family: $oswald
+    transition: all 0.1s linear
+    line-height: 1.4
+    left: 0
+    top: 0
+
+    &:hover
+      padding: 0
+      left: 3px
+      top: 3px
+      position: relative
+      text-shadow: -3px -3px 5px #ccc
+
+      &.link1
+        color: #76F7D5
+
+      &.link2
+        color: #6EDEDD
+      
+      &.link3
+        color: #64C3E9
+
+      &.link4
+        color: #5AA7F4
 
 .burger
   a svg
@@ -344,12 +351,12 @@ li.burger, nav
 
 .submenu
   font-size: 2em
-  width: 200px
+  width: 150px
   list-style-type: none
   visibility: hidden
   opacity: 0
   position: relative
-  top: -75px
+  top: -85px
   left: 5px
   transform: translateY(-1em)
   z-index: -1
@@ -374,37 +381,8 @@ li.burger, nav
     transform: translateY(50px)
     transition-delay: 0s, 0s, 0.2s
 
-.menuitem a
-  color: transparent
-  padding: 0 0
-  font-weight: 400
-  font-family: $oswald
-
-li
-  &.menuitem a:hover
-    background: linear-gradient(90deg, #7de3f9 50%, #88f5bf 100%)
-    -webkit-background-clip: text
-    -webkit-text-fill-color: transparent
-
-  &.burger > a:hover svg
-    fill: url(#gradient)
-
-a:hover svg stop
-  &:first-child
-    stop-color: #6eb2f7
-
-  &:last-child
-    stop-color: #7de3f9
-
-li
-  &.about > a:hover svg
-    fill: url(#gradient1)
-
-  &.posts > a:hover svg
-    fill: url(#gradient2)
-
-  &.projects > a:hover svg
-    fill: url(#gradient3)
+li.burger > a:hover svg
+  fill: blue
 
 .cube:hover ~ .content
   opacity: 0.5
@@ -415,11 +393,10 @@ li
 
 .cube a:hover
   .top p
-    background: linear-gradient(45deg, #6eb2f7 0%, #7de3f9 30%, #88f5bf 100%)
-    -webkit-background-clip: text
-    -webkit-text-fill-color: transparent
+    color: blue
 
   .left p
-    background: linear-gradient(45deg, #3c98f4 0%, #7de3f9 100%)
-    -webkit-background-clip: text
-    -webkit-text-fill-color: transparent
+    color: blue
+  
+.cube a:hover > .burger > a svg
+  fill: red
