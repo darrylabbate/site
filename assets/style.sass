@@ -116,22 +116,21 @@ hr
   background: $white
 
 .home
+  transform: rotate(210deg) skewX(-30deg) scaleY(0.864)
   display: block
   margin: 0 auto
   width: 0%
   cursor: auto
+  top: 35%
+  left: 45%
+  position: absolute
+  transform-origin: 0 0
 
   p
     height: 100%
     margin: 0 auto
     padding-top: 0px
     float: left
-
-  .name
-    top: 35%
-    left: 50%
-
-  .top p
     transform-origin: 50% 50%
     transform: rotate(180deg)
     color: #666
@@ -148,26 +147,35 @@ hr
     font-size: 3em
     text-align: left
     line-height: 1.2
-    margin: -100px -340px
+    margin: -65px -340px
 
     a
       background: none
       color: #999
       padding: 0
+      position: relative
+      transition: all 0.1s linear  0s
+      left: 0
+      top: 0
 
       &:hover
-        background: linear-gradient(90deg, #7de3f9 50%, #88f5bf 100%)
-        -webkit-background-clip: text
-        -webkit-text-fill-color: transparent
+        padding: 0
+        left: -5px
+        top: -5px
+        position: relative
+        text-shadow: 5px 5px 8px #ccc
 
-.name
-  position: absolute
-  height: 50px
-  transform-origin: 0 0
+        &.link1
+          color: #76F7D5
 
-.home .name
-  &.top
-    transform: rotate(210deg) skewX(-30deg) scaleY(0.864)
+        &.link2
+          color: #6EDEDD
+        
+        &.link3
+          color: #64C3E9
+
+        &.link4
+          color: #5AA7F4
 
 // Post Styling
 
@@ -335,16 +343,6 @@ li.burger, nav
   overflow: visible
 
 .submenu
-  &:before
-    position: absolute
-    top: 0
-    right: -15px
-    bottom: -15px
-    left: -15px
-    z-index: -1
-    display: block
-    content: ''
-
   font-size: 2em
   width: 200px
   list-style-type: none
@@ -356,6 +354,17 @@ li.burger, nav
   transform: translateY(-1em)
   z-index: -1
   transition: all 0.1s linear 0s, visibility 0s linear 0.1s, z-index 0s linear 0.01s
+
+  &:before
+    position: absolute
+    top: 0
+    right: -15px
+    bottom: -15px
+    left: -15px
+    z-index: -1
+    display: block
+    content: ''
+
 
 .burger
   &:focus .submenu, &:focus-within .submenu, &:hover .submenu
