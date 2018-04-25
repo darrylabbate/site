@@ -9,13 +9,12 @@ $sourcecodepro: 'Source Code Pro', monospace
 $sourcesanspro: 'Source Sans Pro', sans-serif
 
 // Colors
-$black: #414141
+$black: #4d4d4d
 $darkblack: #212121
 $white: #f7f9fb
 $midwhite: #eee
 $darkwhite: #dfdfdf
 $cyan: #4CE7FE
-$link: #66A5E6
 
 body
   background: $white
@@ -122,7 +121,7 @@ hr
   width: 0%
   cursor: auto
   top: 35%
-  left: 45%
+  left: 50%
   position: absolute
   transform-origin: 0 0
 
@@ -132,13 +131,12 @@ hr
     padding-top: 0px
     float: left
     transform-origin: 50% 50%
-    transform: rotate(180deg)
-    color: #666
-    font-size: 90px
+    transform: rotate(90deg)
+    color: $black
+    font-size: 130px
     font-weight: 700
     font-family: $orbitron
-    float: left
-    text-shadow: 3px 3px 5px #ccc
+    // text-shadow: 3px 3px 5px #ccc
 
   .homelinks
     transform: rotate(180deg)
@@ -147,7 +145,7 @@ hr
     font-size: 3em
     text-align: left
     line-height: 1.2
-    margin: -65px -340px
+    margin: -45px -325px
 
     a
       background: none
@@ -164,18 +162,7 @@ hr
         top: -5px
         position: relative
         text-shadow: 5px 5px 8px #ccc
-
-        &.link1
-          color: #76F7D5
-
-        &.link2
-          color: #6EDEDD
-        
-        &.link3
-          color: #64C3E9
-
-        &.link4
-          color: #5AA7F4
+        color: $black
 
 // Post Styling
 
@@ -306,7 +293,7 @@ code
   display: inline-block
   
   a
-    color: #666
+    color: #999
     position: relative
     padding: 0
     font-weight: 400
@@ -321,25 +308,15 @@ code
       left: 3px
       top: 3px
       position: relative
-      text-shadow: -3px -3px 5px #ccc
-
-      &.link1
-        color: #76F7D5
-
-      &.link2
-        color: #6EDEDD
-      
-      &.link3
-        color: #64C3E9
-
-      &.link4
-        color: #5AA7F4
+      text-shadow: -3px -3px 7px #ccc
+      color: $black
 
 .burger
   a svg
     fill: #777
     transform: scaleY(1.25)
     left: -1px
+    transition: all 0.1s linear
 
   svg
     list-style-type: none
@@ -360,7 +337,7 @@ li.burger, nav
   left: 5px
   transform: translateY(-1em)
   z-index: -1
-  transition: all 0.1s linear 0s, visibility 0s linear 0.1s, z-index 0s linear 0.01s
+  transition: all 0.1s linear 0s, visibility 0.1s linear 0.1s, z-index 0s linear 0.01s
 
   &:before
     position: absolute
@@ -382,14 +359,11 @@ li.burger, nav
     transition-delay: 0s, 0s, 0.2s
 
 li.burger > a:hover svg
-  fill: blue
+  fill: $black
 
 .cube a:hover
   .top p
-    color: blue
+    color: #6d6d6d
 
   .left p
-    color: blue
-  
-.cube a:hover > .burger > a svg
-  fill: red
+    color: $black
