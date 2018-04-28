@@ -2,13 +2,15 @@
 <html>
 	<head>
 		{% include head.html %}
+		{% include copylink.html %}
+		<span id="permalink">https://darryl.sh{{page.url}}</span>
 	</head>
 	<body>
 		{% include nav.html %}
 		<div class="content">
 			<h1>{{ page.title }}</h1>
 			<div class="postinfobox">
-				<span class="postinfo">By Darryl Abbate</span><br><span class="postinfo">{{ page.date }}</span><br><a class="postinfo" href="https://darryl.sh{{ page.url }}">{% octicon link height:18 %} darryl.sh{{page.url}}</a>
+				<span class="postinfo">By Darryl Abbate</span><br><span class="postinfo">{{ page.date }}</span><br><button class="linkbutton" type="button" onclick="copyToClipboard('#permalink')">{% octicon link height:18 %} <span>darryl.sh{{page.url}}</span></button>
 		</div>
 			{{ content }}
 		</div>
