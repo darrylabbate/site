@@ -120,60 +120,51 @@ hr
 
 // Home Page
 
-.homepage
+.home
+  display: block
+  margin: 10% auto
   position: fixed
-  margin: 0 auto
   height: 100%
   width: 100%
-  background: $white
+  top: 0
+  left: 0
 
-.home
-  transform: rotate(-30deg) skewX(30deg) scaleY(0.864)
-  display: block
-  margin: 0 auto
-  width: 0%
-  cursor: auto
-  top: 50%
-  left: 35%
-  position: absolute
-  transform-origin: 0 0
+  svg
+    width: 550px
+    height: 550px
 
-  p
-    height: 100%
-    margin: 0 auto
-    padding-top: 0px
-    float: left
-    transform-origin: 50% 50%
-    color: $black
-    font-size: 130px
-    font-weight: 700
-    font-family: $orbitron
+.linkface
+  position: relative
+  width: intrinsic
+  margin-top: -375px
+  margin-left: 150px
 
-  .homelinks
-    transform: rotate(90deg)
-    float: left
-    font-family: $oswald
-    font-size: 3em
-    text-align: left
-    line-height: 1.2
-    margin: -45px 20px
+ul.homelinks
+  list-style-type: none
+  transform: rotate(-30deg) skewX(-30deg) scaleY(0.864)
+  float: left
+  font-family: $oswald
+  font-size: 3em
+  text-align: left
+  line-height: 1.2
+  position: relative
 
-    a
-      background: none
-      color: #999
+  a
+    background: none
+    color: #999
+    padding: 0
+    position: relative
+    transition: all 0.1s linear  0s
+    left: 0
+    top: 0
+
+    &:hover
       padding: 0
+      left: 5px
+      top: 5px
       position: relative
-      transition: all 0.1s linear  0s
-      left: 0
-      top: 0
-
-      &:hover
-        padding: 0
-        left: -5px
-        top: -5px
-        position: relative
-        text-shadow: 5px 5px 8px #ccc
-        color: $black
+      text-shadow: -5px -5px 8px #ccc
+      color: $black
 
 // Post Styling
 
