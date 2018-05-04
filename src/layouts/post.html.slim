@@ -1,0 +1,26 @@
+| <!doctype>
+html
+  head
+    == partial 'head'
+	== partial 'copylink'
+  span#permalink
+    | https://darryl.sh{{page.url}}
+  body
+    == partial 'nav'
+    .content
+      h1
+        == current_page.data.title
+      .postinfobox
+        span.postinfo
+          | By Darryl Abbate
+        br
+        span.postinfo
+          == current_page.data.date
+        br
+        button.linkbutton[type="button" onclick="copyToClipboard('#permalink')"]
+          <!-- | {% octicon link height:18 %} -->
+          span
+            | darryl.sh
+            == current_page.data.permalink
+		== yield
+  == partial 'footer'
