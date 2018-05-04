@@ -1,11 +1,13 @@
+activate :livereload
+
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
+  prefix.inline = true
 end
 
-activate :livereload
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
@@ -41,7 +43,21 @@ page '/*.txt', layout: false
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
-# configure :build do
-#   activate :minify_css
-#   activate :minify_javascript
-# end
+configure :build do
+  activate :minify_css
+  activate :minify_html
+  activate :minify_javascript
+end
+
+set :markdown_engine, :redcarpet
+set :markdown, fenced_code_blocks: true
+
+configure :markdown do
+  activate :syntax
+end
+
+# set :css_dir, 'assets'
+set :sass_dir, 'stylesheets'
+set :source, 'src'
+
+Haml::TempleEngine.disable_option_validator!
