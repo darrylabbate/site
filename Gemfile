@@ -1,12 +1,8 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem "jekyll", "~> 3.7.3"
-group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.6"
-end
-gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem "wdm", "~> 0.1.0" if Gem.win_platform?
+gem 'middleman', '~> 4.2'
+gem 'middleman-autoprefixer', '~> 2.7'
+gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
+gem 'wdm', '~> 0.1', platforms: [:mswin, :mingw]
 
-gem "jekyll-octicons"
-gem "redcarpet"
-gem "jekyll-autoprefixer"
+gem 'middleman-livereload'
