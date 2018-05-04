@@ -1,9 +1,11 @@
-activate :livereload
+# Activate and configure extensions
+# https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
 require 'slim'
 
-# Activate and configure extensions
-# https://middlemanapp.com/advanced/configuration/#configuring-extensions
+activate :livereload
+
+set :livereload_css_target, 'css/style.css'
 
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
@@ -66,6 +68,5 @@ configure :markdown do
   activate :syntax
 end
 
-# set :css_dir, 'assets'
-# set :sass_dir, 'stylesheets'
+set :css_dir, 'css'
 set :source, 'src'
