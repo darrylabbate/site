@@ -1,5 +1,7 @@
 activate :livereload
 
+require 'slim'
+
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
@@ -7,6 +9,14 @@ activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
   prefix.inline = true
 end
+
+activate :blog do |blog|
+  blog.layout = "post"
+  blog.permalink = "{permalink}"
+  blog.sources = "posts/{year}-{month}-{day}-{title}.html"
+end
+
+activate :directory_indexes
 
 # Layouts
 # https://middlemanapp.com/basics/layouts/
@@ -57,7 +67,5 @@ configure :markdown do
 end
 
 # set :css_dir, 'assets'
-set :sass_dir, 'stylesheets'
+# set :sass_dir, 'stylesheets'
 set :source, 'src'
-
-Haml::TempleEngine.disable_option_validator!
