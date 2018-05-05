@@ -1,10 +1,11 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem "jekyll", "~> 3.7.3"
-group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.6"
-end
+gem 'middleman', '~> 4.2'
+gem 'middleman-autoprefixer', '~> 2.7'
+gem 'middleman-livereload'
+gem 'middleman-blog', '~> 4.0'
 
-gem "jekyll-octicons"
-gem "redcarpet"
-gem "jekyll-autoprefixer"
+gem 'middleman-minify-html'
+
+gem 'slim'
+gem 'redcarpet'
