@@ -1,13 +1,13 @@
 | <!doctype>
 html
   head
-    == partial 'head'
-	== partial 'copylink'
+    == partial 'partials/head'
+	== partial 'partials/copylink'
   span#permalink
     | https://darryl.sh
     == current_page.data.permalink
   body
-    == partial 'nav'
+    == partial 'partials/nav'
     .content
       h1
         == current_page.data.title
@@ -26,4 +26,4 @@ html
             == current_page.data.permalink
       == yield
       .EOF
-  == partial 'footer'
+  == partial 'partials/footer'
