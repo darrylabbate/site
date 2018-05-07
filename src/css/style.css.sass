@@ -1,1 +1,383 @@
-@import '../sass/style.sass'
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Orbitron:700|Oswald:300,400|Source+Code+Pro|Source+Sans+Pro)
+$orbitron: 'Orbitron', sans-serif
+$oswald: 'Oswald', sans-serif
+$sourcecodepro: 'Source Code Pro', monospace
+$sourcesanspro: 'Source Sans Pro', sans-serif
+
+// Colors
+$black: #4d4d4d
+$darkblack: #212121
+$white: #fbf9f7
+$midwhite: #eee
+$darkwhite: #dfdfdf
+$cyan: #4CE7FE
+
+body
+  background: $white
+  font-family: $sourcesanspro
+  font-weight: 400
+  color: $black
+  margin: 0 auto
+
+a
+  text-decoration: none
+  color: $black
+  background: $darkwhite
+  padding: 0 0.3em
+  border-radius: 0.2em
+  transition: all 0.05s linear 0s
+
+  &:hover
+    background: $black
+    color: $white
+
+  svg
+    fill: $black
+    vertical-align: middle
+    padding-bottom: 2px
+    transition: all 0.05s linear 0s
+
+  &:hover svg
+    fill: $white
+
+p
+  font-size: 1em
+  color: $black
+  max-width: 80em
+  
+  code
+    color: $black
+    background: $midwhite
+    padding: 0 0.3em
+    border-radius: 0.2em
+
+  &>a>code
+    padding: 0
+    background: none
+
+  &>a:hover code
+    color: $white
+
+h1
+  color: $black
+  font-size: 2.5em
+  font-weight: 400
+  padding-top: 10px
+
+h2
+  color: $black
+  font-size: 1.75em
+  margin-top: 1.75em
+  line-height: 1.2
+  font-weight: 400
+  border-bottom: 2px dashed $black
+
+h3
+  color: $black
+  font-size: 1.5em
+  font-weight: 400
+
+hr
+  border: 0
+  border-top: 2px dashed $black
+
+.announcement
+  background: $midwhite
+  border-radius: 3px
+  border: dashed 3px $black
+  padding: 10px
+  text-align: center
+
+.content
+  margin: 0 auto
+  min-width: 30em
+  max-width: 40em
+  width: 60%
+  text-align: left
+  line-height: 1.4
+
+.EOF
+  text-align: center
+  padding: 2em 0
+  font-family: $sourcecodepro
+  color: $darkwhite
+
+  svg
+    fill: $darkwhite
+
+  &::before
+    content: '$'
+
+.footer
+  text-align: right
+  font-family: $sourcesanspro
+  font-size: 0.8em
+  padding: 2em
+
+// Home Page
+
+.home
+  display: block
+  margin: 5% auto
+  position: fixed
+  height: 100%
+  width: 100%
+  top: 0
+  left: 0
+
+  svg
+    width: 550px
+    height: 550px
+
+.linkface
+  position: relative
+  width: 210px
+  margin-top: -365px
+  margin-left: 140px
+
+ul.homelinks
+  list-style-type: none
+  transform: rotate(-30deg) skewX(-30deg) scaleY(0.864)
+  font-family: $oswald
+  font-size: 55px
+  text-align: left
+  line-height: 1.1
+  position: relative
+
+  a
+    background: none
+    color: #999
+    padding: 0
+    position: relative
+    transition: all 0.1s linear  0s
+    left: 0
+    top: 0
+
+    &:hover
+      padding: 0
+      left: 5px
+      top: 5px
+      position: relative
+      text-shadow: -5px -5px 8px #ccc
+      color: $black
+
+// Post Styling
+
+#permalink
+  display: none
+
+.postinfobox
+  padding-bottom: 1em
+
+.postinfo
+  font-size: 0.8em
+  font-family: $sourcecodepro
+
+.linkbutton
+  border: none
+  font-size: 0.8em
+  font-family: $sourcecodepro
+  padding: 0.1em 0.2em
+  border-radius: 0.2em
+  cursor: pointer
+  color: $black
+  background: $darkwhite
+  display: inline-block
+  transition: all 0.05s linear 0s
+
+  svg
+    fill: $black
+    vertical-align: middle
+    padding-bottom: 0.2em
+    transition: all 0.05s linear 0s
+
+  &:hover
+    background: $black
+    color: $white
+
+  &:hover svg
+    fill: $white
+
+.highlight
+  pre
+    border-radius: 0.3em
+
+    code
+      font-family: $sourcecodepro
+      font-size: 1em
+
+pre
+  display: block
+  white-space: pre
+  padding: 0.5em
+  border-radius: 0.5em
+  background: $black
+  font-family: $sourcecodepro
+  overflow: hidden
+  overflow-x: scroll
+
+  code
+    overflow: hidden
+    overflow-x: scroll
+    color: $white
+
+pre > code.bash::before
+  content: '$ '
+
+  a
+    color: $black
+    background: $darkwhite
+    padding: 0 0.3em
+    border-radius: 0.2em
+
+code
+  font-family: $sourcecodepro
+  font-size: 0.9em
+
+  a
+    color: $black
+    background: $darkwhite
+    padding: 0 0.3em
+    border-radius: 0.2em
+
+.nv
+  color: $darkwhite
+
+// Desktop navigation
+
+.cube
+  position: fixed
+  display: block
+  margin: 30px 30px
+  width: 60px
+  height: 60px
+  cursor: auto
+  list-style-type: none
+
+  a, &:hover a svg
+    background: none
+
+  p
+    height: 100%
+    margin: 0 auto
+    padding-top: 0px
+    font-size: 62px
+    font-weight: 700
+    font-family: $orbitron
+    text-align: center
+    float: left
+    transition: all 0.1s linear
+
+  .face
+    left: 40px
+    top: 40px
+
+  .top p
+    transform-origin: 50% 50%
+    transform: rotate(180deg)
+    color: #888
+    margin-left: -2px
+
+  .left p
+    transform-origin: 50% 50%
+    transform: rotate(-90deg)
+    color: #666
+
+.face
+  position: absolute
+  height: 50px
+  width: 50px
+  transform-origin: 0 0
+
+.cube .face
+  &.top
+    transform: rotate(210deg) skewX(-30deg) scaleY(0.864)
+
+  &.left
+    transform: rotate(90deg) skewX(-30deg) scaleY(0.864)
+
+  &.right
+    transform: rotate(-30deg) skewX(-30deg) scaleY(0.864)
+
+*
+  box-sizing: border-box
+
+.menuitem
+  list-style-type: none
+  position: relative
+  margin-left: -40px
+  
+  a
+    color: #999
+    position: relative
+    padding: 0
+    font-weight: 400
+    font-family: $oswald
+    transition: all 0.1s linear
+    line-height: 1.4
+    left: 0
+    top: 0
+
+    &:hover
+      padding: 0
+      left: 3px
+      top: 3px
+      position: relative
+      text-shadow: -3px -3px 7px #ccc
+      color: $black
+
+.burger
+  a svg
+    fill: #777
+    transform: scaleY(1.25)
+    left: -1px
+    transition: all 0.1s linear
+
+  svg
+    list-style-type: none
+    position: relative
+
+  &:focus .submenu, &:focus-within .submenu, &:hover .submenu
+    visibility: visible
+    opacity: 1
+    z-index: 1
+    transform: translateY(50px)
+    transition-delay: 0s, 0s, 0.2s
+
+li.burger, nav
+  height: 50px
+  overflow: visible
+
+.submenu
+  font-size: 2em
+  width: 150px
+  list-style-type: none
+  visibility: hidden
+  opacity: 0
+  position: relative
+  top: -85px
+  left: 5px
+  transform: translateY(-1em)
+  z-index: -1
+  transition: all 0.1s linear 0.1s, visibility 0.1s linear 0.1s, z-index 0s linear 0.01s
+
+  &:before
+    position: absolute
+    top: 0
+    right: -15px
+    bottom: -15px
+    left: -15px
+    z-index: -1
+    display: block
+    content: ''
+
+li.burger > a:hover svg
+  fill: $black
+
+.cube a:hover
+  .top p
+    color: #6d6d6d
+
+  .left p
+    color: $black
