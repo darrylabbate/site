@@ -3,7 +3,24 @@ layout: page
 title: Coming Soon
 ---
 
-br
-br
-.announcement
-  | This page is currently unavailable. Thanks for looking and check back soon!
+/ br
+/ br
+/ .announcement
+/   | This page is currently unavailable. Thanks for looking and check back soon!
+/ br
+/ br
+.snippetsheader
+  | POSTS
+.snippets
+  - blog.articles.each do |article|
+    = link_to article.url
+      .snippetcard
+        .snippettitle
+          = article.data.category
+        .snippetcode
+          = article.summary
+  .snippetcard
+    .snippettitle
+      | test
+    .snippetcode
+      | test
