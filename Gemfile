@@ -9,3 +9,4 @@ gem 'middleman-minify-html'
 
 gem 'slim'
 gem 'redcarpet'
+gem 'nokogiri'
