@@ -4,7 +4,7 @@ title: "Ipsum Lorem: a How-To"
 permalink: /ipsum-lorem
 date: 2018/04/29
 tags: ipsum, lorem
-category: ARTICLE
+category: article
 ---
 
 Lorem markdownum puero sortis utque. Admovit ait matri ira advena imbrem

@@ -4,7 +4,7 @@ title: Bash Function to Check a Cryptocurrency's Price
 permalink: /crypto-price-bash-function
 date: 2018/05/17
 tags: bash, cryptocurrency
-category: CODE SNIPPET
+category: code snippet
 ---
 
 
