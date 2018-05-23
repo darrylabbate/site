@@ -1,0 +1,138 @@
+// Desktop navigation
+
+.cube
+  position: fixed
+  display: block
+  margin: 30px 30px
+  width: 60px
+  height: 60px
+  cursor: auto
+  list-style-type: none
+  text-transform: uppercase
+
+  a, &:hover a svg
+    background: none
+
+  p
+    height: 100%
+    margin: 0 auto
+    padding-top: 0px
+    font-size: 62px
+    font-weight: 700
+    font-family: $orbitron
+    text-align: center
+    float: left
+    transition: all 0.1s linear
+
+  .face
+    left: 40px
+    top: 40px
+
+  .top p
+    transform-origin: 50% 50%
+    transform: rotate(180deg)
+    color: #666
+    margin-left: -2px
+
+  .left p
+    transform-origin: 50% 50%
+    transform: rotate(-90deg)
+    color: #666
+
+.face
+  position: absolute
+  height: 50px
+  width: 50px
+  transform-origin: 0 0
+
+.cube .face
+  &.top
+    transform: rotate(210deg) skewX(-30deg) scaleY(0.864)
+
+  &.left
+    transform: rotate(90deg) skewX(-30deg) scaleY(0.864)
+
+  &.right
+    transform: rotate(-30deg) skewX(-30deg) scaleY(0.864)
+
+*
+  box-sizing: border-box
+
+.menuitem
+  list-style-type: none
+  position: relative
+  margin-left: -40px
+  
+  a
+    color: #999
+    position: relative
+    padding: 0
+    font-weight: 400
+    font-family: $oswald
+    transition: all 0.1s linear
+    line-height: 1.4
+    left: 0
+    top: 0
+
+    &:hover
+      padding: 0
+      left: 3px
+      top: 3px
+      position: relative
+      text-shadow: -3px -3px 7px #ccc
+      color: $black
+
+.burger
+  a svg
+    fill: #666
+    transform: scaleY(1.25)
+    left: -1px
+    transition: all 0.1s linear
+
+  svg
+    list-style-type: none
+    position: relative
+
+  &:focus .submenu, &:focus-within .submenu, &:hover .submenu
+    visibility: visible
+    opacity: 1
+    z-index: 1
+    transform: translateY(50px)
+    transition-delay: 0s, 0s, 0.2s
+
+li.burger, nav
+  height: 50px
+  overflow: visible
+
+.submenu
+  font-size: 2em
+  width: 150px
+  list-style-type: none
+  visibility: hidden
+  opacity: 0
+  position: relative
+  top: -85px
+  left: 5px
+  transform: translateY(-1em)
+  z-index: -1
+  transition: all 0.1s linear 0.1s, visibility 0.1s linear 0.1s, z-index 0s linear 0.01s
+
+  &:before
+    position: absolute
+    top: 0
+    right: -15px
+    bottom: -15px
+    left: -15px
+    z-index: -1
+    display: block
+    content: ''
+
+li.burger > a:hover svg
+  fill: $black
+
+.cube a:hover
+  .top p
+    color: $black
+
+  .left p
+    color: $black

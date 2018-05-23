@@ -1,0 +1,81 @@
+// Post Styling
+
+#permalink
+  display: none
+
+.postinfobox
+  padding-bottom: 1em
+
+.postinfo
+  font-size: 0.8em
+  font-family: $sourcecodepro
+
+.linkbutton
+  border: none
+  font-size: 0.8em
+  font-family: $sourcecodepro
+  padding: 0.1em 0.2em
+  border-radius: 0.2em
+  cursor: pointer
+  color: $black
+  background: $darkwhite
+  display: inline-block
+  transition: all 0.05s linear 0s
+
+  svg
+    fill: $black
+    vertical-align: middle
+    padding-bottom: 0.2em
+    transition: all 0.05s linear 0s
+
+  &:hover
+    background: $black
+    color: $white
+
+  &:hover svg
+    fill: $white
+
+.highlight
+  pre
+    border-radius: 0.3em
+
+    code
+      font-family: $sourcecodepro
+      font-size: 1em
+
+pre
+  display: block
+  white-space: pre
+  padding: 0.5em
+  border-radius: 0.3em
+  background: $black
+  font-family: $sourcecodepro
+  overflow: hidden
+  overflow-x: scroll
+
+  code
+    overflow: hidden
+    overflow-x: scroll
+    color: $white
+
+pre > code.bash::before
+  content: '$ '
+
+  a
+    color: $black
+    background: $darkwhite
+    padding: 0 0.3em
+    border-radius: 0.2em
+
+code
+  font-family: $sourcecodepro
+  font-size: 0.9em
+
+  a
+    color: $black
+    background: $darkwhite
+    padding: 0 0.3em
+    border-radius: 0.2em
+
+.nv
+  color: $darkwhite
