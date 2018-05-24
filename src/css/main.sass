@@ -1,0 +1,103 @@
+// Main
+
+body
+  background: $white
+  font-family: $sourcesanspro
+  font-weight: 400
+  color: $black
+  margin: 0 auto
+
+a
+  text-decoration: none
+  color: $black
+  background: $darkwhite
+  padding: 0 0.3em
+  border-radius: 0.2em
+  transition: all 0.05s linear 0s
+
+  &:hover
+    background: $black
+    color: $white
+
+  svg
+    fill: $black
+    vertical-align: middle
+    padding-bottom: 2px
+    transition: all 0.05s linear 0s
+
+  &:hover svg
+    fill: $white
+
+p
+  font-size: 1em
+  color: $black
+  max-width: 80em
+  
+  code
+    color: $black
+    background: $midwhite
+    padding: 0 0.3em
+    border-radius: 0.2em
+
+  &>a>code
+    padding: 0
+    background: none
+
+  &>a:hover code
+    color: $white
+
+h1
+  color: $black
+  font-size: 2.5em
+  font-weight: 400
+  padding-top: 10px
+
+h2
+  color: $black
+  font-size: 1.75em
+  margin-top: 1.75em
+  line-height: 1.2
+  font-weight: 400
+  border-bottom: 2px dashed $black
+
+h3
+  color: $black
+  font-size: 1.5em
+  font-weight: 400
+
+hr
+  border: 0
+  border-top: 2px dashed $black
+
+.announcement
+  background: $midwhite
+  border-radius: 3px
+  border: dashed 3px $black
+  padding: 10px
+  text-align: center
+
+.content
+  margin: 0 auto
+  min-width: 30em
+  max-width: 40em
+  width: 60%
+  text-align: left
+  line-height: 1.4
+
+.EOF
+  text-align: center
+  padding: 2em 0
+  font-family: $sourcecodepro
+  color: $darkwhite
+
+  svg
+    fill: $darkwhite
+
+  &::before
+    content: 'ϟ'
+
+.footer
+  text-align: right
+  font-family: $sourcesanspro
+  font-size: 0.8em
+  padding: 2em
