@@ -41,7 +41,7 @@ When we echo the `$name` variable, it will parse the full name of the cryptocurr
 ```
 price=$(echo $url | printf "%.2f\n" $(jq '.price_usd'))
 ```
-This is similar to the name request, however, this nests the `jq` command inside a `printf` function. This truncates the price to two decimal places.
+This is similar to the name request. However, this nests the `jq` command inside a `printf` function, which truncates the price to two decimal places.
 
 ```
 echo $name" (${1^^}) \$"$price
