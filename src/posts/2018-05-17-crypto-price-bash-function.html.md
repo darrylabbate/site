@@ -11,10 +11,10 @@ category: code snippet
 
 ```
 function coin () {
-	url=$(curl -s http://coincap.io/page/${1^^})
-	name=$(echo $url | jq -cr '.display_name')
-	price=$(echo $url | printf "%.2f\n" $(jq '.price_usd'))
-	echo $name" (${1^^}) \$"$price
+  url=$(curl -s http://coincap.io/page/${1^^})
+  name=$(echo $url | jq -cr '.display_name')
+  price=$(echo $url | printf "%.2f\n" $(jq '.price_usd'))
+  echo $name" (${1^^}) \$"$price
 }
 ```
 
