@@ -1,11 +1,13 @@
 
-━━━ Darryl Abbate ━━━━━━━━━━━━━━━━━━━━━━
 
-Placeholder text.
-
-The purpose of this file is to return a simplified 
-plain-text file for my personal site. This is for users
-who try to access the site via curl or wget. The purpose
-is not to block users, but to serve a version appropriate
-for a terminal window.
+                                    Darryl Abbate
+/\\\\\\\\\\\    /\\\\\\\\\\
+\/\\\//////\\\  /\\\//////\\\       https://darryl.sh
+ \/\\\    \/\\\ \/\\\    \/\\\      https://github.com
+  \/\\\    \/\\\ \/\\\\\\\\\\\\
+   \/\\\    \/\\\ \/\\\//////\\\    ━ PGP Key ━━━━━━━━━━━━━━━━━━━━
+    \/\\\\\\\\\\/  \/\\\    \/\\\     curl darryl.sh/pgp
+     \//////////    \///     \///
+                                    ━ Install dotfiles ━━━━━━━━━━━
+                                      curl get.darryl.sh | sh
 
