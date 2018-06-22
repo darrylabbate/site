@@ -1,42 +1,38 @@
 // Main
 
 body
-  background: $white
-  font-family: $sourcesanspro
+  background: $black
+  font-family: $monda
   font-weight: 400
   font-size: 16px
-  color: $black
+  color: $white
   margin: 0 auto
 
 a
   text-decoration: none
-  color: $black
-  background: $darkwhite
-  padding: 0 0.3em
-  border-radius: 0.2em
+  color: $darkcyan
   transition: all 0.05s linear 0s
 
   &:hover
-    background: $black
-    color: $white
+    color: $cyan
 
   svg
-    fill: $black
+    fill: $white
     vertical-align: middle
     padding-bottom: 2px
     transition: all 0.05s linear 0s
 
   &:hover svg
-    fill: $white
+    fill: $black
 
 p
-  font-size: 1em
-  color: $black
-  max-width: 80em
+  font-size: 1.25em
+  color: $white
+  max-width: 100em
   
   code
-    color: $black
-    background: $midwhite
+    color: $white
+    background: $midblack
     padding: 0 0.3em
     border-radius: 0.2em
 
@@ -45,37 +41,38 @@ p
     background: none
 
   &>a:hover code
-    color: $white
+    color: $black
 
 h1
-  color: $black
+  color: $cyan
+  font-family: $monda
   font-size: 2.5em
   font-weight: 400
-  line-height: 1.25em
+  line-height: 1.2em
 
 h2
-  color: $black
-  font-size: 1.75em
+  color: $cyan
+  font-family: $monda
+  font-size: 1.5em
   margin-top: 1.75em
-  line-height: 2em
+  line-height: 1.25em
   font-weight: 400
-  border-bottom: 2px dashed #666
 
 h3
-  color: $black
-  font-size: 1.5em
+  color: $white
+  font-family: $monda
+  font-size: 1.2em
   font-weight: 400
-  line-height: 2em
-  border-bottom: 1px dashed #666
+  line-height: 1em
 
 hr
   border: 0
-  border-top: 2px dashed $black
+  border-top: 2px dashed $white
 
 .announcement
-  background: $midwhite
+  background: $midblack
   border-radius: 3px
-  border-left: solid 4px #888
+  border-left: solid 4px $darkwhite
   padding: 1em
   text-align: left
   box-shadow: 0 4px 8px 0 rgba(0,0,0,.12),0 2px 8px 0 rgba(0,0,0,.08)
@@ -93,16 +90,16 @@ hr
   text-align: center
   padding: 2em 0
   font-family: $sourcecodepro
-  color: $darkwhite
+  color: $darkblack
 
   svg
-    fill: $darkwhite
+    fill: $darkblack
 
   &::before
     content: 'ϟ'
 
 .footer
   text-align: right
-  font-family: $sourcesanspro
+  font-family: $sourcecodepro
   font-size: 0.8em
   padding: 2em
