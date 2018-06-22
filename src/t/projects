@@ -1,0 +1,13 @@
+
+━━━ Projects ━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+    dotfiles
+    macOS settings and configurations managed with git for 
+    easy deployment and synchronization across machines.
+    https://github.com/rootbeersoup/dotfiles
+
+    get.darryl.sh
+    Completely effortless installation of dotfiles with a 
+    single curl command.
+    https://github.com/rootbeersoup/get.darryl.sh
+

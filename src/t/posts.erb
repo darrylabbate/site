@@ -1,0 +1,8 @@
+
+━━━ Latest Articles ━━━━━━━━━━━━━━━━━━━━
+
+<% blog.articles[0...5].each do |article| %>
+    <%= article.title %>
+    <%= article.data.date %> https://darryl.sh<%= article.data.permalink %>
+
+<% end %>
