@@ -6,6 +6,7 @@ gem 'middleman-livereload'
 gem 'middleman-blog', '~> 4.0'
 
 gem 'middleman-minify-html'
+gem 'middleman-syntax'
 
 gem 'slim'
 gem 'redcarpet'
