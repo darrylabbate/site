@@ -1,0 +1,24 @@
+# This is just for personal refernce. Nginx won't actually read from this file.
+
+server {
+  if ($http_user_agent ~* curl) {
+    rewrite /$ /t/index last;
+    rewrite /keybase.txt$ /keybase.txt last;
+    rewrite /pgp$ /pgp last;
+    rewrite ^(.*)$ /t/$1;
+  }
+
+  index index index.html;
+
+  location / {
+    location ~pgp {
+      add_header Content-Type text/plain;
+    }
+  }
+
+  location /txt/ {
+    location ~* {
+      add_header Content-Type text/plain;
+    }
+  }
+}
