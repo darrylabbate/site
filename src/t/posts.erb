@@ -1,8 +1,8 @@
 
-━━━ [1mLatest Articles[0m ━━━━━━━━━━━━━━━━━━━━
+━━━ <%= "\e[1mLatest Articles\e[0m" %> ━━━━━━━━━━━━━━━━━━━━
 
 <% blog.articles[0...5].each do |article| %>
-    [1m<%= article.title %>[0m
+    <%= "\e[1m" %><%= article.title %><%= "\e[0m" %>
     <%= article.data.date %> by Darryl Abbate 
     https://darryl.sh<%= article.data.permalink %>
 
