@@ -30,3 +30,7 @@ Along with the typical browser view, there is also a minisite which can be acces
 
 ### Make One Yourself!
 I'll have a blog post soon with a tutorial on how to implement something like this on your own site (using Nginx).
+
+## To-Do
+* Flesh out content
+* Dark/light theme switcher
