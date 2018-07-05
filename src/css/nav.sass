@@ -31,14 +31,14 @@
   .top p
     transform-origin: 50% 50%
     transform: rotate(180deg)
-    color: $darkwhite
+    color: $midblack
     margin-left: -2px
     margin-top: 1px
 
   .left p
     transform-origin: 50% 50%
     transform: rotate(-90deg)
-    color: $darkwhite
+    color: $midblack
 
 .face
   position: absolute
@@ -79,12 +79,12 @@
       left: 3px
       top: 3px
       position: relative
-      text-shadow: -3px -3px 7px rgba(0, 0, 0, 0.6)
-      color: $color
+      text-shadow: -3px -3px 7px rgba(0, 0, 0, 0.3)
+      color: $black
 
 .burger
   a svg
-    fill: $darkwhite
+    fill: $midblack
     transform: scaleY(1.25)
     left: 4px
     transition: all 0.1s linear
@@ -129,11 +129,11 @@ li.burger, nav
     content: ''
 
 li.burger > a:hover svg
-  fill: $white
+  fill: $black
 
 .cube a:hover
   .top p
-    color: $white
+    color: $black
 
   .left p
-    color: $white
+    color: $black

@@ -17,19 +17,23 @@
   padding: 0.1em 0.2em
   border-radius: 0.2em
   cursor: pointer
-  color: $white
-  background: $darkblack
+  color: $black
+  background: $darkwhite
   display: inline-block
   transition: all 0.1s linear 0s
 
   svg
-    fill: $white
+    fill: $black
     vertical-align: middle
     padding-bottom: 0.2em
     transition: all 0.1s linear 0s
 
   &:hover
-    background: $lightblack
+    background: $black
+    color: $white
+
+    svg
+      fill: $white
 
 .highlight
   pre
@@ -41,11 +45,11 @@
 
 pre
   display: block
-  black-space: pre
+  white-space: pre
   padding: 0.5em
   border-radius: 0.3em
-  background: $darkblack
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,.12),0 2px 8px 0 rgba(0,0,0,.08)
+  background: $black
+  // box-shadow: 0 4px 8px 0 rgba(0,0,0,.12),0 2px 8px 0 rgba(0,0,0,.08)
   font-family: $sourcecodepro
   overflow: hidden
   overflow-x: scroll
@@ -58,7 +62,7 @@ pre
 
 pre > code.bash::before
   content: '$ '
-  color: $lightblack
+  color: $midblack
 
 code
   font-family: $sourcecodepro
