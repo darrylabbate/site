@@ -1,7 +1,12 @@
 ---
 layout: page
-title: Darryl Abbate
+title: Contact - Darryl Abbate
 ---
-# darryl.sh
 
-> Coming soon! Try `curl darryl.sh/contact` in the meantime!
+# Contact
+
+Email: [hi@darryl.sh](mailto:hi@darryl.sh)
+
+PGP: [83F3 27E9 B28E A173](https://darryl.sh/pgp)
+
+`curl darryl.sh/pgp | gpg --import`

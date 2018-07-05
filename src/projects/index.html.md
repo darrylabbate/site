@@ -2,6 +2,6 @@
 layout: page
 title: Darryl Abbate
 ---
-# darryl.sh
+# Projects
 
 > Coming soon! Try `curl darryl.sh/projects` in the meantime!
