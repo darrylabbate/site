@@ -1,33 +1,33 @@
 // Main
 
 body
-  background: $white
+  background: $color-white
   font-family: $monda
   font-weight: 400
   font-size: 16px
-  color: $black
+  color: $color-gray-dark
   margin: 0 auto
 
 a
   text-decoration: none
-  color: $red
+  color: $color-red
   transition: all 0.05s linear 0s
 
   &:hover
-    color: $lightred
+    color: $color-red-light
 
   svg
-    fill: $white
+    fill: $color-white
     vertical-align: middle
     padding-bottom: 2px
     transition: all 0.05s linear 0s
 
   &:hover svg
-    fill: $black
+    fill: $color-gray-dark
 
 p
   font-size: 1.25em
-  color: $black
+  color: $color-gray-dark
   max-width: 100em
 
   img
@@ -35,26 +35,26 @@ p
     height: auto
   
   code
-    color: $black
-    background: $darkwhite
+    color: $color-gray-dark
+    background: $color-white-darker
     padding: 0 0.3em
     border-radius: 0.2em
 
   &>a>code
-    color: $red
+    color: $color-red
 
   &>a:hover code
-    color: $lightred
+    color: $color-red-light
 
 h1
-  color: $black
+  color: $color-gray-dark
   font-family: $monda
   font-size: 2.5em
   font-weight: 400
   line-height: 1.2em
 
 h2
-  color: $black
+  color: $color-gray-dark
   font-family: $monda
   font-size: 1.5em
   margin-top: 1.75em
@@ -62,7 +62,7 @@ h2
   font-weight: 400
 
 h3
-  color: $black
+  color: $color-gray-dark
   font-family: $monda
   font-size: 1.2em
   font-weight: 400
@@ -70,12 +70,12 @@ h3
 
 hr
   border: 0
-  border-top: 2px dashed $white
+  border-top: 2px dashed $color-white
 
 blockquote
-  background: $darkwhite
+  background: $color-yellow-lightest
   border-radius: 4px
-  border-left: solid 0.4em $lightblack
+  border-left: solid 0.4em $color-yellow-light
   padding: 1em
   text-align: left
   box-shadow: 0 4px 8px 0 rgba(0,0,0,.12),0 2px 8px 0 rgba(0,0,0,.08)
@@ -85,8 +85,8 @@ blockquote
     margin: 0 auto
 
     code
-      background: $midblack
-      color: $white
+      background: $color-yellow-lighter
+      color: $color-dark
 
 .content
   margin: 0 auto
@@ -98,8 +98,8 @@ blockquote
   padding-top: 1em
 
 .command
-  background: $black
-  color: $white
+  background: $color-gray-dark
+  color: $color-white
   font-family: $sourcecodepro
   font-size: 1em
   border-radius: 4px
@@ -111,16 +111,16 @@ blockquote
 
 .command::before
   content: '$ '
-  color: $lightblack
+  color: $color-gray-light
 
 .EOF
   text-align: center
   padding: 2em 0
   font-family: $sourcecodepro
-  color: $darkwhite
+  color: $color-white-darker
 
   svg
-    fill: $darkblack
+    fill: $color-dark
 
   &::before
     content: 'ϟ'
