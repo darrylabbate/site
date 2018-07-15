@@ -13,16 +13,24 @@ Darryl Abbate is a student at the University of New Orleans majoring in Computer
 
 ## Education
 
-University of New Orleans
+**University of New Orleans** • *New Orleans, LA*
 Currently pursuing B.S. in Computer Science
 
-Delgado Community College
+**Delgado Community College** • *New Orleans, LA*
 A.S. in Management, 2009
 
-## Experience
+## Work Experience
 
-Joel Catering and Events, New Orleans, LA
+**Joel Catering and Events** • *New Orleans, LA*
 Sous Chef, 2015-2018
 
-Bistro Daisy, New Orleans, LA
+**Bistro Daisy** • *New Orleans, LA*
 Sous Chef, 2011-2014
+
+## Skills/Interests
+
+Proficiencies: POSIX sh (dash), Bash, HTML, CSS/Sass, Unix tools, Git.
+
+Familiaraties: Haskell, GNU Make, Python, Javascript, Adobe CC
+
+Currently spending my free time learning Haskell in-depth.
