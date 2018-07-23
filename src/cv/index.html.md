@@ -5,11 +5,11 @@ title: Darryl Abbate - CV
 
 # Darryl Abbate
 
-920 Focis Street | Metairie, LA 70005
 +1 (504) 450-5121
-[darrylabbate@gmail.com](mailto:darrylabbate@gmail.com) | [darryl.sh](https://darryl.sh)
+[darrylabbate@gmail.com](mailto:darrylabbate@gmail.com)
+[https://darryl.sh](https://darryl.sh)
 
-Darryl Abbate is a student at the University of New Orleans majoring in Computer Science. Previously, Darryl worked as a Sous Chef for various New Orleans restaurants, as well as a catering company.
+Darryl Abbate is a student at the University of New Orleans majoring in Computer Science. Darryl has experience with software/web development as well as graphic design.
 
 ## Education
 
@@ -32,5 +32,3 @@ Sous Chef, 2011-2014
 Proficiencies: POSIX sh (dash), Bash, HTML, CSS/Sass, Unix tools, Git.
 
 Familiaraties: Haskell, GNU Make, Python, Javascript, Adobe CC
-
-Currently spending my free time learning Haskell in-depth.
