@@ -2,7 +2,7 @@
 
 body
   background: $color-white
-  font-family: $monda
+  font-family: $font-base
   font-weight: 400
   font-size: 16px
   color: $color-gray-dark
@@ -10,11 +10,12 @@ body
 
 a
   text-decoration: none
-  color: $color-red
-  transition: all 0.05s linear 0s
+  color: $color-gray-dark
+  border-bottom: 1px solid $color-gray-light
+  transition: all 0.1s linear 0s
 
   &:hover
-    color: $color-red-light
+    border-bottom-color: $color-red
 
   svg
     fill: $color-white
@@ -26,10 +27,12 @@ a
     fill: $color-gray-dark
 
 p
-  font-size: 1.25em
+  font-size: 1.2em
   color: $color-gray-dark
   max-width: 100em
   white-space: pre-line
+  line-height: 1.5em
+  letter-spacing: -0.01em
 
   img
     max-width: 100%
@@ -41,22 +44,24 @@ p
     padding: 0 0.3em
     border-radius: 0.2em
 
+  a
+    padding-bottom: 0.15em
+
   &>a>code
-    color: $color-red
+    border-bottom: none
 
   &>a:hover code
-    color: $color-red-light
 
 h1
   color: $color-gray-dark
-  font-family: $monda
+  font-family: $font-share
   font-size: 2.5em
   font-weight: 400
   line-height: 1.2em
 
 h2
   color: $color-gray-dark
-  font-family: $monda
+  font-family: $font-share
   font-size: 2em
   margin-top: 1.75em
   line-height: 1.25em
@@ -64,7 +69,7 @@ h2
 
 h3
   color: $color-gray-dark
-  font-family: $monda
+  font-family: $font-share
   font-size: 1.2em
   font-weight: 400
   line-height: 1em
@@ -74,6 +79,7 @@ hr
   border-top: 2px dashed $color-gray-light
 
 blockquote
+  font-family: $font-share
   background: $color-yellow-lightest
   border-radius: 4px
   border-left: solid 0.4em $color-yellow-light
@@ -101,7 +107,7 @@ blockquote
 .command
   background: $color-gray-dark
   color: $color-white
-  font-family: $sourcecodepro
+  font-family: $font-source-code-pro
   font-size: 1em
   border-radius: 4px
   padding: 0.5em
@@ -117,7 +123,7 @@ blockquote
 .EOF
   text-align: center
   padding: 2em 0
-  font-family: $sourcecodepro
+  font-family: $font-source-code-pro
   color: $color-white-darker
 
   svg
@@ -128,7 +134,7 @@ blockquote
 
 .footer
   text-align: right
-  font-family: $sharetech
+  font-family: $font-share-tech
   color: $color-gray-light
   font-size: 1em
   padding: 2em
