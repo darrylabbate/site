@@ -7,7 +7,7 @@ This is my personal website, which contains basic information about myself as we
 ## Table of Contents
 * [Command-Line Minisite](#command-line-minisite)
   * [Available Commands](#available-commands)
-  * [Make One Yourself!](#make-one-yourself)
+* [License](#license)
 
 ---
 
@@ -28,9 +28,8 @@ Along with the typical browser view, there is also a minisite which can be acces
   * `curl darryl.sh/pgp | gpg --import` to add the key automatically.
 * `curl darryl.sh/projects` - Brief overview of some of my projects.
 
-### Make One Yourself!
-I'll have a blog post soon with a tutorial on how to implement something like this on your own site (using Nginx).
+## License
 
-## To-Do
-* Flesh out content
-* Dark/light theme switcher
+Source code is licensed under the [MIT License](https://github.com/rootbeersoup/darryl.sh/blob/master/LICENSE)
+
+All documentation and images are licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
