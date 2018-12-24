@@ -7,7 +7,6 @@ This is my personal website, which contains basic information about myself as we
 ## Table of Contents
 * [Command-Line Minisite](#command-line-minisite)
   * [Available Commands](#available-commands)
-* [License](#license)
 
 ---
 

@@ -1,0 +1,10 @@
+baseURL = "https://darryl.sh/"
+languageCode = "en-us"
+title = "Darryl Abbate"
+
+watch = true
+newContentEditor = "vim"
+
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+

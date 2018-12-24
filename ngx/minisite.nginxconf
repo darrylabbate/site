@@ -1,6 +1,7 @@
 # This is just for personal refernce. Nginx won't actually read from this file.
 
-server {
+server 
+{
   if ($http_user_agent ~* curl) {
     rewrite /$ /t/index last;
     rewrite /keybase.txt$ /keybase.txt last;
@@ -11,13 +12,10 @@ server {
   index index index.html;
 
   location / {
-    location ~pgp {
+    location ~keybase.txt {
       add_header Content-Type text/plain;
     }
-  }
-
-  location /txt/ {
-    location ~* {
+    location ~pgp {
       add_header Content-Type text/plain;
     }
   }
