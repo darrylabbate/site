@@ -1,2 +1,0 @@
-| 
-  {{ .RawContent | replaceRE "esc" "\033" }}

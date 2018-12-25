@@ -7,4 +7,3 @@ newContentEditor = "vim"
 
 pygmentsUseClasses = true
 pygmentsCodeFences = true
-
