@@ -2,29 +2,39 @@
 
 .nav
   display: flex
-  font-family: $font-carlmarx
-  font-weight: 400
-  color: $color-gray-dark
-  max-width: 900px
-  margin: 0 auto
-  padding: 2em 2em 0 2em
+  align-items: center
+  padding-bottom: 0.5em
+  border-bottom: solid 3px $color-gray-dark
 
   a
     border: none
 
 .wordmark
   flex: 2
-  font-size: 3.5em
+  font-size: 3em
+  font-family: $font-carlmarx
+  font-weight: 400
+  text-transform: lowercase
+  transition: all 0.1s linear
+
+  a
+    color: $color-gray-dark
+
+    &:hover
+      color: $color-dark
 
 .links
   flex: 3
   display: inline-block
-  font-size: 2em
+  font-size: 1.75em
   text-align: right
+  margin: 0 auto
 
   ul
-    li, li a
+    margin: 0 auto
+
+    li
       display: inline-flex
       list-style-type: none
       text-align: right
-      align-items: center
+      margin-left: 0.5em
