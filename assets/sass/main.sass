@@ -8,7 +8,7 @@ body
   font-size: 16px
   color: $color-gray-dark
   margin: 0 auto
-  padding: 0.5em 1em 1.5em 1em
+  padding: 0.5em 0.75em 1.5em 0.75em
 
 a
   text-decoration: none
@@ -79,6 +79,13 @@ hr
   border-top: 2px dashed $color-gray-light
 
 blockquote
+  font-style: italic
+  border-left: solid 4px $color-gray-light
+  margin: 0 auto
+  margin-left: -1em
+  padding-left: 1em
+
+.announcement
   font-family: $font-share-tech
   background: $color-white-darker
   border-radius: 4px
@@ -92,16 +99,12 @@ blockquote
     margin: 0 auto
 
     code
-      // background: $color-gray-light
       color: $color-dark
 
 .content
-  margin: 0 auto
-  min-width: 40em
-  max-width: 80em
+  padding: 1em 0.25em
   text-align: left
   line-height: 1.4
-  padding-top: 1em
 
 .command
   background: $color-gray-dark
