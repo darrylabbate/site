@@ -9,7 +9,7 @@ html lang=en
     .content
       h1 {{ .Title }}
       .postinfobox
-        span.postinfo By Darryl Abbate
+        span.postinfo By {{ .Params.author }}
         br
         span.postinfo {{ .Date }}
         br
