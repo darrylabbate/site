@@ -5,8 +5,6 @@ date   = '2018/12/26'
 url    = '/lorem-ipsum/'
 +++
 
-## Domos nymphae saepius
-
 Lorem **markdownum**, novabis, Aeaciden vitiatur **tactis**, inde funera.  **Disce tum**, tu mox `crescendo` et elige unam erit volucresque. Caecaque insula et mihi et Paris angustum vidi!
 
 > This is a block of quoted text
@@ -24,39 +22,29 @@ Repetitaque regia capillis! Ut nunc carbasa, in tulit viribus, inrequieta [me vi
 ```haskell
 {-# LANGUAGE OverloadedStrings #-}
 
-module LunarPhase where
+module LoremIpsum where
 
-import           Data.Fixed
-import           Data.Text
-import           Data.Time
-import           Data.Time.Calendar.Julian
+import Data.Char
+import Data.List
 
-data Phase = New
-           | WaxingCrescent
-           | FirstQuarter
-           | WaxingGibbous
-           | Full
-           | WaningGibbous
-           | ThirdQuarter
-           | WaningCrescent
-           deriving (Eq, Show)
+data Fox = Quick | Brown deriving Show
 
-moonRevolution = 29.530588853
-
-calcPhase :: Integer -> Int -> Int -> Phase
-calcPhase y m d = phase . flip mod' moonRevolution . fromIntegral $
-                  diffDays (fromJulian y m d) (fromJulian 2000 1 6) where
-                  phase x | x < 0.94566  = New
-                          | x < 7.53699  = WaxingCrescent
-                          | x < 9.22831  = FirstQuarter
-                          | x < 13.91963 = WaxingGibbous
-                          | x < 15.61096 = Full
-                          | x < 21.80228 = WaningGibbous
-                          | x < 22.59361 = ThirdQuarter
-                          | x < 28.68493 = WaningCrescent
-                          | otherwise    = New
+func :: (Num a) => a -> a
+func x | x > 2     = Quick
+       | x > 3     = Brown
+       | otherwise = Dog
 ```
 
 Est nec densumque *quam* dictis Pallas, mihi verba nam et dabat. Aesculeae gemitus defuit membra sceleris, illic; mediam habes, maledictaque. Ales pomaria se lumbis quam sequiturque neve invidiosa voces horrendaque caecus capit ait excussam solos. Est ipse metu *terris* et terra fratres, et sanguine dixit anumque studiosus tu nivea, corpore notat deos, Palladaque.
 
 Egeriae alebat. Nate habuit; ille ferebat [Proserpina](http://ad.io/), illa vacuas, Parosque? Vallis melius [carminibus](http://doceri.io/) blandis aves ex stagnata lingua totaque; **quid cuius** quo ulterius! Residens [quam](http://sine-committit.net/) cum, fugiant quoniam; Iove litore latus?
+
+```c
+#include <stdio.h>
+
+int main(void)
+{
+  printf("Hello, Darryl!");
+  return 0;
+}
+```
