@@ -12,7 +12,7 @@ html lang=en
       .postinfobox
         span.postinfo By {{ .Params.author }}
         br
-        span.postinfo {{ .Date }}
+        span.postinfo {{ .Date.Format "2006-01-02" }}
         br
         button.linkbutton type="button" onclick="copyToClipboard('#permalink')"
           svg height="18" viewbox="0 0 16 16" version="1.1" width="18" aria-hidden="true"

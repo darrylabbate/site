@@ -1,7 +1,7 @@
 +++
 title  = 'Epaphus sunt'
 author = 'Darryl Abbate'
-date   = '2018/12/26'
+date   = 2018-12-27T10:18:04-06:00
 url    = '/lorem-ipsum/'
 +++
 
