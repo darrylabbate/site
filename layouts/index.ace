@@ -4,6 +4,6 @@ html lang=en
     {{ partial "head.html" }}
     title Darryl Abbate
   body
-    {{ partial "nav.html" }}
+    {{ partial "header.html" }}
     .content
       {{ .Content }}

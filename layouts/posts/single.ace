@@ -5,7 +5,7 @@ html lang=en
       {{ partial "copylink.html" }}
     span#permalink https://darryl.sh{{ .URL }}
   body
-    {{ partial "nav.html" }}
+    {{ partial "header.html" }}
     .content
       h1 {{ .Title }}
       .postinfobox
