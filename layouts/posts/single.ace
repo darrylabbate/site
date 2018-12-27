@@ -2,7 +2,8 @@
 html lang=en
   head
     {{ partial "head.html" }}
-      {{ partial "copylink.html" }}
+    title {{ .Title }}
+    {{ partial "copylink.html" }}
     span#permalink https://darryl.sh{{ .URL }}
   body
     {{ partial "header.html" }}
