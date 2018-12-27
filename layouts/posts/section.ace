@@ -3,6 +3,6 @@ html lang=en
   head
     {{ partial "head.html" }}
   body
-    {{ partial "nav.html" }}
+    {{ partial "header.html" }}
     .content
       {{ .Content }}
