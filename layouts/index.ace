@@ -2,7 +2,6 @@
 html lang=en
   head
     {{ partial "head.html" }}
-    title Darryl Abbate
   body
     {{ partial "header.html" }}
     .content
