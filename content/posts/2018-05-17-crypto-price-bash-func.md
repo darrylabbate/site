@@ -1,8 +1,7 @@
----
-title: Bash Function to Check a Cryptocurrency's Price
-date: "2018/05/17"
-url: /crypto-price-bash-function/
----
++++
+title = "Bash Function to Check a Cryptocurrency's Price"
+url = "/crypto-price-bash-function/"
++++
 
 ```bash
 function coin () {
