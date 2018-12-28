@@ -4,7 +4,7 @@ html lang=en
     {{ partial "head.html" }}
     title {{ .Title }}
     {{ partial "copylink.html" }}
-    span#permalink https://darryl.sh{{ .URL }}
+    span#permalink {{ .Site.BaseURL }}{{ .URL }}
   body
     {{ partial "header.html" }}
     .content
