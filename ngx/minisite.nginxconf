@@ -1,22 +1,28 @@
-# This is just for personal refernce. Nginx won't actually read from this file.
+# This is just for personal refernce. Nginx doesn't actually read from this
+# file.  These are configurations for serving plain text files via `curl` in a
+# UNIX terminal.
+
+# I've chosen not to target other command-line tools such as `wget` or `httpie`
+# since their default behaviors don't lend well to using them as a plain text
+# web browser, and may annoy people who use those tools for their intended
+# purposes.
 
 server 
 {
   if ($http_user_agent ~* curl) {
-    rewrite /$ /t/index last;
+    rewrite ^/$ /t/index.html last;
     rewrite /keybase.txt$ /keybase.txt last;
     rewrite /pgp$ /pgp last;
-    rewrite ^(.*)$ /t/$1;
+    rewrite ^/(.*)$ /t/$1/index.html;
   }
 
   index index index.html;
 
   location / {
-    location ~keybase.txt {
-      add_header Content-Type text/plain;
-    }
-    location ~pgp {
-      add_header Content-Type text/plain;
-    }
+    location ~keybase.txt { add_header Content-Type text/plain; }
+    location ~pgp         { add_header Content-Type text/plain; }
   }
+
+  location /t/ {
+    location ~* { add_header Content-Type text/plain; }
 }
