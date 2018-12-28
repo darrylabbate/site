@@ -1,17 +1,14 @@
 // Header
 
 .header
-  display: flex
-  align-items: center
   padding-bottom: 0.5em
   border-bottom: solid 4px $color-gray-dark
-  margin-bottom: 0.75em
+  margin-bottom: 0.25em
 
   a
     border: none
 
 .wordmark
-  flex: 2
   font-size: 3em
   font-family: $font-carlmarx
   font-weight: 400
@@ -25,17 +22,20 @@
       color: $color-dark
 
 .links
-  flex: 3
-  display: inline-block
-  font-size: 1.75em
-  text-align: right
-  margin: 0 auto
+  font-family: $font-source-code-pro
+  text-transform: lowercase
+  transition: all 0.1s linear
+  margin-bottom: 0.5em
 
   ul
     margin: 0 auto
+    padding: 0
+    list-style-type: none
 
-    li
+    li, li a
+      color: $color-gray-dark
       display: inline-flex
-      list-style-type: none
-      text-align: right
-      margin-left: 0.5em
+      border: none
+
+      &:hover
+        color: $color-dark

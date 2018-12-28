@@ -4,5 +4,8 @@ html lang=en
     {{ partial "head.html" }}
   body
     {{ partial "header.html" }}
+    br
+    .blue
+      | Posts coming soon!
     .content
       {{ .Content }}
