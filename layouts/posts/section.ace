@@ -5,7 +5,7 @@ html lang=en
   body
     {{ partial "header.html" }}
     br
-    .blue
+    .alert-blue
       | Posts coming soon!
     .content
       {{ .Content }}

@@ -84,7 +84,7 @@ blockquote
   margin-left: -1em
   padding-left: 0.5em
 
-@mixin announcement($background, $border-color)
+@mixin alert($background, $border-color)
   background: $background
   border-left: solid 4px $border-color
   font-family: $font-source-code-pro
@@ -97,11 +97,11 @@ blockquote
   p
     margin: 0 auto
 
-.yellow
-  @include announcement($color-yellow-lightest, $color-yellow-light)
+.alert-yellow
+  @include alert($color-yellow-lightest, $color-yellow-light)
 
-.blue
-  @include announcement($color-blue-lightest, $color-blue-light)
+.alert-blue
+  @include alert($color-blue-lightest, $color-blue-light)
 
 .content
   padding: 1em 0.25em
