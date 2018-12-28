@@ -1,3 +1,5 @@
 .header
   .wordmark
     a href=https://darryl.sh Darryl Abbate
+.announcement
+  | Redesign in progress
