@@ -84,7 +84,9 @@ blockquote
   margin-left: -1em
   padding-left: 0.5em
 
-@mixin alert($background, $border-color)
+// Alert divs
+// Used for displaying short messages near the header
+=alert($background, $border-color)
   background: $background
   border-left: solid 4px $border-color
   font-family: $font-monospace
@@ -98,10 +100,10 @@ blockquote
     margin: 0 auto
 
 .alert-yellow
-  @include alert($color-yellow-lightest, $color-yellow-light)
+  +alert($color-yellow-lightest, $color-yellow-light)
 
 .alert-blue
-  @include alert($color-blue-lightest, $color-blue-light)
+  +alert($color-blue-lightest, $color-blue-light)
 
 .content
   padding: 1em 0.25em
@@ -130,9 +132,6 @@ blockquote
   font-family: $font-monospace
   color: $color-white-darker
 
-  svg
-    fill: $color-dark
-
   &::before
     content: 'ϟ'
 
@@ -142,3 +141,54 @@ blockquote
   color: $color-gray-light
   font-size: 1em
   padding: 2em
+
+// Header & footer
+
+$style-hf-divider: solid 4px $color-gray-dark
+$style-hf-padding: 0.5em
+$style-hf-margin:  0.25em
+
+.header
+  padding-bottom: $style-hf-padding
+  border-bottom:  $style-hf-divider
+  margin-bottom:  $style-hf-margin
+
+.footer
+  border-top:  $style-hf-divider
+  margin-top:  $style-hf-margin
+  padding-top: $style-hf-padding
+
+.header a, .footer a
+  border: none
+
+.wordmark
+  font-size: 3em
+  font-family: $font-carlmarx
+  font-weight: 400
+  text-transform: lowercase
+  transition: all 0.1s linear
+
+  a
+    color: $color-gray-dark
+
+    &:hover
+      color: $color-dark
+
+.links
+  font-family: $font-monospace
+  text-transform: lowercase
+  transition: all 0.1s linear
+  margin-bottom: 0.5em
+
+  ul
+    margin: 0 auto
+    padding: 0
+    list-style-type: none
+
+    li, li a
+      color: $color-gray-dark
+      display: inline-flex
+      border: none
+
+      &:hover
+        color: $color-dark
