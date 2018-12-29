@@ -2,7 +2,11 @@
 html lang=en
   head
     {{ partial "head.html" }}
+    title {{ .Title }}
   body
     {{ partial "header.html" }}
+    br
+    .alert-blue
+      | Projects page coming soon!
     .content
       {{ .Content }}
