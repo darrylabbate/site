@@ -37,6 +37,10 @@ func x | x > 2     = Quick
 
 Est nec densumque *quam* dictis Pallas, mihi verba nam et dabat. Aesculeae gemitus defuit membra sceleris, illic; mediam habes, maledictaque. Ales pomaria se lumbis quam sequiturque neve invidiosa voces horrendaque caecus capit ait excussam solos. Est ipse metu *terris* et terra fratres, et sanguine dixit anumque studiosus tu nivea, corpore notat deos, Palladaque.
 
+```math
+C(n,r)=\frac{n!}{(r!(n-r)!)}
+```
+
 Egeriae alebat. Nate habuit; ille ferebat [Proserpina](http://ad.io/), illa vacuas, Parosque? Vallis melius [carminibus](http://doceri.io/) blandis aves ex stagnata lingua totaque; **quid cuius** quo ulterius! Residens [quam](http://sine-committit.net/) cum, fugiant quoniam; Iove litore latus?
 
 ```c
