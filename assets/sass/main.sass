@@ -136,14 +136,14 @@ blockquote
 
 // Header & footer
 
-$style-hf-divider: solid 4px $color-gray
+$style-hf-divider: solid 3px $color-gray
 $style-hf-padding: 0.5em
 $style-hf-margin:  0.25em
 
 .header
-  padding-bottom: $style-hf-padding
-  border-bottom:  $style-hf-divider
-  margin-bottom:  $style-hf-margin
+  // padding-bottom: $style-hf-padding
+  // border-bottom:  $style-hf-divider
+  // margin-bottom:  $style-hf-margin
 
 .footer
   border-top:  $style-hf-divider
@@ -154,19 +154,23 @@ $style-hf-margin:  0.25em
   border: none
 
 .wordmark
-  font-size: $size-header-base
+  font-size: 2em
   font-family: $font-carlmarx
   font-weight: 400
-  text-transform: lowercase
+  text-transform: uppercase
   transition: all 0.1s linear
+  margin: 0.2em 0
   a
-    color: $color-gray
+    color: $color-white
+    padding: 0.15em 0.3em
+    background: $color-gray-dark
+    border-radius: 0.05em
     &:hover
-      color: $color-dark
+      background: $color-dark
 
 .links
   font-family: $font-monospace
-  font-weight: 500
+  font-weight: 400
   text-transform: lowercase
   transition: all 0.1s linear
   margin-bottom: 0.5em
