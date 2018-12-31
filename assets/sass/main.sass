@@ -1,5 +1,7 @@
 // Main
 
+$size-header-base: 2.5em
+
 html
   -webkit-text-size-adjust: 100%
 
@@ -53,17 +55,17 @@ h1, h2, h3
   font-weight: 500
 
 h1
-  font-size: 3em
+  font-size: $size-header-base
   line-height: 1.2em
   margin: 0 auto
 
 h2
-  font-size: 2em
+  font-size: $size-header-base * 0.8
   margin-top: 1em
   line-height: 1.25em
 
 h3
-  font-size: 1.2em
+  font-size: $size-header-base * 0.5
   line-height: 1em
 
 hr
@@ -135,7 +137,7 @@ blockquote
 
 // Header & footer
 
-$style-hf-divider: solid 4px $color-gray-dark
+$style-hf-divider: solid 4px $color-gray
 $style-hf-padding: 0.5em
 $style-hf-margin:  0.25em
 
@@ -153,18 +155,19 @@ $style-hf-margin:  0.25em
   border: none
 
 .wordmark
-  font-size: 3em
+  font-size: $size-header-base
   font-family: $font-carlmarx
   font-weight: 400
   text-transform: lowercase
   transition: all 0.1s linear
   a
-    color: $color-gray-dark
+    color: $color-gray
     &:hover
       color: $color-dark
 
 .links
   font-family: $font-monospace
+  font-weight: 500
   text-transform: lowercase
   transition: all 0.1s linear
   margin-bottom: 0.5em
