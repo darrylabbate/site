@@ -1,6 +1,6 @@
 +++
 title = "Bash Function to Check a Cryptocurrency's Price"
-url = "/crypto-price-bash-function/"
+url   = "crypto-price-bash-function"
 +++
 
 ```bash

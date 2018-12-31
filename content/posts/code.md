@@ -1,5 +1,5 @@
 +++
-url = "/code/"
+url = 'code'
 +++
 
 ```bash
