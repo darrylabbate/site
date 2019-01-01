@@ -10,13 +10,13 @@ body
   background: $color-white
   font-family: $font-base
   font-weight: 400
-  color: $color-gray
+  color: $color-gray-dark
   margin: 0 auto
   padding: 0.5em 0.75em 1.5em 0.75em
 
 a
   text-decoration: none
-  color: $color-gray
+  color: $color-gray-dark
   border-bottom: 1px solid $color-gray-light
   transition: all 0.1s linear 0s
   &:hover
@@ -49,9 +49,9 @@ p
     border-bottom: none
 
 h1, h2, h3
-  color: $color-gray
-  font-family: $font-base
-  font-weight: 300
+  color: $color-gray-dark
+  font-family: $font-display
+  font-weight: 200
 
 h1
   font-size: $size-header-base
@@ -88,7 +88,7 @@ blockquote
   border-radius: 4px
   padding: 0.5em
   text-align: left
-  margin: 0 auto
+  margin: 1em 0
   p
     margin: 0 auto
 
@@ -136,17 +136,14 @@ blockquote
 
 // Header & footer
 
-$style-hf-divider: solid 3px $color-gray
 $style-hf-padding: 0.5em
 $style-hf-margin:  0.25em
 
 .header
-  // padding-bottom: $style-hf-padding
-  // border-bottom:  $style-hf-divider
-  // margin-bottom:  $style-hf-margin
+  display: flex
+  margin: 1em 0
 
 .footer
-  border-top:  $style-hf-divider
   margin-top:  $style-hf-margin
   padding-top: $style-hf-padding
 
@@ -154,33 +151,38 @@ $style-hf-margin:  0.25em
   border: none
 
 .wordmark
+  flex: 2
   font-size: 2em
-  font-family: $font-carlmarx
-  font-weight: 400
+  font-family: $font-display
+  font-weight: 300
   text-transform: uppercase
   transition: all 0.1s linear
-  margin: 0.2em 0
+  line-height: 1em
   a
     color: $color-white
-    padding: 0.15em 0.3em
     background: $color-gray-dark
-    border-radius: 0.05em
+    padding: 0.2em
     &:hover
       background: $color-dark
 
 .links
-  font-family: $font-monospace
+  flex: 3
+  font-family: $font-display
+  font-size: 1.2em
   font-weight: 400
   text-transform: lowercase
   transition: all 0.1s linear
   margin-bottom: 0.5em
+  text-align: right
+  display: inline-block
   ul
     margin: 0 auto
     padding: 0
-    list-style-type: none
+    list-style-type: inline-block
     li, li a
-      color: $color-gray
+      color: $color-gray-dark
       display: inline-flex
+      margin-left: 0.5em
       border: none
       &:hover
         color: $color-dark
