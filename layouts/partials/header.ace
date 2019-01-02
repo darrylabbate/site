@@ -1,13 +1,5 @@
 .header
   .wordmark
     a href=.. Darryl Abbate
-  .links
-    ul
-      li
-        a href=../posts Posts
-      li
-        a href=../projects Projects
-      li
-        a href=https://github.com/rootbeersoup GitHub
 .alert-yellow
   | Redesign in progress
