@@ -72,7 +72,9 @@ hr
   border-top: 2px dashed $color-gray-light
 
 blockquote
+  font-family: $font-italic
   font-style: italic
+  font-weight: 200
   border-left: solid 4px $color-gray-light
   margin: 0 auto
   margin-left: -1em
@@ -140,8 +142,8 @@ $style-hf-margin:  0.25em
 
 .header
   display: flex
-  margin: 1em 0
-  padding-bottom: 0.8em
+  padding: 0.5em 0
+  margin-bottom: 0.5em
   border-bottom: solid 3px $color-gray-dark
 
 .footer
@@ -153,9 +155,9 @@ $style-hf-margin:  0.25em
 
 .wordmark
   flex: 3
-  font-size: 2em
+  font-size: $size-header-base * 0.8
   font-family: $font-display
-  font-weight: 300
+  font-weight: 400
   text-transform: uppercase
   transition: all 0.1s linear
   line-height: 1em
