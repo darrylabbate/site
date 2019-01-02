@@ -87,7 +87,7 @@ blockquote
   font-weight: 400
   padding: 0.5em
   text-align: left
-  margin: 1em 0
+  margin: 0.5em 0
   p
     margin: 0 auto
 
@@ -98,7 +98,7 @@ blockquote
   +alert($color-blue-lightest, $color-blue-light)
 
 .content
-  padding: 1em 0.25em
+  padding: 0.25em
   text-align: left
   line-height: 1.4
 
@@ -141,6 +141,8 @@ $style-hf-margin:  0.25em
 .header
   display: flex
   margin: 1em 0
+  padding-bottom: 0.8em
+  border-bottom: solid 3px $color-gray-dark
 
 .footer
   margin-top:  $style-hf-margin
@@ -158,11 +160,9 @@ $style-hf-margin:  0.25em
   transition: all 0.1s linear
   line-height: 1em
   a
-    color: $color-white
-    background: $color-gray-dark
-    padding: 0.3em 0.6em 0.2em 0.6em
+    color: $color-gray-dark
     &:hover
-      background: $color-dark
+      color: $color-dark
 
 .links
   flex: 3
