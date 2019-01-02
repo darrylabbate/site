@@ -7,7 +7,7 @@ url    = 'lorem-ipsum'
 
 Lorem **markdownum**, novabis, Aeaciden vitiatur **tactis**, inde funera.  **Disce tum**, tu mox `crescendo` et elige unam erit volucresque. Caecaque insula et mihi et Paris angustum vidi!
 
-> This is a block of quoted text
+> The quick brown fox jumps over the lazy dog
 
 Regem fraxinus Iason tentoria io inducto certe, est parvae pectine, quoque.  Operiri tellus legi vultus crimine. Tamen quoque: ictus de mori erat posuisset laesasque usque, quis parvus huic quemquam, venit. Quae nova. Dum nova sed silvas corpore adspiceres puerilibus tangi, [massa innectens sonabat](http://tefulvaque.io/nam.aspx)!
 
