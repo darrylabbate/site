@@ -1,7 +1,5 @@
 // Main
 
-$size-header-base: 2.5em
-
 html
   -webkit-text-size-adjust: 100%
 
@@ -20,14 +18,7 @@ a
   border-bottom: 1px solid $color-gray-light
   transition: all 0.1s linear 0s
   &:hover
-    border-bottom-color: $color-red
-  svg
-    fill: $color-white
-    vertical-align: middle
-    padding-bottom: 2px
-    transition: all 0.05s linear 0s
-  &:hover svg
-    fill: $color-gray
+    border-bottom-color: $color-gray-dark
 
 p
   font-size: 1.2em
@@ -48,9 +39,11 @@ p
   &>a>code
     border-bottom: none
 
-h1, h2, h3
+$size-header-base: 2.5em
+
+h1, h2, h3, h4
   color: $color-gray-dark
-  font-family: $font-display-alt
+  font-family: $font-display
   font-weight: 200
 
 h1
@@ -60,12 +53,14 @@ h1
 
 h2
   font-size: $size-header-base * 0.8
-  margin-top: 1em
   line-height: 1.25em
 
 h3
-  font-size: $size-header-base * 0.5
+  font-size: $size-header-base * 0.6
   line-height: 1em
+
+h4
+  font-size: $size-header-base * 0.5
 
 hr
   border: 0
@@ -80,45 +75,25 @@ blockquote
   margin-left: -1em
   padding-left: 0.5em
 
-// Alert divs
-// Used for displaying short messages near the header
-=alert($background, $border-color)
+// Alerts
+=alert($background, $font-color)
   background: $background
-  border-left: solid 4px $border-color
-  font-family: $font-monospace
+  color: $font-color
+  font-family: $font-display
   font-weight: 400
-  padding: 0.5em
-  text-align: left
-  margin: 0.5em 0
-  p
-    margin: 0 auto
+  padding: 0 0.2em
+  text-transform: uppercase
 
 .alert-yellow
-  +alert($color-yellow-lightest, $color-yellow-light)
+  +alert($color-yellow-lighter, $color-gray-dark)
 
 .alert-blue
-  +alert($color-blue-lightest, $color-blue-light)
+  +alert($color-blue-lighter, $color-gray-dark)
 
 .content
   padding: 0.25em
   text-align: left
   line-height: 1.4
-
-.command
-  background: $color-gray-dark
-  color: $color-white
-  font-family: $font-monospace
-  font-size: 1em
-  border-radius: 4px
-  padding: 0.5em
-  border: none
-  width: 100%
-  display: block
-  cursor: auto
-
-.command::before
-  content: '$ '
-  color: $color-gray-light
 
 .EOF
   text-align: center
@@ -126,64 +101,26 @@ blockquote
   font-family: $font-display
   color: $color-white-darker
   &::before
-    content: 'ϟ'
-
-.footer
-  text-align: right
-  font-family: $font-monospace
-  color: $color-gray-light
-  font-size: 1em
-  padding: 2em
+    content: 'EOF'
 
 // Header & footer
 
-$style-hf-padding: 0.5em
-$style-hf-margin:  0.25em
-
 .header
-  display: flex
   padding: 0.5em 0
   margin-bottom: 0.5em
-  border-bottom: solid 3px $color-gray-dark
-
-.footer
-  margin-top:  $style-hf-margin
-  padding-top: $style-hf-padding
-
-.header a, .footer a
-  border: none
+  a
+    border: none
 
 .wordmark
-  flex: 3
-  font-size: $size-header-base * 0.8
+  font-size: 1em
   font-family: $font-display
   font-weight: 400
   text-transform: uppercase
-  transition: all 0.1s linear
-  line-height: 1em
+  margin-right: 1em
   a
     color: $color-gray-dark
+    padding: 0 0.2em
+    transition: all 0.05s linear
     &:hover
-      color: $color-dark
-
-.links
-  flex: 3
-  font-family: $font-display-alt
-  font-size: 1.2em
-  font-weight: 400
-  text-transform: lowercase
-  transition: all 0.1s linear
-  margin-bottom: 0.5em
-  text-align: right
-  display: inline-block
-  ul
-    margin: 0 auto
-    padding: 0
-    list-style-type: inline-block
-    li, li a
-      color: $color-gray-dark
-      display: inline-flex
-      margin-left: 0.5em
-      border: none
-      &:hover
-        color: $color-dark
+      background: $color-gray-dark
+      color: $color-white

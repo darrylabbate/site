@@ -1,5 +1,5 @@
 .header
-  .wordmark
+  span.wordmark
     a href=.. Darryl Abbate
-.alert-yellow
-  | Redesign in progress
+  span.alert-yellow
+    | Redesign in progress

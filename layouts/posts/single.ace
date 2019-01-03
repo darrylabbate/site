@@ -7,7 +7,6 @@ html lang=en
     {{ partial "header.html" }}
     .content
       h1 {{ .Title }}
-      .postinfobox
-        span.postinfo By {{ .Params.author }} :: {{ .Date.Format "2006-01-02" }}
+      span.postinfo By {{ .Params.author }} :: {{ .Date.Format "2006-01-02" }}
       {{ .Content }}
     .EOF
