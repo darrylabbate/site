@@ -21,19 +21,20 @@ h1, h2, h3, h4
   font-weight: 700
 
 // Alerts
-=alert($background, $font-color)
+=alert($background, $border-color, $font-color)
   background: $background
   color: $font-color
   font-family: $font-display
   font-weight: 400
   padding: 0 0.2em
   text-transform: uppercase
+  border-left: solid 2px $border-color
 
 .alert-yellow
-  +alert($color-yellow-lighter, $color-gray-dark)
+  +alert($color-yellow-lighter, $color-yellow, $color-gray-dark)
 
 .alert-blue
-  +alert($color-blue-lighter, $color-gray-dark)
+  +alert($color-blue-lighter, $color-blue, $color-gray-dark)
 
 .content
   padding: 0.25em
