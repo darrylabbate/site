@@ -1,79 +1,24 @@
-// Main
+// Main styling
+// Global styles and default markdown rendering is defined here.
 
 html
   -webkit-text-size-adjust: 100%
 
 body
   max-width: 40em
-  background: $color-white
-  font-family: $font-base
+  background: $color-white-dark
+  font-family: $font-monospace
   font-weight: 400
-  color: $color-gray-dark
+  color: $color-gray
   margin: 0 auto
   padding: 0.5em 0.75em 1.5em 0.75em
 
 a
   text-decoration: none
-  color: $color-gray-dark
-  border-bottom: 1px solid $color-gray-light
-  transition: all 0.1s linear 0s
-  &:hover
-    border-bottom-color: $color-gray-dark
-
-p
-  font-size: 1.2em
-  max-width: 100em
-  white-space: pre-line
-  line-height: 1.5em
-  letter-spacing: -0.01em
-  img
-    max-width: 100%
-    height: auto
-  code
-    color: $color-gray-dark
-    background: $color-white-dark
-    padding: 0 0.3em
-    border-radius: 0.2em
-  a
-    padding-bottom: 0.15em
-  &>a>code
-    border-bottom: none
-
-$size-header-base: 2.5em
 
 h1, h2, h3, h4
-  color: $color-gray-dark
-  font-family: $font-display
-  font-weight: 200
-
-h1
-  font-size: $size-header-base
-  line-height: 1.2em
-  margin: 0 auto
-
-h2
-  font-size: $size-header-base * 0.8
-  line-height: 1.25em
-
-h3
-  font-size: $size-header-base * 0.6
-  line-height: 1em
-
-h4
-  font-size: $size-header-base * 0.5
-
-hr
-  border: 0
-  border-top: 2px dashed $color-gray-light
-
-blockquote
-  font-family: $font-italic
-  font-style: italic
-  font-weight: 200
-  border-left: solid 4px $color-gray-light
-  margin: 0 auto
-  margin-left: -1em
-  padding-left: 0.5em
+  font-size: 1em
+  font-weight: 700
 
 // Alerts
 =alert($background, $font-color)

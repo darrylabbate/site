@@ -5,7 +5,7 @@ html lang=en
     title {{ .Title }}
   body
     {{ partial "header.html" }}
-    .content
+    .article
       h1 {{ .Title }}
       span.postinfo By {{ .Params.author }} :: {{ .Date.Format "2006-01-02" }}
       {{ .Content }}
