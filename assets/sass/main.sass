@@ -15,6 +15,16 @@ body
 
 a
   text-decoration: none
+  color: $color-gray
+  background: $color-white-darker
+  padding: 0 0.2em
+  transition: all 0.05s linear
+  &:hover
+    background: $color-gray
+    color: $color-white
+
+p
+  white-space: pre
 
 h1, h2, h3, h4
   font-size: 1em
@@ -37,7 +47,7 @@ h1, h2, h3, h4
   +alert($color-blue-lighter, $color-blue, $color-gray-dark)
 
 .content
-  padding: 0.25em
+  padding: 0 0.25em
   text-align: left
   line-height: 1.4
 
@@ -65,6 +75,7 @@ h1, h2, h3, h4
   margin-right: 1em
   a
     color: $color-gray-dark
+    background: none
     padding: 0 0.2em
     transition: all 0.05s linear
     &:hover
