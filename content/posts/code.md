@@ -1,11 +1,9 @@
 +++
-url = 'code'
+title = 'Example Code'
+url   = 'code'
 +++
 
-```bash
-$ echo hello | awk '{print $0}'
-```
-
+#### AWK
 ```awk
 BEGIN { FS="" }
 
@@ -18,6 +16,12 @@ BEGIN { FS="" }
 }
 ```
 
+#### Bash
+```bash
+$ echo hello | awk '{print $0}'
+```
+
+#### C
 ```c
 #include <stdio.h>
 
@@ -28,6 +32,7 @@ int main(void)
 }
 ```
 
+#### diff
 ```diff
 ---one
 +++two
