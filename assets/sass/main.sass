@@ -5,23 +5,27 @@ html
   -webkit-text-size-adjust: 100%
 
 body
-  max-width: 40em
-  background: #333
+  max-width: 48em
+  background: $color-dark
   font-family: $font-monospace
+  font-size: 14px
   font-weight: 400
   color: $color-white
   margin: 0 auto
-  padding: 0.5em 0.75em 1.5em 0.75em
+  padding: 0.75em
 
 a
   text-decoration: none
   color: $color-white
   transition: all 0.05s linear
+  background: lighten($color-dark, 10%)
+  border-radius: 0.1em
   &:hover
-    color: $color-blue
+    background: $color-blue
+    color: $color-dark
 
 p
-  white-space: pre
+  white-space: pre-line
 
 h1, h2, h3, h4
   font-size: 1em
@@ -34,7 +38,7 @@ h1, h2, h3, h4
   font-weight: 400
   text-transform: uppercase
   &::before
-    color: $color-gray-light
+    color: lighten($color-gray, 20%)
     content: ' *** '
     font-family: $font-monospace
 
@@ -50,9 +54,13 @@ h1, h2, h3, h4
   text-align: center
   padding: 2em 0
   font-family: $font-display
-  color: $color-white-darker
+  color: darken($color-white, 10%)
   &::before
     content: 'EOF'
+
+.home
+  max-width: 32em
+  margin: 0 auto
 
 // Header & footer
 
@@ -67,10 +75,10 @@ h1, h2, h3, h4
   font-family: $font-display
   font-weight: 400
   text-transform: uppercase
-  // margin-right: 1em
   a
-    color: $color-white-dark
+    color: $color-white
     background: none
     transition: all 0.05s linear
+    padding: none
     &:hover
       color: $color-blue
