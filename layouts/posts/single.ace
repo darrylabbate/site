@@ -4,9 +4,11 @@ html lang=en
     {{ partial "head.html" }}
     title {{ .Title }}
   body
-    {{ partial "header.html" }}
     .article
       h1 {{ .Title }}
-      span.postinfo By {{ .Params.author }} :: {{ .Date.Format "2006-01-02" }}
+      span.postinfo 
+        | By
+        a href=..  {{ .Params.author }}
+        |  :: {{ .Date.Format "2006-01-02" }}
       {{ .Content }}
     .EOF
