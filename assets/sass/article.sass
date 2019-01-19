@@ -3,16 +3,16 @@
 
 .article
   font-family: $font-base
+  padding: 0 0.25em
 
   a
     text-decoration: none
     background: none
     padding: 0
-    color: $color-gray-dark
-    border-bottom: 1px solid $color-gray-light
+    color: $color-white
     transition: all 0.1s linear 0s
     &:hover
-      border-bottom-color: $color-gray-dark
+      color: $color-blue
 
   p
     font-size: 1.2em
@@ -24,21 +24,21 @@
       max-width: 100%
       height: auto
     code
-      color: $color-gray-dark
-      background: $color-white
+      color: $color-white
+      background: $color-gray-dark
       padding: 0 0.3em
-      border-radius: 0.2em
-    a
-      padding-bottom: 0.15em
-    &>a>code
-      border-bottom: none
+      border-radius: 0.1em
 
   $size-header-base: 2.5em
 
   h1, h2, h3, h4
-    color: $color-gray-dark
+    color: $color-white
     font-family: $font-display
     font-weight: 200
+    code
+      background: $color-gray-dark
+      padding: 0 0.2em
+      border-radius: 0.1em
 
   h1
     font-size: $size-header-base
@@ -55,6 +55,9 @@
 
   h4
     font-size: $size-header-base * 0.5
+    padding: 0.3em 0
+    margin-bottom: -0.5em
+    border-bottom: 2px dashed $color-gray-light
 
   hr
     border: 0
@@ -82,9 +85,8 @@
   pre
     display: block
     white-space: pre
-    padding: 0.5em
+    padding: 0.5em 0
     border-radius: 0.3em
-    background: $color-white-dark
     font-family: $font-monospace
     overflow: hidden
     overflow-x: scroll

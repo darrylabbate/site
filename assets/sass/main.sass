@@ -6,22 +6,19 @@ html
 
 body
   max-width: 40em
-  background: $color-white-dark
+  background: #333
   font-family: $font-monospace
   font-weight: 400
-  color: $color-gray
+  color: $color-white
   margin: 0 auto
   padding: 0.5em 0.75em 1.5em 0.75em
 
 a
   text-decoration: none
-  color: $color-gray
-  background: $color-white-darker
-  padding: 0 0.2em
+  color: $color-white
   transition: all 0.05s linear
   &:hover
-    background: $color-gray
-    color: $color-white
+    color: $color-blue
 
 p
   white-space: pre
@@ -31,20 +28,18 @@ h1, h2, h3, h4
   font-weight: 700
 
 // Alerts
-=alert($background, $border-color, $font-color)
-  background: $background
-  color: $font-color
+=alert($color)
+  color: $color
   font-family: $font-display
   font-weight: 400
-  padding: 0 0.2em
   text-transform: uppercase
-  border-left: solid 2px $border-color
-
-.alert-yellow
-  +alert($color-yellow-lighter, $color-yellow, $color-gray-dark)
+  &::before
+    color: $color-gray-light
+    content: ' *** '
+    font-family: $font-monospace
 
 .alert-blue
-  +alert($color-blue-lighter, $color-blue, $color-gray-dark)
+  +alert($color-blue)
 
 .content
   padding: 0 0.25em
@@ -62,8 +57,8 @@ h1, h2, h3, h4
 // Header & footer
 
 .header
-  padding: 0.5em 0
   margin-bottom: 0.5em
+  padding: 0 0.25em
   a
     border: none
 
@@ -72,12 +67,10 @@ h1, h2, h3, h4
   font-family: $font-display
   font-weight: 400
   text-transform: uppercase
-  margin-right: 1em
+  // margin-right: 1em
   a
-    color: $color-gray-dark
+    color: $color-white-dark
     background: none
-    padding: 0 0.2em
     transition: all 0.05s linear
     &:hover
-      background: $color-gray-dark
-      color: $color-white
+      color: $color-blue
