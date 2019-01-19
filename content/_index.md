@@ -2,7 +2,10 @@
 title = 'Darryl Abbate'
 +++
 
-What:      Self-taught programmer and CS student
-Where:     New Orleans, LA
-Currently: Intern at Entergy
-Links:     [Github](https://github.com/rootbeersoup)
+Self-taught programmer and Computer Science student at the University of New Orleans. Currently interning at Entergy's corporate office in New Orleans, LA.
+
+Some CS-related interests are command-line interfaces, functional programming, and graphic & web design.
+
+Other interests include playing guitar & piano.
+
+Links: [Github](https://github.com/rootbeersoup) [Keybase](https://keybase.io/rootbeersoup)
