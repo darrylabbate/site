@@ -33,17 +33,16 @@ h1, h2, h3, h4
 
 // Alerts
 =alert($color)
-  color: $color
+  background: rgba($color, 0.5)
   font-family: $font-display
   font-weight: 400
   text-transform: uppercase
-  &::before
-    color: lighten($color-gray, 20%)
-    content: ' *** '
-    font-family: $font-monospace
 
 .alert-blue
   +alert($color-blue)
+
+.alert-red
+  +alert($color-red)
 
 .content
   padding: 0 0.25em
