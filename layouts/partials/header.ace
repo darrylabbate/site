@@ -1,5 +1,3 @@
 .header
   span.wordmark
     a href=.. Darryl Abbate
-  span.alert-blue
-    | Redesign in progress
