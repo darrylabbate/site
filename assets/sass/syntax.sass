@@ -1,90 +1,84 @@
 // Syntax higlighting
-// Based on 'Tomorrow Night Eighties'
 
-$syntax-red:    #f2777a
-$syntax-orange: #f99157
-$syntax-yellow: #ffcc66
-$syntax-green:  #99cc99
-$syntax-cyan:   #66cccc
-$syntax-blue:   #6699cc
-$syntax-purple: #cc99cc
+$syntax-gray:   lighten($color-gray, 25%)
+$syntax-red:    lighten($color-red,  10%)
+$syntax-orange: lighten(#FFA01E, 15%)
+$syntax-yellow: #D2965A
+$syntax-green:  #50E3BB
+$syntax-cyan:   lighten(#10CFE8, 15%)
+$syntax-blue:   desaturate($color-blue, 20%)
+$syntax-purple: lighten(#105DE8, 15%)
 
 .chroma
 
-  // Comments
-  .c,
-  .c1,
-  .ch,
-  .cm,
-  .cp,
-  .cpf,
-  .cs
-    color: $syntax-blue
+  .c,   // Comment
+  .c1,  // Comment.Single
+  .ch,  // Comment.Hashbang
+  .cm,  // Comment.Multiline
+  .cp,  // Comment.Preproc
+  .cpf, // Comment.PreprocFile
+  .cs,  // Comment.Special
+  .esc  // Escape
+    color: $syntax-gray
 
-  // Error
-  .err
+  .err  // Error
     background: $syntax-red
 
-  // Keywords
-  .k,
-  .kc,
-  .kd,
-  .kn,
-  .kp,
-  .kr,
+  .k,   // Keyword
+  .kc,  // Keyword.Constant
+  .kd,  // Keyword.Declaration
+  .kn,  // Keyword.Namespace
+  .kp,  // Keyword.Pseudo
+  .kr,  // Keyword.Reserved
     color: $syntax-cyan
 
-  .kt
+  .kt   // Keyword.Type
     color: $syntax-purple
   
-  // Literals
-  .il,
-  .l,
-  .mb,
-  .mf,
-  .mh,
-  .mi
-  .mo,
-  .se
+  .l,   // Literal
+  .mb,  // Literal.Number.Bin
+  .mf,  // Literal.Number.Float
+  .mh,  // Literal.Number.Hex
+  .mi,  // Literal.Number.Integer 
+  .il,  // Literal.Number.Integer.Long
+  .mo,  // Literal.Number.Oct
+  .se   // Literal.String.Escape
     color: $syntax-purple
 
-  // Names
-  .fm,
-  .na,
-  .nc,
-  .nd,
-  .ne,
-  .nf,
-  .nx 
+  .na,  // Name.Attribute
+  .nc,  // Name.Class
+  .nd,  // Name.Decorator
+  .ne,  // Name.Exception
+  .nf,  // Name.Function
+  .fm,  // Name.Function.Magic
+  .nx   // Name.Other
     color: $syntax-green
 
-  // Operator
-  .o
+  .nn   // Name.Namespace
+    color: $syntax-orange
+
+  .o    // Operator
     color: $syntax-cyan
 
-  // Punctuation
-  .p
-    color: lighten($color-gray, 20%)
+  .p    // Punctuation
+    color: $syntax-gray
 
-  // Strings
-  .dl,
-  .ld,
-  .s,
-  .s1,
-  .s2,
-  .sa,
-  .sb,
-  .sc,
-  .sd,
-  .sh,
-  .si,
-  .sr,
-  .ss,
-  .sx
-    color: $syntax-yellow
+  .s,   // Literal.String
+  .dl,  // Literal.String.Delimiter
+  .s1,  // Literal.String.Single
+  .s2,  // Literal.String.Double
+  .sa,  // Literal.String.Affix
+  .sb,  // Literal.String.Backtick
+  .sc,  // Literal.String.Char
+  .sd,  // Literal.String.Doc
+  .sh,  // Literal.String.Heredoc
+  .si,  // Literal.String.Interpol
+  .sr,  // Literal.String.Regex
+  .ss,  // Literal.String.Symbol
+  .sx   // Literal.String.Other
+    color: $syntax-blue
 
-  // Diff
-  .gd
+  .gd   // Generic.Deleted
     color: $syntax-red
-  .gi
+  .gi   // Generic.Inserted
     color: $syntax-green
