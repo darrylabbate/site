@@ -31,7 +31,7 @@ import Data.List
 
 data Fox = Quick | Brown deriving Show
 
-func :: (Num a) => a -> a
+func :: (Num a) => a -> a   -- Type signature
 func x | x > 2     = Quick
        | x > 3     = Brown
        | otherwise = Dog

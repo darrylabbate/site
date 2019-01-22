@@ -5,7 +5,7 @@ url   = 'code'
 
 #### AWK
 ```awk
-BEGIN { FS="" }
+BEGIN { FS="" } # here's a comment
 
 /pattern/ {
   while (1) {
@@ -18,13 +18,14 @@ BEGIN { FS="" }
 
 #### Bash
 ```bash
-$ echo hello | awk '{print $0}'
+$ echo hello | awk '{print $0}' # comment
 ```
 
 #### C
 ```c
 #include <stdio.h>
 
+// Say hello
 int main(void)
 {
   printf("Hello, World!\n");
