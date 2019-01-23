@@ -13,7 +13,7 @@ body
   font-weight: 400
   color: $color-white
   margin: 0 auto
-  padding: 0.75em
+  padding: 0.75em 1.5em
 
 a
   text-decoration: none
@@ -31,6 +31,20 @@ p
 h1, h2, h3, h4
   font-size: 1em
   font-weight: 700
+  text-transform: uppercase
+
+ul, ol
+  font-size: 1.2em
+  padding-left: 0
+  list-style-position: outside
+  list-style-type: none
+  margin-left: -1.1em
+
+li
+  &::before
+    content: '-'
+    font-weight: 700
+    margin-right: 0.8em
 
 // Alerts
 =alert($color)
