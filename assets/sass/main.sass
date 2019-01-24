@@ -3,48 +3,39 @@
 
 html
   -webkit-text-size-adjust: 100%
+  font-kerning: normal
 
 body
   max-width: 48em
-  background: $color-dark
-  font-family: $font-monospace
-  font-kerning: normal
-  font-size: 14px
+  background: #fbf9f7
+  font-family: $font-base
   font-weight: 400
-  color: $color-white
+  color: $color-gray
   margin: 0 auto
-  padding: 0.75em 1.5em
+  padding: 0.75em 1.2em
 
 a
   text-decoration: none
-  color: $color-white
+  color: $color-gray
   transition: all 0.05s linear
-  background: lighten($color-dark, 10%)
   border-radius: 0.1em
   &:hover
-    background: $color-blue
-    color: $color-dark
+    color: $color-blue
 
 p
   white-space: pre-line
 
 h1, h2, h3, h4
   font-size: 1em
-  font-weight: 700
+  font-weight: 400
+  letter-spacing: -0.01em
   text-transform: uppercase
 
 ul, ol
   font-size: 1.2em
   padding-left: 0
   list-style-position: outside
-  list-style-type: none
-  margin-left: -1.1em
-
-li
-  &::before
-    content: '-'
-    font-weight: 700
-    margin-right: 0.8em
+  list-style-type: square
 
 // Alerts
 =alert($color)
@@ -60,7 +51,6 @@ li
   +alert($color-red)
 
 .content
-  padding: 0 0.25em
   text-align: left
   line-height: 1.4
 
@@ -80,18 +70,13 @@ li
 
 .header
   margin-bottom: 0.5em
-  padding: 0 0.25em
-  a
-    border: none
 
 .wordmark
-  font-size: 1em
+  font-size: 2em
   font-family: $font-display
   font-weight: 400
   text-transform: uppercase
   a
-    color: $color-white
-    background: none
     transition: all 0.05s linear
     padding: none
     &:hover

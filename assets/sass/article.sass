@@ -8,7 +8,7 @@
     text-decoration: none
     background: none
     padding: 0
-    color: $color-white
+    color: $color-gray
     transition: all 0.1s linear 0s
     &:hover
       color: $color-blue
@@ -23,22 +23,15 @@
       max-width: 100%
       height: auto
     code
-      color: $color-white
-      background: darken($color-gray, 5%)
+      background: lighten($color-gray, 60%)
       padding: 0 0.3em
       border-radius: 0.1em
 
-  $size-header-base: 2.5em
+  $size-header-base: 3.5em
 
   h1, h2, h3, h4
-    color: $color-white
+    color: $color-gray
     font-family: $font-display
-    font-weight: 200
-    code
-      background: darken($color-gray, 5%)
-      font-weight: 400
-      padding: 0 0.2em
-      border-radius: 0.1em
 
   h1
     font-size: $size-header-base
@@ -46,15 +39,15 @@
     margin: 0 auto
 
   h2
-    font-size: $size-header-base * 0.8
+    font-size: $size-header-base * 0.6
     line-height: 1.25em
 
   h3
-    font-size: $size-header-base * 0.6
+    font-size: $size-header-base * 0.5
     line-height: 1em
 
   h4
-    font-size: $size-header-base * 0.5
+    font-size: $size-header-base * 0.4
     margin-bottom: -0.5em
 
   hr
@@ -64,11 +57,11 @@
   blockquote
     font-family: $font-italic
     font-style: italic
-    font-weight: 200
-    border-left: solid 5px lighten($color-gray, 15%)
+    font-weight: 300
+    border-left: solid 4px lighten($color-gray, 5%)
     margin: 0 auto
-    margin-left: -1.5em
-    padding-left: 1.2em
+    margin-left: -1.2em
+    padding-left: 0.9em
 
   .postinfo
     font-size: 0.8em
@@ -84,12 +77,11 @@
     display: block
     white-space: pre
     padding: 0.5em
-    border-radius: 0.2em
+    border-radius: 0.4em
     font-family: $font-monospace
     overflow: hidden
     overflow-x: scroll
-    background: lighten($color-dark, 3%)
-    border: solid 1px $color-gray
+    background: #ebebeb
     code
       overflow: hidden
       overflow-x: scroll

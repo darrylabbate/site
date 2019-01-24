@@ -1,9 +1,8 @@
 // Syntax higlighting
 
-$syntax-gray:   darken($color-white, 15%)
 $syntax-red:    lighten($color-red,  10%)
-$syntax-green:  #50E3BB
-$syntax-blue:   desaturate($color-blue, 20%)
+$syntax-green:  darken(#50E3BB, 15%)
+$syntax-blue:   darken($color-blue, 10%)
 
 .chroma
 
@@ -20,6 +19,3 @@ $syntax-blue:   desaturate($color-blue, 20%)
 
   .gi   // Generic.Inserted
     color: $syntax-green
-
-  .p    // Punctuation
-    color: $syntax-gray
