@@ -7,8 +7,8 @@ html lang=en
     .article
       h1 {{ .Title }}
       span.postinfo 
-        | By
-        a href=..  {{ .Params.author }}
-        |  :: {{ .Date.Format "2006-01-02" }}
+        a href=.. {{ .Params.author }}
+        br
+        {{ .Date.Format "2006-01-02" }}
       {{ .Content }}
     .EOF
