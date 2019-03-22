@@ -1,0 +1,11 @@
+= doctype html
+html lang=en
+  head
+    {{ partial "head.html" }}
+  body
+    {{ partial "header.html" }}
+    br
+    .alert-blue
+      | Posts coming soon!
+    .content
+      {{ .Content }}

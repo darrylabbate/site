@@ -1,0 +1,10 @@
+= doctype html
+html lang=en
+  head
+    {{ partial "head.html" }}
+    title {{ .Title }}
+  body
+    .article
+      h1 {{ .Title }}
+      {{ .Content }}
+    .EOF
