@@ -25,17 +25,43 @@ a
 p
   white-space: pre-line
 
+$size-header-base: 3.5em
+
 h1, h2, h3, h4
-  font-size: 1em
-  font-weight: 400
+  color: $color-gray
   letter-spacing: -0.01em
-  text-transform: uppercase
   code
     font-size: 80%
     background: lighten($color-gray, 65%)
     padding: 0.1em
     border-radius: 0.1em
     text-transform: none
+
+h1, h2
+  font-family: $font-display
+  font-weight: 400
+  text-transform: uppercase
+
+h3, h4
+  font-family: $font-base
+  font-weight: 700
+
+h1
+  font-size: $size-header-base
+  line-height: 1.2em
+  margin: 0 auto
+
+h2
+  font-size: $size-header-base * 0.8
+  line-height: 1em
+
+h3
+  font-size: 1.5em
+  line-height: 1em
+
+h4
+  font-size: 1.2em
+  margin-bottom: -0.5em
 
 ul, ol
   font-size: 1.2em
