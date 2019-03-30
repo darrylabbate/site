@@ -4,9 +4,9 @@ https://keybase.io/rootbeersoup
 
 I hereby claim:
 
-  * I am an admin of https://darryl.sh
+  * I am an admin of https://darryl.cx
   * I am rootbeersoup (https://keybase.io/rootbeersoup) on keybase.
-  * I have a public key with fingerprint B5F4 A94C 02EC 83A5 B302  E41A 83F3 27E9 B28E A173
+  * I have a public key ASDOFLxVY1cwJd4ruKFsp92Q2RnqTXu6t07dnAFL6ugicAo
 
 To do so, I am signing this object:
 
@@ -14,55 +14,39 @@ To do so, I am signing this object:
   "body": {
     "key": {
       "eldest_kid": "01010f4c52bb6c1a482ad582e145a92a3e0e7b6b0254348de5b44cd9bef7cb5e0e090a",
-      "fingerprint": "b5f4a94c02ec83a5b302e41a83f327e9b28ea173",
       "host": "keybase.io",
-      "key_id": "83f327e9b28ea173",
-      "kid": "01010f4c52bb6c1a482ad582e145a92a3e0e7b6b0254348de5b44cd9bef7cb5e0e090a",
+      "kid": "0120ce14bc5563573025de2bb8a16ca7dd90d919ea4d7bbab74edd9c014beae822700a",
       "uid": "270b81c4dff25778f739af8624376f19",
       "username": "rootbeersoup"
     },
+    "merkle_root": {
+      "ctime": 1553963011,
+      "hash": "43c27da90afcc5a4772365182401e651ab3fad756e70e0bba0d2359b6ccc86bb0dcb7f2ee13490e7bb542a723e739db3dfb5e964a2b8404d0b1c3bdbb08f60e7",
+      "hash_meta": "0bffb149f3f3d9ef47d3678c677792c623a4e61c86de5b80637b145b15e7a963",
+      "seqno": 5061477
+    },
     "service": {
-      "hostname": "darryl.sh",
+      "entropy": "UChPqPnZ8/nedKslbarSeupJ",
+      "hostname": "darryl.cx",
       "protocol": "https:"
     },
     "type": "web_service_binding",
-    "version": 1
+    "version": 2
   },
-  "ctime": 1529224564,
-  "expire_in": 157680000,
-  "prev": "f15823b99665edaebcc03c3a2f7cc5ee755e8ac6ceb4369a5dcb32711eb2f1f2",
-  "seqno": 15,
+  "client": {
+    "name": "keybase.io go client",
+    "version": "3.1.2"
+  },
+  "ctime": 1553963018,
+  "expire_in": 504576000,
+  "prev": "d60ff4ed6cb463d592db506705c3f665dea5cc4117eb60467fc0579326d113aa",
+  "seqno": 26,
   "tag": "signature"
 }
 
 which yields the signature:
 
------BEGIN PGP MESSAGE-----
-
-owGtUn9QFGUYPuAYDkhBQSzskpaSMrhuf93unjMK0s2B2VxoUkhx7bf7LeyAt3d7
-C4pEQyCaEA2IMGRDBYVBBI3yo2wYygZIJYehGfXMwRl/UIFMNOKIJHLtMvpff/Z9
-f3zf977P83zv+8xbuyJIZwiomEuYOvlhizdgdArosjcYK0sQIPHFiLUEyYfLByzg
-oVdx5os8YkXMqLoFgiMxACwcyhI0xvIkjUGUIFkGY3FohhSwADNGEjhB85AEBMHx
-DIACxQFSzZoZM4skIoLoyoWyWxZdiioLSIFgGYIzY5CjcZYEuHojUJbGBRyjIAMw
-GrIohavEPMmrMdTiAOuFJlFSY+rDuVzef+D/57oLl+UwygxolCN4QcBIiqIFCmdY
-gbZgBE5ZBJTRgF4ou9g9UEXLkqQACGWvVOhGShMRNVMkclAzV+vmIYpnZbm4wOTN
-U8luWVIkTipQw3mK4vZaNZpS7NZweyFwPlRwAtHFq0aqjCJVXpRciBVVkZwiapIo
-iTEYRpAWIhGB+9yiDJ2ihiApC21Wl/YPLFIlBVS1At8NGMZiISHPQsBxZpzDWUzt
-niMhpEgS0ixn4SAgcAvDkjwHVKNRFAJMQAUM0ZryuCRNXC2UzVVFvWKui1UKZYiU
-hh0OxPW6AIPOGPO0vu9Ox/bAmYq2nsCbsY+mLzhQGz1dWGjkowj/TIT/lYyNGzM+
-7uAXV5n6Iw1ja7bZdOkNz381en7A3vclmO15dsIVJUcJX5fDRaNf5xjM6mld3PVC
-e/SLjWJ7qjMrp8oqlPEj8xv2X950jb/41o1S4ykvHNqeDH5Of2zv50e2NPoD4j2+
-VMclQ3jOhQn/itOTR7M9xPWgTkfybbHXsLJarC9PSvTd6TP5bqXUDtwoXf1tRcRS
-ftepupNP/TA+SIQjb4fUjlRM2GdihIj6fvsTxDsZa3QJ5Vb7ynR/dd0HYn5z6t2B
-zZh9+BPf9/rJ+eg05lL7IJLfFny9+L6vpuLNz2LphcJdcVu74y83ONZO/zk8yZ0b
-Ta8uS8Zzv9PLin/9VuS0f3TVCfKIRwk6YJ197qVkujdid0/jztULUZFnQvVlGZm/
-VnanPU4p6WlXbPp9nnWlV6YyxW/Wzn4qzr/mO/qeIXv9QsmFGmNsTD/S9JHx5aa+
-zOmflsbr/w5hc3b0Dt7tY5jInXT00BdPTp/xnC+83fsAC/VTxc23os7uAKbm2eyr
-SUn3ut5tSHsj4ceLHePrK8NuHogaMtVvedBapz9rNt/bPJx4cL+90x9iS+lq2PT6
-ubjwqmNFjpax7G1lxw6+3wp+u2b7a+SPmd//sc91thzy7YFX4yaC5n8JDQoeyFx3
-PLjbtlRVM5ZRxTriU+rk+1lzJw5X47a2V493NtXBfwE=
-=t0kB
------END PGP MESSAGE-----
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgzhS8VWNXMCXeK7ihbKfdkNkZ6k17urdO3ZwBS+roInAKp3BheWxvYWTESpcCGsQg1g/07Wy0Y9WS21BnBcP2Zd6lzEEX62BGf8BXkybRE6rEIDFJbLT+1ojQjZ7LSOZHsB9amMk7dW2vGdttwxwmXAG5AgHCo3NpZ8RA5oym0RKPxh88F1gNrtm/SMl4xxCVXiH0Yw3meggfekm5wSDvcpPhBTuAn7/uWC2SlnKYdoeAuNlT/Z8gzYKyBKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEID2r4GTL0nNX4e8MzwNUn21v3XkmXMCos5cM2pxbAB9go3RhZ80CAqd2ZXJzaW9uAQ==
 
 And finally, I am proving ownership of this host by posting or
 appending to this document.
@@ -70,4 +54,3 @@ appending to this document.
 View my publicly-auditable identity here: https://keybase.io/rootbeersoup
 
 ==================================================================
-
