@@ -18,11 +18,11 @@ Along with the typical browser view, there is also a minisite which can be acces
 </p>
 
 ### Available commands
-* `curl darryl.sh` - Seen in the above screenshot.
-* `curl darryl.sh/about` - A little about myself.
-* `curl darryl.sh/contact` - Contact info.
-* `curl darryl.sh/posts` - 5 latest blog posts (⌘ + click opens links in iTerm).
-* `curl darryl.sh/pgp` - My public PGP key.
-  * `curl darryl.sh/pgp | pbcopy` to copy to macOS clipboard.
-  * `curl darryl.sh/pgp | gpg --import` to add the key automatically.
-* `curl darryl.sh/projects` - Brief overview of some of my projects.
+* `curl darryl.cx` - Seen in the above screenshot.
+* `curl darryl.cx/about` - A little about myself.
+* `curl darryl.cx/contact` - Contact info.
+* `curl darryl.cx/posts` - 5 latest blog posts (⌘ + click opens links in iTerm).
+* `curl darryl.cx/pgp` - My public PGP key.
+  * `curl darryl.cx/pgp | pbcopy` to copy to macOS clipboard.
+  * `curl darryl.cx/pgp | gpg --import` to add the key automatically.
+* `curl darryl.cx/projects` - Brief overview of some of my projects.
