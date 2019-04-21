@@ -9,6 +9,5 @@ html lang=en
       span.postinfo 
         a href=.. {{ .Params.author }}
         br
-        {{ .Date.Format "2006-01-02" }}
+        {{ .Date.Format "2006/01/02" }}
       {{ .Content }}
-    .EOF
