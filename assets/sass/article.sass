@@ -6,11 +6,13 @@
 
   a
     text-decoration: none
-    background: none
-    padding: 0
+    background: lighten($color-gray, 65%)
+    padding: 0 0.3em
     color: $color-gray
+    border-radius: 0.1em
     &:hover
-      color: $color-blue
+      background: $color-gray
+      color: $color-white
 
   p
     font-size: 1.2em
@@ -21,11 +23,6 @@
     img
       max-width: 100%
       height: auto
-    code
-      background: lighten($color-gray, 65%)
-      padding: 0 0.3em
-      border-radius: 0.1em
-
 
   hr
     border: 0
@@ -71,3 +68,22 @@
   code
     font-family: $font-monospace
     font-size: 0.9em
+
+  table
+    border-collapse: collapse
+    font-size: 1.2em
+    margin: 0 auto
+    border-bottom: 2px solid lighten($color-gray, 35%)
+    th
+      font-weight: 400
+      font-size: 0.9em
+      border-bottom: 2px solid lighten($color-gray, 35%)
+    tr
+      display: table-row
+      &:hover
+        background: lighten($color-gray, 65%)
+    td, th
+      margin: 0 auto
+      padding: 0.3em
+    tr:nth-child(2n)
+      // background: lighten($color-gray, 65%)
