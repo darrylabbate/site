@@ -40,6 +40,11 @@
   .postinfo
     font-size: 0.8em
     font-family: $font-monospace
+    a
+      background: none
+      padding: 0
+      &:hover
+        color: $color-blue
 
   .highlight
     pre
@@ -72,11 +77,9 @@
     border-collapse: collapse
     font-size: 1.2em
     margin: 0 auto
-    border-bottom: 2px solid lighten($color-gray, 35%)
+    border-bottom: 2px solid lighten($color-gray, 25%)
     th
-      font-weight: 400
-      font-size: 0.9em
-      border-bottom: 2px solid lighten($color-gray, 35%)
+      border-bottom: 2px solid lighten($color-gray, 25%)
     tr
       display: table-row
       &:hover
