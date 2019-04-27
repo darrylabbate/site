@@ -7,7 +7,7 @@ html
 
 body
   max-width: 48em
-  background: #fbfbfb
+  background: $color-white
   font-family: $font-base
   font-weight: 400
   color: $color-gray
@@ -33,9 +33,6 @@ h1, h2, h3, h4
   code
     font-size: 80%
     font-weight: 600
-    background: lighten($color-gray, 65%)
-    padding: 0.1em
-    border-radius: 0.1em
     text-transform: none
 
 h1, h2
@@ -69,19 +66,6 @@ ul, ol
   padding-left: 0
   list-style-position: outside
   list-style-type: square
-
-// Alerts
-=alert($color)
-  background: rgba($color, 0.5)
-  font-family: $font-display
-  font-weight: 400
-  text-transform: uppercase
-
-.alert-blue
-  +alert($color-blue)
-
-.alert-red
-  +alert($color-red)
 
 .content
   text-align: left
