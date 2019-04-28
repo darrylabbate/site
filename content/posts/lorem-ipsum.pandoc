@@ -1,8 +1,8 @@
 +++
-title  = 'Lorem Ipsum (H1)'
-author = 'Darryl Abbate'
+title  = "Lorem Ipsum (H1)"
+author = "Darryl Abbate"
 date   = 2018-12-27T10:18:04-06:00
-url    = 'lorem-ipsum'
+url    = "lorem-ipsum"
 +++
 
 Lorem **markdownum**, novabis, Aeaciden vitiatur **tactis**, inde funera.  **Disce tum**, tu mox `crescendo` et elige unam erit volucresque. Caecaque insula et mihi et Paris angustum vidi!
@@ -11,15 +11,21 @@ Lorem **markdownum**, novabis, Aeaciden vitiatur **tactis**, inde funera.  **Dis
 
 > The quick brown fox jumps over the lazy dog
 
-Regem fraxinus Iason `tentoria` io inducto certe, est parvae `pectine`, quoque.  Operiri tellus legi vultus crimine. Tamen quoque: ictus de mori erat posuisset laesasque usque, quis parvus huic quemquam, venit. Quae nova. Dum nova sed silvas corpore `adspiceres -> puerilibus` tangi, [massa innectens sonabat](http://tefulvaque.io/nam.aspx)!
+Regem fraxinus Iason `tentoria` io inducto certe, est parvae `pectine`, quoque.  Operiri tellus legi vultus crimine. Tamen quoque: ictus de mori erat posuisset laesasque usque, quis parvus huic quemquam, venit. Quae nova. Dum nova sed silvas[^1] corpore `adspiceres -> puerilibus` tangi, [massa innectens sonabat](http://tefulvaque.io/nam.aspx)!
+
+[^1]: Example footnote 1
 
 - Cum quid posset
 - Superabat patrem sceleri demisere uritur
 - Paludes ambo obstipuit quatenus nunc bella relevare
 
-Repetitaque regia capillis! Ut nunc carbasa, in tulit viribus, inrequieta [`me vivaque nam`](http://www.velquid.net/redeunt.aspx) loquar edentem, esse vale.  Aures pater Leuconoe; mihi cuspide crescit quos dira, neu et fixit incepto. Mea inque, fiet trado, ridet quid deficiunt, dies adunci pectore Cereris.
+Repetitaque regia^[Example inline footnote] capillis! Ut nunc carbasa, in tulit viribus, inrequieta [`me vivaque nam`](http://www.velquid.net/redeunt.aspx) loquar edentem, esse vale.  Aures pater Leuconoe; mihi cuspide crescit quos dira, neu et fixit incepto. Mea inque, fiet trado, ridet quid deficiunt, dies adunci pectore Cereris.
 
 ### Header (H3)
+
+- [ ] an unchecked task list item
+- [x] checked item
+
 #### Header (H4)
 
 ```haskell
@@ -45,12 +51,17 @@ func x | x > 2     = Quick
 
 Est nec densumque *quam* dictis Pallas, mihi verba nam et dabat. Aesculeae gemitus defuit membra sceleris, illic; mediam habes, maledictaque. Ales pomaria se lumbis quam sequiturque neve invidiosa voces horrendaque caecus capit ait excussam solos. Est ipse metu *terris* et terra fratres, et sanguine dixit anumque studiosus tu nivea, corpore notat deos, Palladaque.
 
-| A Table             | Of Things               |
-| -------             | ---------               |
-| `oneFish`           | Two Fish                |
-| **Red Fish**        | *Blue Fish*             |
-| Looooooooooong Fish | shrt fsh                |
-| shrt fsh v2         | Looooooooooooonger Fish |
+| Radix   | Description         |
+|:-------:| ---                 |
+| `h`     | hexadecimal         |
+| `q`/`o` | octal               |
+| `d`     | decimal             |
+| `b`     | binary              |
+| `r`     | encoded real        |
+| `t`     | decimal (alternate) |
+| `y`     | binary (alternate)  |
+
+: Table 1: Example Caption
 
 Egeriae alebat. Nate habuit; ille ferebat [Proserpina](http://ad.io/), illa vacuas, Parosque? Vallis melius [carminibus](http://doceri.io/) blandis aves ex stagnata lingua totaque; **quid cuius** quo ulterius! Residens [quam](http://sine-committit.net/) cum, fugiant quoniam; Iove litore latus?
 
@@ -63,3 +74,13 @@ int main(void)
   return 0;
 }
 ```
+
+| Operator | Name              | Precedence  |
+| :---:    | ---               | ---         |
+| `()`     | Parentheses       | 1 (highest) |
+| `+`,`-`  | Unary plus, minus | 2           |
+| `*`,`/`  | Multiply, divide  | 3           |
+| `MOD`    | Modulus           | 3           |
+| `+`, `-` | Add, subtract     | 4 (lowest)  |
+
+: Table 2: example caption
