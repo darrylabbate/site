@@ -1,4 +1,5 @@
 baseURL = "https://darryl.cx"
+disableKinds = ["taxonomy", "taxonomyTerm"]
 languageCode = "en-us"
 title = "Darryl Abbate"
 
