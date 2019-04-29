@@ -61,8 +61,6 @@ Est nec densumque *quam* dictis Pallas, mihi verba nam et dabat. Aesculeae gemit
 | `t`     | decimal (alternate) |
 | `y`     | binary (alternate)  |
 
-: Table 1: Example Caption
-
 Egeriae alebat. Nate habuit; ille ferebat [Proserpina](http://ad.io/), illa vacuas, Parosque? Vallis melius [carminibus](http://doceri.io/) blandis aves ex stagnata lingua totaque; **quid cuius** quo ulterius! Residens [quam](http://sine-committit.net/) cum, fugiant quoniam; Iove litore latus?
 
 ```c
@@ -82,5 +80,3 @@ int main(void)
 | `*`,`/`  | Multiply, divide  | 3           |
 | `MOD`    | Modulus           | 3           |
 | `+`, `-` | Add, subtract     | 4 (lowest)  |
-
-: Table 2: example caption

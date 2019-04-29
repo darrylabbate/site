@@ -1,5 +1,6 @@
 baseURL = "https://darryl.cx"
 disableKinds = ["taxonomy", "taxonomyTerm"]
+footnoteReturnLinkContents = "[return]"
 languageCode = "en-us"
 title = "Darryl Abbate"
 

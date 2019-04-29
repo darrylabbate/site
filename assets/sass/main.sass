@@ -93,7 +93,7 @@ ul
 
 .home
   font-family: $font-monospace
-  font-size: 0.8em
+  font-size: 0.9em
   max-width: 32em
   margin: 0 auto
 
@@ -132,7 +132,7 @@ blockquote
       color: $color-blue
 
 
-// Inline & denced code blocks
+// Inline & fenced code blocks
 
 .highlight
   pre
@@ -166,18 +166,17 @@ table
   font-size: 1.2em
   margin: 0 auto
   border: 2px solid lighten($color-gray, 25%)
-  caption
-    font-size: 0.8em
   th
     background: lighten($color-gray, 65%)
     border-bottom: 2px solid lighten($color-gray, 25%)
   tr
     display: table-row
+    transition: all 0.05s linear
     &:hover
       background: lighten($color-gray, 65%)
   td, th
     margin: 0 auto
-    padding: 0.3em
+    padding: 0.3em 1em
   tr:nth-child(2n)
     // background: lighten($color-gray, 65%)
 
@@ -185,16 +184,20 @@ table
 // Article fotnotes
 
 .footnotes
+  font-family: $font-monospace
   font-size: 0.8em
+  margin: 3em 0
+  ol > li:hover
+    transition: all 0.05s linear
+    background: lighten($color-gray, 65%)
 
-a.footnote-back
+a.footnote-return
   background: none 
-  position: relative
-  top: 0.2em
+  float: right
   &:hover
     color: $color-blue
 
-.footnote-ref
+.footnote-ref > a
   background: none
   font-size: 0.9em
   margin-left: -0.2em

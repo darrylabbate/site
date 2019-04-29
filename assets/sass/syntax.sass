@@ -4,20 +4,18 @@ $syntax-red:    lighten($color-red,  10%)
 $syntax-green:  darken(#50E3BB, 15%)
 $syntax-blue:   darken($color-blue, 10%)
 
-.sourceCode
+.chroma
 
-  .co  // Comments
+  .c,   // Comment
+  .c1,  // Comment.Single
+  .cs,  // Comment.Special
     color: $syntax-blue
 
-  &.diff
-    .kw,
-    .st
-      color: $syntax-red
+  .err  // Error
+    background: $syntax-red
 
-    .dt,
-    .va
-      color: $syntax-green
+  .gd   // Generic.Deleted
+    color: $syntax-red
 
-  .sourceLine:hover
-    color: $color-gray
-    background: none
+  .gi   // Generic.Inserted
+    color: $syntax-green
