@@ -32,6 +32,10 @@ p
     max-width: 100%
     height: auto
 
+// Inline code (paragraphs, lists)
+// Hasklig (Source Code Pro) looks just slightly too large
+p > code, li > code, p > a > code
+  font-size: 0.97em
 
 // Headers (H1, H2, ...)
 
@@ -112,6 +116,7 @@ ul
 hr
   border: 0
   border-top: 2px dashed lighten($color-gray, 10%)
+  margin-top: 2em
 
 blockquote
   font-family: $font-italic
@@ -148,27 +153,28 @@ pre
   font-family: $font-monospace
   overflow: hidden
   overflow-x: scroll
-  background: lighten($color-gray, 65%)
+  background: lighten($color-gray, 68%)
   code
     overflow: hidden
     overflow-x: scroll
     font-size: 1em
 
-pre > code.bash::before
-  content: '$ '
-  color: $color-gray
-
 code
   font-family: $font-monospace
 
+
+// Tables
+
 table
   border-collapse: collapse
-  font-size: 1.2em
+  font-size: 1em
   margin: 0 auto
-  border: 2px solid lighten($color-gray, 25%)
-  th
+  thead
     background: lighten($color-gray, 65%)
-    border-bottom: 2px solid lighten($color-gray, 25%)
+    border-bottom: 2px solid lighten($color-gray, 20%)
+    border-top: 2px solid lighten($color-gray, 20%)
+  tbody
+    border-bottom: 2px solid lighten($color-gray, 20%)
   tr
     display: table-row
     transition: all 0.05s linear
@@ -194,6 +200,7 @@ table
 a.footnote-return
   background: none 
   float: right
+  padding: 0
   &:hover
     color: $color-blue
 
