@@ -4,7 +4,7 @@ html lang=en
     {{ partial "head.html" }}
     title {{ .Title }}
   body
-    .article
+    main
       h1 {{ .Title }}
-      {{ .Content }}
-    .EOF
+      article
+        {{ .Content }}

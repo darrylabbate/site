@@ -4,7 +4,6 @@ html lang=en
     {{ partial "head.html" }}
     title Darryl Abbate
   body
-    .home
-      span.wordmark Darryl Abbate
-      .content
+    main
+      .home
         {{ .Content }}
