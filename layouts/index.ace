@@ -1,9 +1,0 @@
-= doctype html
-html lang=en
-  head
-    {{ partial "head.html" }}
-    title Darryl Abbate
-  body
-    main
-      .home
-        {{ .Content }}

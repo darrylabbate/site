@@ -1,4 +1,0 @@
-meta charset="UTF-8"
-meta name="viewport" content="initial-scale=1, width=device-width"
-{{ $style := resources.Get "sass/style.sass" | toCSS | minify | fingerprint }}
-link rel="stylesheet" href="{{ $style.Permalink }}"
