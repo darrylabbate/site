@@ -187,20 +187,21 @@ table
 
 .footnotes
   font-family: $font-monospace
-  font-size: 0.8em
   margin: 3em 0
+  ol
+    font-size: 0.8em
   ol > li:hover
     transition: all 0.05s linear
     background: lighten($color-gray, 65%)
 
-a.footnote-return
+a.footnote-back
   background: none 
   float: right
   padding: 0
   &:hover
     color: $color-blue
 
-.footnote-ref > a
+a.footnote-ref
   background: none
   font-size: 0.9em
   margin-left: -0.2em
