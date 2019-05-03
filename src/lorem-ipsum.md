@@ -1,9 +1,8 @@
-+++
-title  = "Lorem Ipsum (H1)"
-author = "Darryl Abbate"
-date   = 2018-12-27T10:18:04-06:00
-url    = "lorem-ipsum"
-+++
+---
+title:  "Lorem Ipsum (H1)"
+author: "Darryl Abbate"
+date:    2018-12-27
+...
 
 Lorem **markdownum**, novabis, Aeaciden vitiatur **tactis**, inde funera.  **Disce tum**, tu mox `crescendo` et elige unam erit volucresque. Caecaque insula et mihi et Paris angustum vidi!
 

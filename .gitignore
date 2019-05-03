@@ -1,5 +1,5 @@
-public/
-resources/
+build/
+dist/
 .sass-cache/
 *.css.map
 *.sass.map

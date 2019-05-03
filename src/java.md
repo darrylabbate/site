@@ -1,7 +1,6 @@
-+++
-title = "Java II Study Guide"
-url   = "/java2"
-+++
+---
+title: "Java II Study Guide"
+...
 
 ## Interfaces
 

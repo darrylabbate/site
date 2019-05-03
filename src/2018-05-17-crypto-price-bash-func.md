@@ -1,8 +1,7 @@
-+++
-title  = "Bash Function to Check a Cryptocurrency's Price"
-author = "Darryl Abbate"
-url    = "crypto-price-bash-function"
-+++
+---
+title:  "Bash Function to Check a Cryptocurrency's Price"
+author: "Darryl Abbate"
+...
 
 ```bash
 function coin () {

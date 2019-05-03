@@ -1,7 +1,6 @@
-+++
-title = 'Example Code'
-url   = 'code'
-+++
+---
+title: "Example Code"
+...
 
 #### ASM
 
