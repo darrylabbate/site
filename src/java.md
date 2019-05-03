@@ -1,6 +1,4 @@
----
-title: "Java II Study Guide"
-...
+% Java II Study Guide
 
 ## Interfaces
 

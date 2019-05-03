@@ -1,6 +1,4 @@
----
-title: "Darryl Abbate"
-...
+% Darryl Abbate
 
 Darryl Abbate
 

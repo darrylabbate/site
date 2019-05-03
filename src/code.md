@@ -1,6 +1,4 @@
----
-title: "Example Code"
-...
+% Example Code
 
 #### ASM
 
