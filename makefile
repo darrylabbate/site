@@ -1,5 +1,6 @@
 SHELL     := /bin/bash
 
+DATA_DIR  := data
 DIST_DIR  := dist
 ETC_DIR   := etc
 SASS_DIR  := sass
@@ -10,13 +11,15 @@ HTML_FMT  := html
 TEXT_FMT  := plain
 
 HFLAGS     = --standalone
+HFLAGS    += --template=$(DATA_DIR)/html.pdc
 HFLAGS    += --from $(INPUT_FMT)
 HFLAGS    += --to $(HTML_FMT)
 HFLAGS    += --css=../style.css
 HFLAGS    += --no-highlight
 
-TFLAGS     = -f $(INPUT_FMT)
-TFLAGS    += -t $(TEXT_FMT)
+TFLAGS     = --from $(INPUT_FMT)
+TFLAGS    += --to $(TEXT_FMT)
+TFLAGS    += --template=$(DATA_DIR)/plain.pdc
 
 SFLAGS     = --style=compressed
 SFLAGS    += --no-source-map
