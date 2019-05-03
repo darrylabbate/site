@@ -1,4 +1,4 @@
-SHELL     := /bin/bash
+SHELL     := /bin/sh
 
 DATA_DIR  := data
 DIST_DIR  := dist
@@ -47,6 +47,8 @@ html: sass
 	pandoc $$i -o $(DIST_DIR)/$$(basename $$i ".md")/index.html $(HFLAGS); \
 	done
 	echo "Compile HTML files"
+	find $(DIST_DIR) -type f -iname "index.html" | xargs sed -i '' 's/↩/[return]/g'
+	echo "Replace default Pandoc footnote character"
 
 plaintext:
 	mkdir -p $(DIST_DIR)/t
