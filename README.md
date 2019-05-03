@@ -1,5 +1,5 @@
 <p align="center" >
-  <img src="logo.png">
+  <img src="doc/logo.png">
 </p>
 
 This is my personal website, which contains basic information about myself as well as a blog and a place to showcase my projects. 
@@ -14,7 +14,7 @@ This is my personal website, which contains basic information about myself as we
 Along with the typical browser view, there is also a minisite which can be accessed from the command-line with `curl`.
 
 <p align="center" >
-  <img src="plaintext.png">
+  <img src="doc/plaintext.png">
 </p>
 
 ### Available commands
