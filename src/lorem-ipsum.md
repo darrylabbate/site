@@ -46,7 +46,7 @@ func x | x > 2     = Quick
 ### `fencedHeader -> H3`
 #### `fencedHeader -> H4`
 
-Est nec densumque *quam* dictis Pallas, mihi verba nam et dabat. Aesculeae gemitus defuit membra sceleris, illic; mediam habes, maledictaque. Ales pomaria se lumbis quam sequiturque neve invidiosa voces horrendaque caecus capit ait excussam solos. Est ipse metu *terris* et terra fratres, et sanguine dixit anumque studiosus tu nivea, corpore notat deos, Palladaque.
+Est nec densumque *quam* dictis Pallas^[The quick brown fox jumps over the really lazy dog. Let's see how long this footnote gets.], mihi verba nam et dabat. Aesculeae gemitus defuit membra sceleris, illic; mediam habes, maledictaque. Ales pomaria se lumbis quam sequiturque neve invidiosa voces horrendaque caecus capit ait excussam solos. Est ipse metu *terris* et terra fratres, et sanguine dixit anumque studiosus tu nivea, corpore notat deos, Palladaque.
 
 | Radix   | Description         |
 |:-------:| ---                 |
@@ -57,6 +57,8 @@ Est nec densumque *quam* dictis Pallas, mihi verba nam et dabat. Aesculeae gemit
 | `r`     | encoded real        |
 | `t`     | decimal (alternate) |
 | `y`     | binary (alternate)  |
+
+: Table 1: A caption
 
 Egeriae alebat. Nate habuit; ille ferebat [Proserpina](http://ad.io/), illa vacuas, Parosque? Vallis melius [carminibus](http://doceri.io/) blandis aves ex stagnata lingua totaque; **quid cuius** quo ulterius! Residens [quam](http://sine-committit.net/) cum, fugiant quoniam; Iove litore latus?
 
@@ -77,3 +79,5 @@ int main(void)
 | `*`,`/`  | Multiply, divide  | 3           |
 | `MOD`    | Modulus           | 3           |
 | `+`, `-` | Add, subtract     | 4 (lowest)  |
+
+: Table 2: Another caption
