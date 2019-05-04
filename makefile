@@ -1,4 +1,5 @@
 SHELL     := /bin/sh
+UNAME     := $(shell uname -s)
 
 DATA_DIR  := data
 DIST_DIR  := dist
@@ -24,6 +25,7 @@ TFLAGS    += --template=$(DATA_DIR)/plain.pdc
 SFLAGS     = --style=compressed
 SFLAGS    += --no-source-map
 
+
 .PHONY: all build clean deploy etc html plaintext sass
 .SILENT: etc html plaintext sass
 
@@ -47,7 +49,11 @@ html: sass
 	pandoc $$i -o $(DIST_DIR)/$$(basename $$i ".md")/index.html $(HFLAGS); \
 	done
 	echo "Compile HTML files"
+ifeq ($(UNAME), Darwin)
 	find $(DIST_DIR) -type f -iname "index.html" | xargs sed -i '' 's/↩/[return]/g'
+else ifeq ($(UNAME), Linux)
+	find $(DIST_DIR) -type f -iname "index.html" | xargs sed -i 's/↩/[return]/g'
+endif
 	echo "Replace default Pandoc footnote character"
 	mv $(DIST_DIR)/index/index.html $(DIST_DIR)/index.html
 	rm -rf $(DIST_DIR)/index
