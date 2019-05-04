@@ -49,6 +49,8 @@ html: sass
 	echo "Compile HTML files"
 	find $(DIST_DIR) -type f -iname "index.html" | xargs sed -i '' 's/↩/[return]/g'
 	echo "Replace default Pandoc footnote character"
+	mv $(DIST_DIR)/index/index.html $(DIST_DIR)/index.html
+	rm -rf $(DIST_DIR)/index
 
 plaintext:
 	mkdir -p $(DIST_DIR)/t
