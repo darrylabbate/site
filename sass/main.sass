@@ -3,10 +3,11 @@ html
   font-kerning: normal
 
 body
-  max-width: 48em
+  max-width: 40em
   background: $color-white
   font-family: $font-base
   font-weight: 400
+  font-size: 16px
   color: $color-gray
   margin: 0 auto
   padding: 0.75em 1.2em
@@ -165,10 +166,10 @@ table
   border-collapse: collapse
   font-size: 1em
   margin: 0 auto
+  border: 2px solid lighten($color-gray, 20%)
   thead
     background: lighten($color-gray, 65%)
     border-bottom: 2px solid lighten($color-gray, 20%)
-    border-top: 2px solid lighten($color-gray, 20%)
   tbody
     border-bottom: 2px solid lighten($color-gray, 20%)
   tr
@@ -178,12 +179,15 @@ table
       background: lighten($color-gray, 65%)
   td, th
     margin: 0 auto
-    padding: 0.3em 1em
+    padding: 0.3em 0.5em
   tr:nth-child(2n)
     // background: lighten($color-gray, 65%)
 
+caption
+  font-size: 0.8em
 
-// Article fotnotes
+
+// Article footnotes
 
 .footnotes
   font-family: $font-monospace
