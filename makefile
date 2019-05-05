@@ -1,11 +1,12 @@
+STYLE     := reader
+
 SHELL     := /bin/sh
 UNAME     := $(shell uname -s)
-
-STYLE     := reader
 
 DATA_DIR  := data
 DIST_DIR  := dist
 ETC_DIR   := etc
+FONTS_DIR := fonts
 SASS_DIR  := sass
 SRC_DIR   := src
 
@@ -59,6 +60,9 @@ endif
 	echo "Replace default Pandoc footnote character"
 	mv $(DIST_DIR)/index/index.html $(DIST_DIR)/index.html
 	rm -rf $(DIST_DIR)/index
+	echo "Resolve index file"
+	cp -r $(FONTS_DIR) $(DIST_DIR)/$(FONTS_DIR)
+	echo "Copy fonts to dist/"
 
 plaintext:
 	mkdir -p $(DIST_DIR)/t
