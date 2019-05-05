@@ -1,6 +1,8 @@
-% Lorem Ipsum (H1)
-% Darryl Abbate
-% 2018/12/27
+---
+title:  Lorem Ipsum (H1)
+author: Darryl Abbate
+date:   2018/12/27
+...
 
 Lorem **markdownum**, novabis, Aeaciden vitiatur **tactis**, inde funera.  **Disce tum**, tu mox `crescendo` et elige unam erit volucresque. Caecaque insula et mihi et Paris angustum vidi!
 
@@ -15,6 +17,7 @@ Regem fraxinus Iason `tentoria` io inducto certe, est parvae `pectine`, quoque. 
 - Cum quid posset
 - Superabat patrem sceleri demisere uritur
 - Paludes ambo obstipuit quatenus nunc bella relevare
+- really really really really really really really really really really really really really really really really really really really really really really really really really really long list item
 
 Repetitaque regia^[Example inline footnote] capillis! Ut nunc carbasa, in tulit viribus, inrequieta [`me vivaque nam`](http://www.velquid.net/redeunt.aspx) loquar edentem, esse vale.  Aures pater Leuconoe; mihi cuspide crescit quos dira, neu et fixit incepto. Mea inque, fiet trado, ridet quid deficiunt, dies adunci pectore Cereris.
 
@@ -62,6 +65,7 @@ Est nec densumque *quam* dictis Pallas^[The quick brown fox jumps over the reall
 
 Egeriae alebat. Nate habuit; ille ferebat [Proserpina](http://ad.io/), illa vacuas, Parosque? Vallis melius [carminibus](http://doceri.io/) blandis aves ex stagnata lingua totaque; **quid cuius** quo ulterius! Residens [quam](http://sine-committit.net/) cum, fugiant quoniam; Iove litore latus?
 
+> What about a really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really long quote?
 ```c
 #include <stdio.h>
 
