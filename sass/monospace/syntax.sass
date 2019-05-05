@@ -2,13 +2,13 @@
 
 $syntax-red:    lighten($color-red, 10%)
 $syntax-green:  darken(#50E3BB, 15%)
-$syntax-blue:   darken($color-blue, 10%)
+$syntax-accent: darken($color-accent, 10%)
 
 .sourceCode
-  color: $color-gray
+  color: inherit
 
 .co
-  color: $syntax-blue
+  color: $syntax-accent
 
 .diff
   .kw, .st 
@@ -18,6 +18,6 @@ $syntax-blue:   darken($color-blue, 10%)
     color: $syntax-green
 
 a.sourceLine, a.sourceLine:hover
-  color: $color-gray
+  color: inherit
   background: none
   text-decoration: none

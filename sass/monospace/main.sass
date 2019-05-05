@@ -1,3 +1,11 @@
+$color-dark:   #222222
+$color-white:  darken(#FBFBFB, 25%)
+$color-accent: #1EAAFF
+$color-red:    #F03C3F
+
+@mixin highlight-color
+  background-color: rgba(255, 255, 255, 0.08)
+
 *
   font-family: $font-base
   font-size: 1em
@@ -8,19 +16,22 @@ html
 
 body
   max-width: 40em
-  background: darken($color-gray, 12%)
+  background: $color-dark
   font-weight: 400
   font-size: 16px
-  color: darken($color-white, 10%)
+  color: $color-white
   margin: 0 auto
   padding: 0.75em 1.2em
 
+strong, b
+  font-weight: 400
+  color: red
 a
   text-decoration: none
-  color: $color-white
+  color: $color-accent
   transition: all 0.05s linear
   &:hover
-    color: $color-blue
+    color: lighten($color-accent, 12%)
 
 p
   max-width: 100em
@@ -42,43 +53,43 @@ ol
 
 ul
   list-style-type: none
-  padding-left: 0
+  padding-left: 1.2em
+  text-indent: -1.2em
   > li::before
     content: "- "
 
 hr
   border: 0
-  border-top: 2px dashed lighten($color-gray, 10%)
+  border-top: 2px dashed $color-white
   margin-top: 2em
 
 blockquote
   font-style: italic
+  padding-left: 1.2em
+  text-indent: -1.2em
   margin: 0 auto
   > ::before
     content: "> "
 
-.postinfo
-  a
-    background: none
-    padding: 0
-    &:hover
-      color: $color-blue
-
+header
+  +highlight-color
+  padding: 0.1em 0.5em
+  border-radius: 0.1em
 
 // Inline & fenced code blocks
 
-code
-  background: $color-gray
+p > code
+  +highlight-color
   border-radius: 0.1em
 
 pre
+  +highlight-color
   display: block
   white-space: pre
   padding: 0.5em
   border-radius: 0.4em
   overflow: hidden
   overflow-x: scroll
-  background: $color-gray
   code
     overflow: hidden
     overflow-x: scroll
@@ -89,20 +100,19 @@ pre
 table
   border-collapse: collapse
   margin: 0 auto
-  border: 1px solid lighten($color-gray, 30%)
+  border: 1px solid $color-white
   thead
-    background: $color-gray
-    border-bottom: 1px solid lighten($color-gray, 30%)
+    +highlight-color
+    border-bottom: 1px solid $color-white
   tr
     display: table-row
     transition: all 0.05s linear
+  tr.odd, tr.even
     &:hover
-      background: $color-gray
+      +highlight-color
   td, th
     margin: 0 auto
     padding: 0.3em 0.5em
-  tr:nth-child(2n)
-    // background: lighten($color-gray, 65%)
 
 caption
   font-size: 0.8em
@@ -114,19 +124,14 @@ caption
   margin: 3em 0
   ol > li:hover
     transition: all 0.05s linear
-    background: $color-gray
+    +highlight-color
 
 a.footnote-back
   float: right
   padding: 0
-  &:hover
-    color: $color-blue
 
 a.footnote-ref
   font-size: 0.9em
-  &:hover
-    background: none
-    color: $color-blue
 
 sup, sub
   vertical-align: baseline
