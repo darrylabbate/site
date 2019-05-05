@@ -53,7 +53,7 @@ html: sass
 	mkdir -p $(DIST_DIR)/$$(basename $$i ".md"); \
 	pandoc $$i -o $(DIST_DIR)/$$(basename $$i ".md")/index.html $(HFLAGS); \
 	done
-	echo "Compile HTML files"
+	echo "Compile Markdown to HTML"
 ifeq ($(UNAME), Darwin)
 	find $(DIST_DIR) -type f -iname "index.html" | xargs sed -i '' 's/↩/[return]/g'
 else ifeq ($(UNAME), Linux)
@@ -71,7 +71,9 @@ plaintext:
 	for i in $$(find $(SRC_DIR) -iname "*.md"); do \
 	pandoc $$i -o $(DIST_DIR)/t/$$(basename $$i ".md") $(TFLAGS); \
 	done
-	echo "Compile plaintext files"
+	echo "Compile Markdown to plain text"
+	cp -r $(SRC_DIR)/t $(DIST_DIR)/
+	echo "Overwrite targeted plaintext files"
 
 sass:
 	sass $(SASS_DIR)/$(STYLE)/style.sass $(DIST_DIR)/style.css $(SFLAGS)
