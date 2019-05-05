@@ -1,6 +1,8 @@
 SHELL     := /bin/sh
 UNAME     := $(shell uname -s)
 
+STYLE     := reader
+
 DATA_DIR  := data
 DIST_DIR  := dist
 ETC_DIR   := etc
@@ -66,5 +68,5 @@ plaintext:
 	echo "Compile plaintext files"
 
 sass:
-	sass $(SASS_DIR)/style.sass $(DIST_DIR)/style.css $(SFLAGS)
+	sass $(SASS_DIR)/$(STYLE)/style.sass $(DIST_DIR)/style.css $(SFLAGS)
 	echo "Compile SASS stylesheets"
