@@ -15,7 +15,7 @@ HTML_FMT  := html
 TEXT_FMT  := plain
 
 HFLAGS     = --standalone
-HFLAGS    += --template=$(DATA_DIR)/html.pdc
+HFLAGS    += --template=$(DATA_DIR)/$(STYLE).pdc
 HFLAGS    += --from $(INPUT_FMT)
 HFLAGS    += --to $(HTML_FMT)
 HFLAGS    += --css=../style.css
@@ -28,8 +28,10 @@ TFLAGS    += --template=$(DATA_DIR)/plain.pdc
 SFLAGS     = --style=compressed
 SFLAGS    += --no-source-map
 
+SWFLAGS    = --watch
 
-.PHONY: all build clean deploy etc html plaintext sass
+
+.PHONY: all build clean deploy etc html plaintext sass sass-live
 .SILENT: etc html plaintext sass
 
 all: build
@@ -74,3 +76,6 @@ plaintext:
 sass:
 	sass $(SASS_DIR)/$(STYLE)/style.sass $(DIST_DIR)/style.css $(SFLAGS)
 	echo "Compile SASS stylesheets"
+
+sass-live:
+	sass $(SASS_DIR)/$(STYLE)/style.sass $(DIST_DIR)/style.css $(SFLAGS) $(SWFLAGS)
