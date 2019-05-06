@@ -74,6 +74,12 @@ plaintext:
 	echo "Compile Markdown to plain text"
 	cp -r $(SRC_DIR)/t $(DIST_DIR)/
 	echo "Overwrite targeted plaintext files"
+ifeq ($(UNAME), Darwin)
+	find $(DIST_DIR)/t -type f | xargs sed -i "" "s/esc\[/$$(printf '\033[')/g"
+else ifeq ($(UNAME), Linux)
+	find $(DIST_DIR)/t -type f | xargs sed -i "s/esc\[/$$(printf '\033[')/g"
+endif
+	echo "Insert escape sequences into plaintext files"
 
 sass:
 	sass $(SASS_DIR)/$(STYLE)/style.sass $(DIST_DIR)/style.css $(SFLAGS)
