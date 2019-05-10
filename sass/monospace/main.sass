@@ -1,6 +1,6 @@
-$color-dark:   #222222
-$color-white:  darken(#FBFBFB, 25%)
-$color-accent: #1EAAFF
+$color-dark:   #2E3440
+$color-light:  #D8DEE9
+$color-accent: #8FBCBB
 $color-red:    #F03C3F
 
 @mixin highlight-color
@@ -19,7 +19,7 @@ body
   background: $color-dark
   font-weight: 400
   font-size: 16px
-  color: $color-white
+  color: $color-light
   margin: 0 auto
   padding: 0.75em 1.2em
 
@@ -35,7 +35,7 @@ a
 
 p
   max-width: 100em
-  white-space: pre-line
+  light-space: pre-line
   img
     max-width: 100%
     height: auto
@@ -60,7 +60,7 @@ ul
 
 hr
   border: 0
-  border-top: 2px dashed $color-white
+  border-top: 2px dashed $color-light
   margin-top: 2em
 
 blockquote
@@ -85,7 +85,7 @@ p > code
 pre
   +highlight-color
   display: block
-  white-space: pre
+  light-space: pre
   padding: 0.5em
   border-radius: 0.4em
   overflow: hidden
@@ -100,10 +100,10 @@ pre
 table
   border-collapse: collapse
   margin: 0 auto
-  border: 1px solid $color-white
+  border: 1px solid $color-light
   thead
     +highlight-color
-    border-bottom: 1px solid $color-white
+    border-bottom: 1px solid $color-light
   tr
     display: table-row
     transition: all 0.05s linear
