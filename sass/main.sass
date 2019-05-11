@@ -1,7 +1,9 @@
 $color-dark:   #2E3440
 $color-light:  #D8DEE9
 $color-accent: #8FBCBB
-$color-red:    #F03C3F
+$color-bold:   #ECEFF4
+
+@import 'fonts.sass'
 
 @mixin highlight-color
   background-color: rgba(255, 255, 255, 0.08)
@@ -21,11 +23,12 @@ body
   font-size: 16px
   color: $color-light
   margin: 0 auto
-  padding: 0.75em 1.2em
+  padding: 0.75em
 
 strong, b
   font-weight: 400
-  color: red
+  color: $color-bold
+
 a
   text-decoration: none
   color: $color-accent
@@ -35,7 +38,7 @@ a
 
 p
   max-width: 100em
-  light-space: pre-line
+  white-space: pre-line
   img
     max-width: 100%
     height: auto
@@ -85,7 +88,7 @@ p > code
 pre
   +highlight-color
   display: block
-  light-space: pre
+  white-space: pre
   padding: 0.5em
   border-radius: 0.4em
   overflow: hidden

@@ -1,4 +1,4 @@
-STYLE     := reader
+STYLE     := main
 
 SHELL     := /bin/sh
 UNAME     := $(shell uname -s)
@@ -15,7 +15,7 @@ HTML_FMT  := html
 TEXT_FMT  := plain
 
 HFLAGS     = --standalone
-HFLAGS    += --template=$(DATA_DIR)/$(STYLE).pdc
+HFLAGS    += --template=$(DATA_DIR)/html.pdc
 HFLAGS    += --from $(INPUT_FMT)
 HFLAGS    += --to $(HTML_FMT)
 HFLAGS    += --css=../style.css
@@ -82,8 +82,8 @@ endif
 	echo "Insert escape sequences into plaintext files"
 
 sass:
-	sass $(SASS_DIR)/$(STYLE)/style.sass $(DIST_DIR)/style.css $(SFLAGS)
+	sass $(SASS_DIR)/$(STYLE).sass $(DIST_DIR)/style.css $(SFLAGS)
 	echo "Compile SASS stylesheets"
 
 sass-live:
-	sass $(SASS_DIR)/$(STYLE)/style.sass $(DIST_DIR)/style.css $(SFLAGS) $(SWFLAGS)
+	sass $(SASS_DIR)/$(STYLE).sass $(DIST_DIR)/style.css $(SFLAGS) $(SWFLAGS)
