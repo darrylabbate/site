@@ -21,7 +21,7 @@ body
   font-size: 16px
   color: $color-fg
   margin: 0 auto
-  padding: 0 1.2em
+  padding: 0.75em 1.2em
 
 a
   text-decoration: none
@@ -30,19 +30,21 @@ a
   &:hover
     color: lighten($color-accent, 8%)
 
+code
+  font-family: $font-monospace
+
 p
   line-height: 1.5em
   max-width: 100em
   white-space: pre-line
+  code
+    padding: 0 0.2em
   img
     max-width: 100%
     height: auto
 
 p, ul, ol
   font-size: 1.2em
-
-code
-  font-family: $font-monospace
 
 $size-header-base: 3.5em
 
@@ -66,6 +68,14 @@ h3
 h4
   font-size: 1.2em
   margin-bottom: -0.5em
+
+.title
+  margin: 0 auto
+
+.postinfo, .postinfo a
+  font-family: $font-monospace
+  font-size: 0.9em
+  color: $color-fg
 
 ol, ul
   list-style-position: outside

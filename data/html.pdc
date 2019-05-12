@@ -33,6 +33,13 @@ $if(title)$
 $if(subtitle)$
 <p class="subtitle">$subtitle$</p>
 $endif$
+$for(author)$
+<span class="postinfo"><a href="https://darryl.cx">$author$</a></span>
+<br>
+$endfor$
+$if(date)$
+<span class="postinfo">$date$</span>
+$endif$
 $endif$
 $if(toc)$
 <nav id="$idprefix$TOC" role="doc-toc">
