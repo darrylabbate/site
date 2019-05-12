@@ -1,16 +1,14 @@
-$color-dark:   #2E3440
-$color-light:  #D8DEE9
-$color-accent: #8FBCBB
-$color-bold:   #ECEFF4
+$color-bg:     #EBEBEB
+$color-fg:     #454545
+$color-accent: #009B77
 
 @import 'fonts.sass'
 
 @mixin highlight-color
-  background-color: rgba(255, 255, 255, 0.08)
+  background-color: rgba(0, 0, 0, 0.05)
 
 *
   font-family: $font-base
-  font-size: 1em
 
 html
   -webkit-text-size-adjust: 100%
@@ -18,36 +16,60 @@ html
 
 body
   max-width: 40em
-  background: $color-dark
-  font-weight: 400
+  background: $color-bg
+  font-weight:400
   font-size: 16px
-  color: $color-light
+  color: $color-fg
   margin: 0 auto
-  padding: 0.75em
-
-strong, b
-  font-weight: 400
-  color: $color-bold
+  padding: 0 1.2em
 
 a
   text-decoration: none
   color: $color-accent
   transition: all 0.05s linear
   &:hover
-    color: lighten($color-accent, 12%)
+    color: lighten($color-accent, 8%)
 
 p
+  line-height: 1.5em
   max-width: 100em
   white-space: pre-line
   img
     max-width: 100%
     height: auto
 
-h1, h2, h3, h4
+p, ul, ol
+  font-size: 1.2em
+
+code
+  font-family: $font-monospace
+
+$size-header-base: 3.5em
+
+h1, h2
+  font-family: $font-display
+  font-weight: 400
+  text-transform: uppercase
+
+h1
+  font-size: $size-header-base
+
+h2
+  font-size: $size-header-base * 0.8
+
+h3, h4
   font-weight: 700
 
+h3
+  font-size: 1.5em
 
-// Lists
+h4
+  font-size: 1.2em
+  margin-bottom: -0.5em
+
+ol, ul
+  list-style-position: outside
+  padding-left: 0
 
 ol
   list-style-type: decimal
@@ -55,35 +77,21 @@ ol
     margin: 0 auto
 
 ul
-  list-style-type: none
-  padding-left: 1.2em
-  text-indent: -1.2em
-  > li::before
-    content: "- "
+  list-style-type: square
 
 hr
   border: 0
-  border-top: 2px dashed $color-light
+  border-top: 2px dashed $color-fg
   margin-top: 2em
 
 blockquote
+  border-left: solid 4px $color-fg
   font-style: italic
-  padding-left: 1.2em
-  text-indent: -1.2em
   margin: 0 auto
-  > ::before
-    content: "> "
-
-header
-  +highlight-color
-  padding: 0.1em 0.5em
-  border-radius: 0.1em
-
-// Inline & fenced code blocks
-
-p > code
-  +highlight-color
-  border-radius: 0.1em
+  margin-left: -1.2em
+  padding-left: 0.9em
+  p
+    font-family: $font-monospace
 
 pre
   +highlight-color
@@ -97,16 +105,13 @@ pre
     overflow: hidden
     overflow-x: scroll
 
-
-// Tables
-
 table
   border-collapse: collapse
   margin: 0 auto
-  border: 1px solid $color-light
+  border: 2px solid $color-fg
   thead
     +highlight-color
-    border-bottom: 1px solid $color-light
+    border-bottom: 2px solid $color-fg
   tr
     display: table-row
     transition: all 0.05s linear
@@ -118,16 +123,18 @@ table
     padding: 0.3em 0.5em
 
 caption
+  font-family: $font-monospace
   font-size: 0.8em
-
-
-// Article footnotes
 
 .footnotes
   margin: 3em 0
-  ol > li:hover
-    transition: all 0.05s linear
-    +highlight-color
+  a, ol, li, p
+    font-family: $font-monospace
+  ol, p
+    font-size: 0.9em
+    > li:hover
+      transition: all 0.05s linear
+      +highlight-color
 
 a.footnote-back
   float: right
