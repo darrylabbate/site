@@ -34,7 +34,7 @@ SWFLAGS    = --watch
 .PHONY: all build clean deploy etc html plaintext sass sass-live
 .SILENT: etc html plaintext sass
 
-all: build
+all: clean build
 
 build: sass html plaintext etc
 
