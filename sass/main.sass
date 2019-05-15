@@ -1,6 +1,6 @@
-$color-bg:     #EBEBEB
-$color-fg:     #454545
-$color-accent: #009B77
+$color-bg:      #FBFBFB
+$color-fg:      #454545
+$color-primary: #009B77
 
 @import 'fonts.sass'
 
@@ -25,10 +25,13 @@ body
 
 a
   text-decoration: none
-  color: $color-accent
+  color: $color-primary
   transition: all 0.05s linear
   &:hover
-    color: lighten($color-accent, 8%)
+    color: lighten($color-primary, 8%)
+
+em
+  font-family: $font-italic
 
 code
   font-family: $font-monospace
