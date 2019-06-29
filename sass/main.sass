@@ -1,14 +1,14 @@
-$color-bg:      #FBFBFB
-$color-fg:      #454545
-$color-primary: #009B77
+$color-bg:      #222222
+$color-fg:      #dddddd
+$color-primary: #1ea4ff
 
 @import 'fonts.sass'
+@import 'syntax.sass'
 
 @mixin highlight-color
-  background-color: rgba(0, 0, 0, 0.05)
+  background-color: rgba(0, 0, 0, 0.08)
 
 *
-  font-family: $font-base
   font-feature-settings: 'zero' on
 
 html
@@ -16,6 +16,7 @@ html
   font-kerning: normal
 
 body
+  font-family: $font-base
   max-width: 40em
   background: $color-bg
   font-weight:400
@@ -29,7 +30,7 @@ a
   color: $color-primary
   transition: all 0.05s linear
   &:hover
-    color: lighten($color-primary, 8%)
+    color: darken($color-primary, 12%)
 
 em
   font-family: $font-italic

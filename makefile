@@ -19,7 +19,6 @@ HFLAGS    += --template=$(DATA_DIR)/html.pdc
 HFLAGS    += --from $(INPUT_FMT)
 HFLAGS    += --to $(HTML_FMT)
 HFLAGS    += --css=../style.css
-HFLAGS    += --no-highlight
 
 TFLAGS     = --from $(INPUT_FMT)
 TFLAGS    += --to $(TEXT_FMT)
