@@ -1,5 +1,11 @@
-$color-bg:      #222222
-$color-fg:      #dddddd
+:root
+  color-scheme: light dark
+  --color-bg: #fbfbfb
+  --color-fg: #454545
+  @media (prefers-color-scheme: dark)
+    --color-bg: #222222
+    --color-fg: #dddddd
+
 $color-primary: #1ea4ff
 
 @import 'fonts.sass'
@@ -18,10 +24,10 @@ html
 body
   font-family: $font-base
   max-width: 40em
-  background: $color-bg
+  background: var(--color-bg)
   font-weight:400
   font-size: 16px
-  color: $color-fg
+  color: var(--color-fg)
   margin: 0 auto
   padding: 0.75em 1.2em
 
@@ -80,7 +86,7 @@ h4
 .postinfo, .postinfo a
   font-family: $font-monospace
   font-size: 0.9em
-  color: $color-fg
+  color: var(--color-fg)
 
 ol, ul
   list-style-position: outside
@@ -96,11 +102,11 @@ ul
 
 hr
   border: 0
-  border-top: 2px dashed $color-fg
+  border-top: 2px dashed var(--color-fg)
   margin-top: 2em
 
 blockquote
-  border-left: solid 4px $color-fg
+  border-left: solid 4px var(--color-fg)
   font-style: italic
   margin: 0 auto
   margin-left: -1.2em
@@ -123,10 +129,10 @@ pre
 table
   border-collapse: collapse
   margin: 0 auto
-  border: 2px solid $color-fg
+  border: 2px solid var(--color-fg)
   thead
     +highlight-color
-    border-bottom: 2px solid $color-fg
+    border-bottom: 2px solid var(--color-fg)
   tr
     display: table-row
     transition: all 0.05s linear
