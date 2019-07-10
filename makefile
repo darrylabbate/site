@@ -29,9 +29,13 @@ SFLAGS    += --no-source-map
 
 SWFLAGS    = --watch
 
+FN_GARB   := $(shell perl -CS -e 'print "\x{21A9}\x{FE0E}"')
+
 
 .PHONY: all build clean deploy etc html plaintext sass sass-live
 .SILENT: etc html plaintext sass
+
+print-%  : ; @echo $* = $($*)
 
 all: clean build
 
@@ -54,9 +58,9 @@ html: sass
 	done
 	echo "Compile Markdown to HTML"
 ifeq ($(UNAME), Darwin)
-	find $(DIST_DIR) -type f -iname "index.html" | xargs sed -i '' 's/↩/[return]/g'
+	find $(DIST_DIR) -type f -iname "index.html" | xargs sed -i '' 's/$(FN_GARB)/[return]/g'
 else ifeq ($(UNAME), Linux)
-	find $(DIST_DIR) -type f -iname "index.html" | xargs sed -i 's/↩/[return]/g'
+	find $(DIST_DIR) -type f -iname "index.html" | xargs sed -i 's/$(FN_GARB)/[return]/g'
 endif
 	echo "Replace default Pandoc footnote character"
 	mv $(DIST_DIR)/index/index.html $(DIST_DIR)/index.html
