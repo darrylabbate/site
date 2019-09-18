@@ -3,7 +3,7 @@
 
   Name      Darryl Abbate
   Website   https://darryl.cx
-  Email     darrylabbate@gmail.com
+  Email     hi@darryl.cx
   PGP       https://darryl.cx/pgp
             curl darryl.cx/pgp | gpg --import
 
