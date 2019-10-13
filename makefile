@@ -32,10 +32,32 @@ SWFLAGS    = --watch
 FN_GARB   := $(shell perl -CS -e 'print "\x{21A9}\x{FE0E}"')
 
 
-.PHONY: all build clean deploy etc html plaintext sass sass-live
-.SILENT: etc html plaintext sass
+# Print the contents of a given variable within this file
+print-% :
+	$(info $* = $($*) ($(flavor $*))) @true
 
-print-%  : ; @echo $* = $($*)
+
+.PHONY:  help usage
+.SILENT: help usage
+
+help: usage
+
+usage:
+	printf "\\n\
+	\\033[1mUSAGE:\\033[0m\\n\
+	\\n\
+	  make              Clean /dist and build\\n\
+	  make build        Build HTML and plain-text files\\n\
+	  make clean        Remove all files in /dist\\n\
+	  make deploy       Push Git-tracked changes to server\\n\
+	  make sass-live    Compile SASS to CSS, watching SASS files for changes\\n\
+	  make print-VAR    Print the contents and flavor of a given variable VAR\\n\
+	\\n\
+	"
+
+
+.PHONY:  all build clean deploy etc html plaintext sass sass-live
+.SILENT: etc help html plaintext sass
 
 all: clean build
 
