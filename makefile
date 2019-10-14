@@ -31,6 +31,9 @@ SWFLAGS    = --watch
 
 FN_GARB   := $(shell perl -CS -e 'print "\x{21A9}\x{FE0E}"')
 
+.PHONY: all
+
+all: clean build
 
 # Print the contents of a given variable within this file
 print-% :
@@ -56,10 +59,9 @@ usage:
 	"
 
 
-.PHONY:  all build clean deploy etc html plaintext sass sass-live
+.PHONY:  build clean deploy etc html plaintext sass sass-live
 .SILENT: etc help html plaintext sass
 
-all: clean build
 
 build: sass html plaintext etc
 
