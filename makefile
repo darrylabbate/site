@@ -46,16 +46,13 @@ print-% :
 help: usage
 
 usage:
-	printf "\\n\
-	\\033[1mUSAGE:\\033[0m\\n\
-	\\n\
+	printf "\\033[1mUSAGE:\\033[0m\\n\
 	  make              Clean /dist and build\\n\
 	  make build        Build HTML and plain-text files\\n\
 	  make clean        Remove all files in /dist\\n\
 	  make deploy       Push Git-tracked changes to server\\n\
-	  make sass-live    Compile SASS to CSS, watching SASS files for changes\\n\
+	  make sass-live    Compile Sass to CSS, watching Sass files for changes\\n\
 	  make print-VAR    Print the contents and flavor of a given variable VAR\\n\
-	\\n\
 	"
 
 
