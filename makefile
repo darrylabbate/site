@@ -101,6 +101,8 @@ else ifeq ($(UNAME), Linux)
 	find $(DIST_DIR)/t -type f | xargs sed -i "s/esc\[/$$(printf '\033[')/g"
 endif
 	echo "Insert escape sequences into plaintext files"
+	for f in $(DIST_DIR)/t/*; do mawk '/^\[[0-9]\]/{p=$$0}{if(p&&!$$0)next; else print}' $$f > $(DIST_DIR)/t/tmp && mv -f $(DIST_DIR)/t/tmp $$f; done
+	echo "Remove blank lines between footnote links"
 
 sass:
 	sass $(SASS_DIR)/$(STYLE).sass $(DIST_DIR)/style.css $(SFLAGS)
