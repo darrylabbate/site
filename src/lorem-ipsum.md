@@ -2,6 +2,7 @@
 title:  Lorem Ipsum (H1)
 author: Darryl Abbate
 date:   2018/12/27
+before: This is a lorem ipsum wow incredible
 ...
 
 Lorem **markdownum**, novabis, Aeaciden vitiatur **tactis**, inde funera.  **Disce tum**, tu mox `crescendo` et elige unam erit volucresque. Caecaque insula et mihi et Paris angustum vidi!
@@ -69,10 +70,9 @@ Egeriae alebat. Nate habuit; ille ferebat [Proserpina](http://ad.io/), illa vacu
 ```c
 #include <stdio.h>
 
-int main(void)
-{
-  printf("Hello, world\n");
-  return 0;
+int main(void) {
+    printf("Hello, world\n");
+    return 0;
 }
 ```
 

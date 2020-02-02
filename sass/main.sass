@@ -11,7 +11,10 @@ $color-primary: #1ea4ff
 @import 'fonts.sass'
 @import 'syntax.sass'
 
-@mixin highlight-color
+@mixin subtle
+  color: rgba(128,128,128,0.7)
+
+@mixin highlight
   background-color: rgba(128, 128, 128, 0.12)
 
 *
@@ -88,6 +91,12 @@ h4
   font-size: 0.9em
   color: var(--color-fg)
 
+.before-after
+  display: block
+  font-family: $font-monospace
+  font-style: italic
+  font-size: 0.9em
+
 ol, ul
   list-style-position: outside
   padding-left: 0
@@ -115,7 +124,7 @@ blockquote
     font-family: $font-monospace
 
 pre
-  +highlight-color
+  +highlight
   display: block
   white-space: pre
   padding: 0.5em
@@ -131,14 +140,14 @@ table
   margin: 0 auto
   border: 2px solid var(--color-fg)
   thead
-    +highlight-color
+    +highlight
     border-bottom: 2px solid var(--color-fg)
   tr
     display: table-row
     transition: all 0.05s linear
   tr.odd, tr.even
     &:hover
-      +highlight-color
+      +highlight
   td, th
     margin: 0 auto
     padding: 0.3em 0.5em
@@ -149,13 +158,24 @@ caption
 
 .footnotes
   margin: 3em 0
+  ol
+    list-style-type: none
+    counter-reset: fn-counter
+  ol li
+    counter-increment: fn-counter
+    position: relative
+  ol li::before
+    font-size: 0.9em
+    content: counter(fn-counter)
+    position: absolute
+    left: -1.1em
   a, ol, li, p
     font-family: $font-monospace
   ol, p
     font-size: 0.9em
     > li:hover
       transition: all 0.05s linear
-      +highlight-color
+      +highlight
 
 a.footnote-back
   float: right
@@ -171,3 +191,11 @@ sup, sub
 
 sub
   top: 0.4em
+
+footer
+  p
+    +subtle
+    margin: 0 auto
+    text-align: right
+    font-family: $font-monospace
+    font-size: 0.8em
