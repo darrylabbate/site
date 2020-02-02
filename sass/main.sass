@@ -15,7 +15,13 @@ $color-primary: #1ea4ff
   color: rgba(128,128,128,0.7)
 
 @mixin highlight
-  background-color: rgba(128, 128, 128, 0.12)
+  background-color: rgba(0,0,0,0.15)
+
+@mixin italic
+  font-style: italic
+
+@mixin monospace
+  font-family: $font-monospace
 
 *
   font-feature-settings: 'zero' on
@@ -26,7 +32,7 @@ html
 
 body
   font-family: $font-base
-  max-width: 40em
+  max-width: 46em
   background: var(--color-bg)
   font-weight: 400
   font-size: 16px
@@ -42,10 +48,10 @@ a
     color: darken($color-primary, 12%)
 
 em
-  font-family: $font-italic
+  +italic
 
 code
-  font-family: $font-monospace
+  +monospace
 
 p
   line-height: 1.5em
@@ -87,14 +93,14 @@ h4
   margin: 0 auto
 
 .postinfo, .postinfo a
-  font-family: $font-monospace
+  +monospace
   font-size: 0.9em
   color: var(--color-fg)
 
 .before-after
   display: block
-  font-family: $font-monospace
-  font-style: italic
+  +monospace
+  +italic
   font-size: 0.9em
 
 ol, ul
@@ -116,12 +122,12 @@ hr
 
 blockquote
   border-left: solid 4px var(--color-fg)
-  font-style: italic
+  +italic
   margin: 0 auto
   margin-left: -1.2em
   padding-left: 0.9em
   p
-    font-family: $font-monospace
+    +monospace
 
 pre
   +highlight
@@ -153,11 +159,11 @@ table
     padding: 0.3em 0.5em
 
 caption
-  font-family: $font-monospace
+  +monospace
   font-size: 0.8em
 
 .footnotes
-  margin: 3em 0
+  margin: 3em 0 2em 0
   ol
     list-style-type: none
     counter-reset: fn-counter
@@ -170,7 +176,7 @@ caption
     position: absolute
     left: -1.1em
   a, ol, li, p
-    font-family: $font-monospace
+    +monospace
   ol, p
     font-size: 0.9em
     > li:hover
@@ -197,5 +203,5 @@ footer
     +subtle
     margin: 0 auto
     text-align: right
-    font-family: $font-monospace
+    +monospace
     font-size: 0.8em
