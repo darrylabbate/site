@@ -1,5 +1,7 @@
 % Darryl Abbate
 
-Programmer & Computer Science student
+[GitHub](https://github.com/rootbeersoup) |
+[LinkedIn](https://www.linkedin.com/in/darrylabbate/) |
+[Projects](/projects)
 
-[Github](https://github.com/rootbeersoup) [Keybase](https://keybase.io/rootbeersoup)
+Programmer & Computer Science student
