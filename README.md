@@ -1,7 +1,3 @@
-<p align="center" >
-  <img src="doc/logo.png">
-</p>
-
 This is my personal website, which contains basic information about myself as well as a blog and a place to showcase my projects. 
 
 ## Table of Contents
