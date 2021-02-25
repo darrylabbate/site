@@ -12,6 +12,9 @@ $size-header-base: 2em
 @import 'fonts.sass'
 @import 'syntax.sass'
 
+@mixin foreground
+  color: var(--color-fg)
+
 @mixin subtle
   color: rgba(128,128,128,0.7)
 
@@ -44,8 +47,7 @@ header
   a
     +subtle
     &:hover
-      color: var(--color-fg)
-      border-bottom: 1px dashed
+      +foreground
   nav
     +monospace
     font-size: 0.9em
@@ -68,12 +70,12 @@ header
           margin-right: 0
 
 body
+  +foreground
   font-family: $font-base
   max-width: 40em
   background: var(--color-bg)
   font-weight: 400
   font-size: 16px
-  color: var(--color-fg)
   margin: 0 auto
   padding: 0.75em 1.2em
 
@@ -112,9 +114,9 @@ h1.title
     font-size: $size-header-base * (1 - ($i / 10))
 
 .postinfo, .postinfo a
+  +foreground
   +monospace
   font-size: 0.9em
-  color: var(--color-fg)
 
 .before-after
   +monospace
