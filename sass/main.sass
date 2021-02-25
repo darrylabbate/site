@@ -39,8 +39,13 @@ html
   font-kerning: normal
 
 header 
-  max-width: 46em
+  max-width: 40em
   text-align: right
+  a
+    color: var(--color-fg)
+    &:hover
+      color: var(--color-fg)
+      border-bottom: 1px dashed
   nav
     +monospace
     font-size: 0.9em
@@ -51,9 +56,20 @@ header
         margin-left: 1em
         display: inline-block
 
+@media screen and (max-width: 400px)
+  header
+    text-align: center
+    nav ul
+      li
+        margin: 0 0.5em
+        &:first-child
+          margin-left: 0
+        &:last-child
+          margin-right: 0
+
 body
   font-family: $font-base
-  max-width: 46em
+  max-width: 40em
   background: var(--color-bg)
   font-weight: 400
   font-size: 16px
@@ -87,7 +103,8 @@ p
 h1.title
   +display
   font-size: 4em
-  margin: 0 auto
+  margin: 0.25em auto
+  line-height: 0.9em
 
 // h{n} tag size calc
 @for $i from 1 through 5

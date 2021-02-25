@@ -1,5 +1,5 @@
 ---
-title:  'Riff: Early Ideas and Motivations'
+title:  'Riff: Early Ideas and Motivation'
 author: Darryl Abbate
 date:   2020/09/30
 before:

@@ -3,7 +3,10 @@ title:  'Advent of Code 2020: Day 8 Solution'
 author: Darryl Abbate
 date:   2020/12/08
 before: 
-    - A [user on Reddit asked](https://www.reddit.com/r/adventofcode/comments/k8xw8h/2020_day_08_solutions/gf38rf6/) me to explain my AWK one-line solution to [day 8](https://adventofcode.com/2020/day/8)'s puzzle (part 1).
+    - A [user on Reddit asked](https://www.reddit.com/r/adventofcode/comments/k8xw8h/2020_day_08_solutions/gf38rf6/) me to explain my AWK one-line solution to [day 8](https://adventofcode.com/2020/day/8)'s puzzle (part 1); specifically to understand what's going on in AWK.
+
+after:
+    - AWK is one of my favorite programming languages, and I find it especially well-suited for Advent of Code puzzles. I solved [every 2019 puzzle](https://github.com/rootbeersoup/aoc/tree/master/19) in AWK and even wrote an overly-complex [assembler/disassembler/debugger/interpreter](https://github.com/rootbeersoup/aoc/blob/master/19/intcode.awk) for [Intcode](https://adventofcode.com/2019/day/2) in AWK.
 ...
 
 
@@ -95,19 +98,19 @@ parts of the machine.
 ----------------------------------------------------------------------
 
 ```awk
-    for (;;) {
-        ...
-    }
+for (;;) {
+    ...
+}
 ```
 
 This represents the interpreter loop, which will run until we
 explicitly `exit` the program.
 
 ```awk
-        if (r[i]++) {
-            print a
-            exit
-        }
+if (r[i]++) {
+    print a
+    exit
+}
 ```
 
 Here, we increment `r[i]` to mark the instruction `i` as "run." If
@@ -115,7 +118,7 @@ Here, we increment `r[i]` to mark the instruction `i` as "run." If
 and exit; the puzzle is solved!
 
 ```awk
-        p[i] ~ /a/ ? a += p[i++] : p[i] ~ /j/ ? i += p[i] : ++i
+p[i] ~ /a/ ? a += p[i++] : p[i] ~ /j/ ? i += p[i] : ++i
 ```
 
 Otherwise, we use this chained ternary expression as a concise
@@ -123,7 +126,7 @@ Otherwise, we use this chained ternary expression as a concise
 
 If the string in `p[i]` contains the letter "`a`", we know the
 instruction is `acc`; we add the value of `p[i]` to `a`. As mentioned
-earlier, AWK will coerce the string to number when used as an addition
+earlier, AWK will coerce the string to a number when used as an addition
 operand. We also increment `i` so `p[i]` will point to the succeeding
 instruction when the interpreter loop jumps back to the beginning.
 
@@ -134,11 +137,3 @@ simulate a "jump" in the program.
 Finally, we can just assume the instruction is a `nop` if it reaches
 the final clause in the ternary expression. In this case, we just
 increment `i`.
-
----
-
-AWK is one of my favorite programming languages, and I find it
-especially well-suited for Advent of Code puzzles. I solved [every
-2019 puzzle](https://github.com/rootbeersoup/aoc/tree/master/19) in
-AWK and even wrote an overly-complex
-[assembler/disassembler/debugger/interpreter](https://github.com/rootbeersoup/aoc/blob/master/19/intcode.awk) for [Intcode](https://adventofcode.com/2019/day/2) in AWK.

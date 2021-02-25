@@ -43,7 +43,7 @@ $if(title)$
     $endif$
 $endif$
 $for(before)$
-    <p class=before-after>$before$</p>
+    <p class="before-after">$before$</p>
 $endfor$
 $if(toc)$
         <nav id="$idprefix$TOC" role="doc-toc">

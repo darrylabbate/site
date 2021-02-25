@@ -22,5 +22,5 @@ dot cx*
 ## Posts
 
 - [Riff: February 2021 Benchmarks](/riff-feb21-benchmarks)
-- [Advent of Code 2020: Day 8 Solution](/aoc20-08)
+- [Advent of Code 2020: Day 8 Solution](/aoc20day8)
 - [Riff: Early Ideas and Motivation](/riff-early-ideas)
