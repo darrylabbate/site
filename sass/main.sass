@@ -1,12 +1,13 @@
 :root
   color-scheme: light dark
-  --color-bg: #ffffff
-  --color-fg: #000000
+  --color-bg: #fff
+  --color-fg: #000
   @media (prefers-color-scheme: dark)
-    --color-bg: #222222
-    --color-fg: #dddddd
+    --color-bg: #222
+    --color-fg: #ddd
 
 $color-primary: #1ea4ff
+$size-header-base: 2em
 
 @import 'fonts.sass'
 @import 'syntax.sass'
@@ -15,13 +16,20 @@ $color-primary: #1ea4ff
   color: rgba(128,128,128,0.7)
 
 @mixin highlight
-  background-color: rgba(0,0,0,0.15)
+  background-color: rgba(0,0,0,0.12)
+  @media (prefers-color-scheme: dark)
+    background-color: rgba(0,0,0,0.18)
 
 @mixin italic
   font-style: italic
 
 @mixin monospace
   font-family: $font-monospace
+
+@mixin display
+  font-family: $font-display
+  font-weight: 300
+  text-transform: uppercase
 
 *
   font-feature-settings: 'zero' on
@@ -63,13 +71,9 @@ p
     max-width: 100%
     height: auto
 
-$size-header-base: 2em
-
 h1.title
-  font-family: $font-display
-  font-weight: 300
+  +display
   font-size: 4em
-  text-transform: uppercase
   margin: 0 auto
 
 // h{n} tag size calc
@@ -83,9 +87,9 @@ h1.title
   color: var(--color-fg)
 
 .before-after
-  display: block
   +monospace
   +italic
+  display: block
   font-size: 0.9em
 
 ol, ul
@@ -106,8 +110,8 @@ hr
   margin-top: 2em
 
 blockquote
-  border-left: solid 4px var(--color-fg)
   +italic
+  border-left: solid 4px var(--color-fg)
   margin: 0 auto
   margin-left: -1.2em
   padding-left: 0.9em
@@ -169,8 +173,8 @@ caption
   ol, p
     font-size: 0.9em
     > li:hover
-      transition: all 0.05s linear
       +highlight
+      transition: all 0.05s linear
 
 a.footnote-back
   float: right
@@ -188,9 +192,8 @@ sub
   top: 0.4em
 
 footer
-  p
-    +subtle
-    margin: 0 auto
-    text-align: right
-    +monospace
-    font-size: 0.8em
+  +monospace
+  +subtle
+  margin: 0 auto
+  text-align: right
+  font-size: 0.8em
