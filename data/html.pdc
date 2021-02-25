@@ -24,6 +24,10 @@ $for(header-includes)$
     $header-includes$
 $endfor$
     </head>
+    <header>
+        <!-- header.pdc -->
+        ${ header() }
+    </header>
     <body>
 $if(title)$
         <h1 class="title">$title$</h1>
@@ -53,7 +57,8 @@ $for(after)$
     <p class=before-after>$after$</p>
 $endfor$
         <footer>
-            <p>© 2018-2021 Darryl Abbate</p>
+            <!-- footer.pdc -->
+            ${ footer() }
         </footer>
     </body>
 </html>
