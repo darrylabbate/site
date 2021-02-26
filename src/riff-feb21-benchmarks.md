@@ -71,10 +71,12 @@ Bendersky's blog post.
 
 > Comments inside the CPython implementation note that using computed goto made the Python VM 15-20% faster
 
-## Notes
+## Methodology
 
 Programs were benchmarked on a 2018 Mac mini with a 3.0 GHz 6-core
-processor and 32GB of 2667 MHz DDR4 RAM.
+processor and 32GB of 2667 MHz DDR4 RAM. Programs were timed using the
+builtin shell utility `time`. Each program was run ten times, with the
+best time being kept.
 
 `riff` was compiled with Apple clang 12.0 (`clang-1200.0.32.27`) with
 `-O3` optimizations enabled.
@@ -84,3 +86,135 @@ processor and 32GB of 2667 MHz DDR4 RAM.
 | Lua         | 5.4.2    | Homebrew-installed                |
 | LuaJIT      | 2.0.5    | Homebrew-installed                |
 | Ruby        | 2.6.3p62 | Default interpreter on macOS 11.2 |
+
+## Programs Used
+
+Recursive Fibonacci (Lua)
+
+```lua
+function fib(n)
+  if n < 2 then
+    return n
+  end
+  return fib(n-1) + fib(n-2)
+end
+print(fib(35))
+```
+
+Recursive Fibonacci (Riff)
+
+```riff
+fn fib(n) {
+    return n < 2 ? n : fib(n-1) + fib(n-2)
+}
+fib(35)
+```
+
+Recursive Fibonacci (Ruby)
+
+```ruby
+def fib(n)
+  if n < 2 then
+    n
+  else
+    fib(n-1) + fib(n-2)
+  end
+end
+puts fib(35)
+```
+
+Ackermann (Lua)
+
+```lua
+function ack(M,N)
+  if M == 0 then return N + 1 end
+  if N == 0 then return ack(M-1,1) end
+  return ack(M-1,ack(M, N-1))
+end
+print(ack(3,10))
+```
+
+Ackermann (Riff)
+
+```riff
+fn ack(m, n) {
+    if m == 0
+        return n + 1
+    elif n == 0
+        return ack(m-1, 1)
+    else
+        return ack(m-1, ack(m, n-1))
+}
+ack(3,10)
+```
+
+Ackermann (Ruby)
+
+```ruby
+def ack(m, n)
+  if m == 0
+    n + 1
+  elsif n == 0
+    ack(m-1, 1)
+  else
+    ack(m-1, ack(m, n-1))
+  end
+end
+puts ack(3,10)
+```
+
+Spectral norm (Riff)
+
+```riff
+fn A(i, j) {
+    local ij = i+j
+    return 1.0 / (ij*(ij+1)/2+i+1)
+}
+
+fn Av(x, y, N) {
+    for i in N-1 {
+        local a = 0
+        for j in N-1
+            a += x[j] * A(i, j)
+        y[i] = a
+    }
+}
+
+fn Atv(x, y, N) {
+    for i in N-1 {
+        local a = 0
+        for j in N-1
+            a += x[j] * A(j, i)
+        y[i] = a
+    }
+}
+
+fn AtAv(x, y, t, N) {
+    Av(x, t, N)
+    Atv(t, y, N)
+}
+
+local u = {},
+      v = {},
+      t = {},
+      N = $1 ? num($1) : 100
+
+for i in N-1
+    u[i] = 1
+
+for i in 9 {
+    AtAv(u, v, t, N)
+    AtAv(v, u, t, N)
+}
+
+local vBv = 0, vv = 0
+for i in N-1 {
+    local vi = v[i]
+    vBv += u[i] * vi
+    vv  += vi * vi
+}
+
+fmt("%0.9f", sqrt(vBv / vv))
+```
+
+Spectral norm programs ([Lua](https://benchmarksgame-team.pages.debian.net/benchmarksgame/program/spectralnorm-lua-1.html), [Ruby](https://benchmarksgame-team.pages.debian.net/benchmarksgame/program/spectralnorm-ruby-1.html)) were sourced from the [Computer Language Benchmarks Game](https://benchmarksgame-team.pages.debian.net/benchmarksgame/index.html).
