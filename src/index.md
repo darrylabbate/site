@@ -12,6 +12,8 @@ dot cx*
 
 - [Riff](https://riff.cx) - general-purpose programming language and
   bytecode interpreter implemented in C
+- [xcv](https://rootbeersoup.github.io/xcv/) - A fully client-side
+  Pastebin clone
 - [`intcode.awk`](https://github.com/rootbeersoup/aoc/blob/master/19/intcode.awk) - 
   An [Intcode](https://adventofcode.com/2019/day/2)
   assembler/disassembler/debugger/interpreter written entirely in AWK
@@ -21,6 +23,7 @@ dot cx*
 
 ## Posts
 
+- [xcv: A Fully Client-Side Pastebin Clone](/xcv)
 - [Riff: February 2021 Benchmarks](/riff-feb21-benchmarks)
 - [Advent of Code 2020: Day 8 Solution](/aoc20day8)
 - [Riff: Early Ideas and Motivation](/riff-early-ideas)
