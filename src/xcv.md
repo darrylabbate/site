@@ -22,14 +22,14 @@ https://tio.run/##yylN/P@/oCgzr0RDySM1JydfRyE8vygnRVFJ8/9/AA
 ```
 
 From just looking at the URL, you can tell there's some method of
-compression being employed before converting the data the base-64. So
-for the purpose of my assignment, I decided to make a simple
+compression being employed before converting the data to base-64. For
+the purpose of my assignment, I decided to make a simple
 [Pastebin](https://pastebin.com) clone. This way I could understand
 the process of encoding and decoding URL data for potential use in any
 future projects.
 
 I ended up implementing a functionally-identical solution to
-[paste](https://topaz.github.io) (credit: [Eric Wastl](http://was.tl).
+[paste](https://topaz.github.io) (credit: [Eric Wastl](http://was.tl))
 I initially tried using a different JavaScript compression library but
 eventually settled on the same
 [LZMA-JS](https://github.com/LZMA-JS/LZMA-JS) compression library used
