@@ -1,8 +1,8 @@
 % Darryl Abbate
 
-I'm a programmer & Computer Science student from New Orleans, LA
-currently finishing up my Bachelor's degree at the University of New
-Orleans. My main CS interests are Human-Computer Interaction,
+I'm a programmer from New Orleans, LA. I recently earned my Bachelor's
+degree from the University of New Orleans, majoring in Computer
+Science. My main CS interests are Human-Computer Interaction,
 Compilers and Programming Language Theory.
 
 If you'd like to contact me, I can be reached via email: *me at darryl
@@ -12,7 +12,7 @@ dot cx*
 
 - [Riff](https://riff.cx) - General-purpose programming language and
   bytecode interpreter implemented in C
-- [Riff Studio](https://play.riff.cx) - Online playground/sandbox
+- [Riff Playground](https://riff.run) - Online playground/sandbox
   for running Riff programs directly in the browser (WebAssembly)
 - [xcv](https://rootbeersoup.github.io/xcv/) - A fully client-side
   Pastebin clone
