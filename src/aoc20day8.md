@@ -10,7 +10,7 @@ after:
 ...
 
 
-```
+```bash
 awk '{p[NR]=$2$1}END{i=1;for(;;){if(r[i]++){print a;exit}p[i]~/a/?a+=p[i++]:p[i]~/j/?i+=p[i]:++i}}' input
 ```
 
@@ -25,7 +25,7 @@ By default, AWK's Record Separator (`RS`) is a newline. The Field
 Separator (`FS`) is any whitespace. AWK will process the input one
 line at a time.
 
-```
+```awk
 { p[NR] = $2$1 }
 ```
 
@@ -47,7 +47,7 @@ jmp +42
 
 The array `p` will be populated as follows:
 
-```
+```awk
 p[1] = "+355nop"
 p[2] = "+46acc"
 p[3] = "+42jmp"
