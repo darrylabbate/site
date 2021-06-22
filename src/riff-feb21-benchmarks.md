@@ -96,7 +96,7 @@ function fib(n)
   if n < 2 then
     return n
   end
-  return fib(n-1) + fib(n-2)
+    return fib(n-1) + fib(n-2)
 end
 print(fib(35))
 ```
@@ -105,7 +105,7 @@ Recursive Fibonacci (Riff)
 
 ```riff
 fn fib(n) {
-    return n < 2 ? n : fib(n-1) + fib(n-2)
+  return n < 2 ? n : fib(n-1) + fib(n-2)
 }
 fib(35)
 ```
@@ -138,12 +138,12 @@ Ackermann (Riff)
 
 ```riff
 fn ack(m, n) {
-    if m == 0
-        return n + 1
-    elif n == 0
-        return ack(m-1, 1)
-    else
-        return ack(m-1, ack(m, n-1))
+  if m == 0
+    return n + 1
+  elif n == 0
+    return ack(m-1, 1)
+  else
+    return ack(m-1, ack(m, n-1))
 }
 ack(3,10)
 ```
@@ -167,51 +167,51 @@ Spectral norm (Riff)
 
 ```riff
 fn A(i, j) {
-    local ij = i+j
-    return 1.0 / (ij*(ij+1)/2+i+1)
+  local ij = i+j
+  return 1.0 / (ij*(ij+1)/2+i+1)
 }
 
 fn Av(x, y, N) {
-    for i in N-1 {
-        local a = 0
-        for j in N-1
-            a += x[j] * A(i, j)
-        y[i] = a
-    }
+  for i in N-1 {
+    local a = 0
+    for j in N-1
+      a += x[j] * A(i, j)
+    y[i] = a
+  }
 }
 
 fn Atv(x, y, N) {
-    for i in N-1 {
-        local a = 0
-        for j in N-1
-            a += x[j] * A(j, i)
-        y[i] = a
-    }
+  for i in N-1 {
+    local a = 0
+    for j in N-1
+      a += x[j] * A(j, i)
+    y[i] = a
+  }
 }
 
 fn AtAv(x, y, t, N) {
-    Av(x, t, N)
-    Atv(t, y, N)
+  Av(x, t, N)
+  Atv(t, y, N)
 }
 
 local u = {},
       v = {},
       t = {},
-      N = $1 ? num($1) : 100
+      N = arg[1] ? num(arg[1]) : 100
 
 for i in N-1
-    u[i] = 1
+  u[i] = 1
 
 for i in 9 {
-    AtAv(u, v, t, N)
-    AtAv(v, u, t, N)
+  AtAv(u, v, t, N)
+  AtAv(v, u, t, N)
 }
 
 local vBv = 0, vv = 0
 for i in N-1 {
-    local vi = v[i]
-    vBv += u[i] * vi
-    vv  += vi * vi
+  local vi = v[i]
+  vBv += u[i] * vi
+  vv  += vi * vi
 }
 
 fmt("%0.9f", sqrt(vBv / vv))

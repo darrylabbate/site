@@ -18,8 +18,10 @@ INPUT_EXT  = +multiline_tables
 
 HFLAGS     = --standalone
 HFLAGS    += --template=$(DATA_DIR)/html.pdc
+HFLAGS    += --syntax-definition=$(DATA_DIR)/riff.xml
 HFLAGS    += --from $(INPUT_FMT)$(INPUT_EXT)
 HFLAGS    += --to $(HTML_FMT)
+HFLAGS    += --mathjax
 HFLAGS    += --css=../style.css
 
 TFLAGS     = --from $(INPUT_FMT)

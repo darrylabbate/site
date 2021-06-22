@@ -1,13 +1,42 @@
+@use "sass:math"
+
 :root
   color-scheme: light dark
   --color-bg: #fff
-  --color-fg: #000
+  --color-fg: #333
+  --color-bg-abs: #fff
+  --color-fg-abs: #000
+  --color-border: #ccc
+  --color-comment: #999
+  --color-string: #a3be8c
+  --color-string-2: #8FBCBB
+  --color-number: #B48EAD
+  --color-operator: #ccc
+  --color-builtin: #88c0d0
+  --color-atom: #aa759f
+  --color-keyword: #5E81AC
+  --color-variable: #6a9fb5
+  --color-attribute: #EBCB8B
   @media (prefers-color-scheme: dark)
     --color-bg: #222
-    --color-fg: #ddd
+    --color-fg: #ccc
+    --color-bg-abs: #000
+    --color-fg-abs: #fff
+    --color-border: #333
+    --color-comment: #666
+    --color-string: #a3be8c
+    --color-string-2: #8FBCBB
+    --color-number: #B48EAD
+    --color-operator: #ccc
+    --color-builtin: #88c0d0
+    --color-atom: #aa759f
+    --color-keyword: #5E81AC
+    --color-variable: #6a9fb5
+    --color-attribute: #EBCB8B
 
 $color-primary: #1ea4ff
 $size-header-base: 2em
+$size-max-width: 40em
 
 @import 'fonts.sass'
 @import 'syntax.sass'
@@ -19,7 +48,7 @@ $size-header-base: 2em
   color: rgba(128,128,128,0.7)
 
 @mixin highlight
-  background-color: rgba(0,0,0,0.12)
+  background-color: rgba(0,0,0,0.03)
   @media (prefers-color-scheme: dark)
     background-color: rgba(0,0,0,0.18)
 
@@ -42,7 +71,7 @@ html
   font-kerning: normal
 
 header 
-  max-width: 40em
+  max-width: $size-max-width
   text-align: right
   a
     +subtle
@@ -72,7 +101,7 @@ header
 body
   +foreground
   font-family: $font-base
-  max-width: 40em
+  max-width: $size-max-width
   background: var(--color-bg)
   font-weight: 400
   font-size: 16px
@@ -85,9 +114,6 @@ a
   &:hover
     transition: all 0.05s linear
     color: darken($color-primary, 12%)
-
-em
-  +italic
 
 code
   +monospace
@@ -111,7 +137,7 @@ h1.title
 // h{n} tag size calc
 @for $i from 1 through 5
   h#{$i}
-    font-size: $size-header-base * (1 - ($i / 10))
+    font-size: $size-header-base * (1 - math.div($i, 10))
 
 .postinfo, .postinfo a
   +foreground
@@ -154,13 +180,16 @@ pre
   +highlight
   display: block
   white-space: pre
-  padding: 0.5em
-  border-radius: 0.4em
+  padding: 0.5em 1.1em
+  margin: 1em -1.1em
+  border-radius: 0.25em
   overflow: hidden
   overflow-x: scroll
   code
     overflow: hidden
     overflow-x: scroll
+  @media screen and (max-width: calc(#{$size-max-width} + 2.5em))
+    border-radius: 0
 
 table
   border-collapse: collapse
@@ -229,3 +258,20 @@ footer
   margin: 0 auto
   text-align: right
   font-size: 0.8em
+
+// Syntax highlighting
+.sourceCode
+  .co
+    color: var(--color-comment)
+  .st
+    color: var(--color-string)
+  .ch
+    color: var(--color-string-2)
+  .dv, .fl, .bn, .kc
+    color: var(--color-number)
+  .bu
+    color: var(--color-builtin)
+  .cf, .kw
+    color: var(--color-keyword)
+  .at, .sc
+    color: var(--color-attribute)
