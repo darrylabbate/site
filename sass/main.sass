@@ -1,40 +1,49 @@
+@use "sass:color"
 @use "sass:math"
+
+$color-primary: #1ea4ff
+$color-dark:    #1b1b1d
+$color-light:   #fafafa
+
+// Base colors for syntax highlighting
+$color-number:  #ac4142     // Numeric literals
+$color-char:    #dc9656     // Character literals
+$color-string:  #dc9656     // String literals
+$color-regex:   #f7ca88     // Regex literals
+$color-builtin: #7cafc2     // Builtin tables/functions
+$color-atom:    #974b46     // `null`
+$color-keyword: #ba8baf     // Keywords
 
 :root
   color-scheme: light dark
-  --color-bg: #fff
+  --color-bg: #{$color-light}
   --color-fg: #333
   --color-bg-abs: #fff
   --color-fg-abs: #000
-  --color-border: #ccc
   --color-comment: #999
-  --color-string: #a3be8c
-  --color-string-2: #8FBCBB
-  --color-number: #B48EAD
-  --color-operator: #ccc
-  --color-builtin: #88c0d0
-  --color-atom: #aa759f
-  --color-keyword: #5E81AC
-  --color-variable: #6a9fb5
-  --color-attribute: #EBCB8B
+  --color-number: #{$color-number}
+  --color-char: #{$color-char}
+  --color-string: #{darken($color-string, 10%)}
+  --color-string-2: #{color.adjust($color-regex, $saturation: -30%, $lightness: -20%)}
+  --color-builtin: #{$color-builtin}
+  --color-atom: #{$color-atom}
+  --color-keyword: #{$color-keyword}
+  --color-attribute: #6a9fb5
   @media (prefers-color-scheme: dark)
-    --color-bg: #222
-    --color-fg: #ccc
-    --color-bg-abs: #000
-    --color-fg-abs: #fff
-    --color-border: #333
-    --color-comment: #666
-    --color-string: #a3be8c
-    --color-string-2: #8FBCBB
-    --color-number: #B48EAD
-    --color-operator: #ccc
-    --color-builtin: #88c0d0
-    --color-atom: #aa759f
-    --color-keyword: #5E81AC
-    --color-variable: #6a9fb5
-    --color-attribute: #EBCB8B
+    --color-bg: #{$color-dark}
+    --color-fg: #{darken($color-light, 20%)}
+    --color-bg-abs: #000000
+    --color-fg-abs: #ffffff
+    --color-comment: #555555
+    --color-number: #{$color-number}
+    --color-char: #{$color-char}
+    --color-string: #{$color-string}
+    --color-string-2: #{$color-regex}
+    --color-builtin: #{$color-builtin}
+    --color-atom: #{$color-atom}
+    --color-keyword: #{$color-keyword}
+    --color-attribute: #6a9fb5
 
-$color-primary: #1ea4ff
 $size-header-base: 2em
 $size-max-width: 40em
 
@@ -196,10 +205,10 @@ pre
 table
   border-collapse: collapse
   margin: 0 auto
-  border: 2px solid var(--color-fg)
+  border: 1px solid var(--color-fg)
   thead
     +highlight
-    border-bottom: 2px solid var(--color-fg)
+    border-bottom: 1px solid var(--color-fg)
   tr
     display: table-row
   tr.odd, tr.even
@@ -265,12 +274,14 @@ footer
 .sourceCode
   .co
     color: var(--color-comment)
-  .st
-    color: var(--color-string)
-  .ch
-    color: var(--color-string-2)
   .dv, .fl, .bn, .kc
     color: var(--color-number)
+  .ch
+    color: var(--color-char)
+  .st
+    color: var(--color-string)
+  .ss
+    color: var(--color-string-2)
   .bu
     color: var(--color-builtin)
   .cf, .kw
