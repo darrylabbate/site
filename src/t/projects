@@ -1,16 +1,11 @@
 
 ━ esc[1mProjectsesc[0m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-  Riff - General-purpose programming language and 
+  esc[1mRiffesc[0m - General-purpose programming language and 
   bytecode interpreter implemented in C
   https://riff.cx
 
-  Riff Studio - Online playground/sandbox for running Riff
-  programs directly in the browser (WebAssembly)
-  https://play.riff.cx
-
-  dotfiles - Shell/environment configurations managed
-  with a Makefile
-  https://github.com/rootbeersoup/dotfiles
-  curl get.darryl.cx | sh
+  esc[1mRiff Playgroundexc[0m - Standalone demo for running Riff
+  programs directly in the browser
+  https://riff.run
 
