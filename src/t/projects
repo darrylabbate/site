@@ -5,7 +5,7 @@
   bytecode interpreter implemented in C
   https://riff.cx
 
-  esc[1mRiff Playgroundexc[0m - Standalone demo for running Riff
+  esc[1mRiff Playgroundesc[0m - Standalone demo for running Riff
   programs directly in the browser
   https://riff.run
 
